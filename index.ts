@@ -1,58 +1,67 @@
-import { createSchema, createYoga } from 'graphql-yoga'
-import { useSofa } from '@graphql-yoga/plugin-sofa'
- 
+import {
+  createInlineSigningKeyProvider,
+  useJWT
+} from "@graphql-yoga/plugin-jwt";
+import { useSofa } from "@graphql-yoga/plugin-sofa";
+import { GraphQLError } from "graphql";
+import { createSchema, createYoga } from "graphql-yoga";
+import jwt from "jsonwebtoken";
+import { getUserByLogin } from "./db";
+
+const signingKey = "SECRET";
+
 const books = [
-  { id: 1, title: 'Book A', type: 'AUDIO' },
-  { id: 2, title: 'Book B', type: 'LEGACY' }
-]
+  { id: 1, title: "Book A", type: "AUDIO" },
+  { id: 2, title: "Book B", type: "LEGACY" },
+];
 const users = [
   {
     id: 1,
-    name: 'User A',
+    name: "User A",
     favoriteBook: books[0],
-    shelf: books
+    shelf: books,
   },
   {
     id: 2,
-    name: 'User B',
+    name: "User B",
     favoriteBook: books[1],
-    shelf: books
-  }
-]
- 
+    shelf: books,
+  },
+];
+
 const UsersCollection = {
   get(id: string | number) {
-    const uid = typeof id === 'string' ? parseInt(id, 10) : id
- 
-    return users.find(u => u.id === uid)
+    const uid = typeof id === "string" ? parseInt(id, 10) : id;
+
+    return users.find((u) => u.id === uid);
   },
   all() {
-    return users
-  }
-}
- 
+    return users;
+  },
+};
+
 const BooksCollection = {
   get(id: string | number) {
-    const bid = typeof id === 'string' ? parseInt(id, 10) : id
- 
-    return books.find(u => u.id === bid)
+    const bid = typeof id === "string" ? parseInt(id, 10) : id;
+
+    return books.find((u) => u.id === bid);
   },
   all() {
-    return books
+    return books;
   },
   add(title: string) {
     const book = {
       id: parseInt(Math.random().toString(10).substr(2), 10),
       title,
-      type: 'LEGACY'
-    }
- 
-    books.push(book)
- 
-    return book
-  }
-}
- 
+      type: "LEGACY",
+    };
+
+    books.push(book);
+
+    return book;
+  },
+};
+
 const schema = createSchema({
   typeDefs: /* GraphQL */ `
     type Book {
@@ -60,30 +69,42 @@ const schema = createSchema({
       title: String!
       type: BookType!
     }
- 
+
     enum BookType {
       AUDIO
       LEGACY
     }
- 
+
     type User {
       id: ID!
       name: String!
+      password: String!
       favoriteBook: Book!
       shelf: [Book!]!
     }
- 
+
+    type Viewer {
+      id: ID!
+      name: String!
+    }
+
+    type AuthPayload {
+      token: String!
+    }
+
     type Query {
       user(id: ID!): User
       users: [User!]
       book(id: ID!): Book
       books: [Book!]
+      viewer: Viewer
+      login(name: String!, password: String!): String
     }
- 
+
     type Mutation {
       addBook(title: String!): Book
     }
- 
+
     schema {
       query: Query
       mutation: Mutation
@@ -91,44 +112,85 @@ const schema = createSchema({
   `,
   resolvers: {
     Query: {
+      viewer: async (_: any, __: any, { jwt }: any) => {
+        if (!jwt) {
+          throw new GraphQLError("Unauthorized");
+        }
+
+        return {
+          id: jwt.payload.sub,
+          name: jwt.payload.name,
+        };
+      },
       user(_: any, { id }: any) {
-        return UsersCollection.get(id)
+        return UsersCollection.get(id);
       },
       users() {
-        return UsersCollection.all()
+        return UsersCollection.all();
       },
       book(_: any, { id }: any) {
-        return BooksCollection.get(id)
+        return BooksCollection.get(id);
       },
       books() {
-        return BooksCollection.all()
-      }
+        return BooksCollection.all();
+      },
+      login(_: any, { name, password }: { name: string; password: string }) {
+        const user = getUserByLogin(name, password);
+
+        if (!user) {
+          throw new GraphQLError("Unauthorized");
+        }
+
+        const token = jwt.sign(
+          {
+            sub: user.id,
+            name: user.name,
+          },
+          signingKey,
+          { expiresIn: "1d" }
+        );
+
+        return token;
+      },
     },
     Mutation: {
       addBook(_: any, { title }: any) {
-        const book = BooksCollection.add(title)
-        return book
-      }
-    }
-  }
-})
- 
+        const book = BooksCollection.add(title);
+        return book;
+      },
+    },
+  },
+});
+
 export const yoga = createYoga({
   schema,
   plugins: [
     useSofa({
-      basePath: '/rest',
+      basePath: "/",
       swaggerUI: {
-        endpoint: '/swagger',
+        endpoint: "/swagger",
       },
-    })
-  ]
-})
+    }),
+    useJWT({
+      // Configure your signing providers: either a local signing-key or a remote JWKS are supported.
+      singingKeyProviders: [createInlineSigningKeyProvider(signingKey)],
+      // Configure context injection after the token is verified.
+      // By default, the plugin will inject the token's payload into the context into the `jwt` field.
+      // You can pass a string: `"myJwt"` to change the field name.
+      extendContext: true,
+      // The plugin can reject the request if the token is missing or invalid (doesn't pass JWT `verify` flow).
+      // By default, the plugin will reject the request if the token is missing or invalid.
+      reject: {
+        missingToken: false,
+        invalidToken: true,
+      },
+    }),
+  ],
+});
 
 Bun.serve({
-  port: 4000,
+  port: 8081,
   fetch: yoga.fetch,
-})
+});
 
-console.info('Server is running on http://localhost:4000/graphql')
-
+console.info("Server is running on http://localhost:8081/graphql");
