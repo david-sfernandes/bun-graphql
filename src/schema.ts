@@ -3,34 +3,19 @@ import { applyMiddleware } from "graphql-middleware";
 import { createSchema } from "graphql-yoga";
 import jwt from "jsonwebtoken";
 import permissions from "./auth/permissions";
-import { BooksCollection } from "./db/BooksCollection";
-import { UsersCollection } from "./db/UsersCollection";
 import SECRET from "./constant/secret";
+import type { GraphQLContext } from "./types/context";
 
 const baseSchema = createSchema({
   typeDefs: /* GraphQL */ `
-    type Book {
-      id: ID!
-      title: String!
-      type: BookType!
-    }
-
-    enum BookType {
-      AUDIO
-      LEGACY
-    }
-
     type User {
       id: ID!
+      email: String!
       name: String!
+      role: String!
       password: String!
-      favoriteBook: Book!
-      shelf: [Book!]!
-    }
-
-    type Viewer {
-      id: ID!
-      name: String!
+      createdAt: String!
+      updatedAt: String!
     }
 
     type AuthPayload {
@@ -38,16 +23,13 @@ const baseSchema = createSchema({
     }
 
     type Query {
-      user(id: ID!): User
+      user(email: String!): User
       users: [User!]
-      book(id: ID!): Book
-      books: [Book!]
-      viewer: Viewer
       login(name: String!, password: String!): String
     }
 
     type Mutation {
-      addBook(title: String!): Book
+      createUser(email: String, name: String!, password: String): User
     }
 
     schema {
@@ -57,37 +39,30 @@ const baseSchema = createSchema({
   `,
   resolvers: {
     Query: {
-      viewer: async (_: any, __: any, { jwt }: any) => {
-        if (!jwt) {
+      async user(_: any, { email }: { email: string }, ctx: GraphQLContext) {
+        return await ctx.prisma.user.findUnique({
+          where: { email },
+        });
+      },
+      async users(_: any, __: any, ctx: GraphQLContext) {
+        return await ctx.prisma.user.findMany();
+      },
+      async login(
+        _: any,
+        { email, password }: { email: string; password: string },
+        ctx
+      ) {
+        const user = await ctx.prisma.user.findUnique({
+          where: { email },
+        });
+        if (!user || user?.password !== password)
           throw new GraphQLError("Unauthorized");
-        }
-
-        return {
-          id: jwt.payload.sub,
-          name: jwt.payload.name,
-        };
-      },
-      user(_: any, { id }: any) {
-        return UsersCollection.get(id);
-      },
-      users() {
-        return UsersCollection.all();
-      },
-      book(_: any, { id }: any) {
-        return BooksCollection.get(id);
-      },
-      books() {
-        return BooksCollection.all();
-      },
-      login(_: any, { name, password }: { name: string; password: string }) {
-        const user = UsersCollection.getByLogin(name, password);
-
-        if (!user) throw new GraphQLError("Unauthorized");
 
         const token = jwt.sign(
           {
             sub: user.id,
             name: user.name,
+            scope: user.role,
           },
           SECRET,
           { expiresIn: "1d" }
@@ -97,9 +72,22 @@ const baseSchema = createSchema({
       },
     },
     Mutation: {
-      addBook(_: any, { title }: any) {
-        const book = BooksCollection.add(title);
-        return book;
+      async createUser(
+        _: any,
+        {
+          email,
+          name,
+          password,
+        }: { email: string; name: string; password: string },
+        ctx: GraphQLContext
+      ) {
+        return await ctx.prisma.user.create({
+          data: {
+            email,
+            name,
+            password,
+          },
+        });
       },
     },
   },

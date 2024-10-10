@@ -5,7 +5,7 @@ const permissions = shield(
   {
     Query: {
       "*": allow,
-      users: isAdmin,
+      // users: isAdmin,
     },
     Mutation: {
       "*": allow,

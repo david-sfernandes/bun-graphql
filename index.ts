@@ -8,9 +8,11 @@ import { createYoga } from "graphql-yoga";
 import SECRET from "./src/constant/secret";
 import { schema } from "./src/schema";
 import figlet from "figlet";
+import { createContext } from "./src/context";
 
 export const yoga = createYoga({
   schema,
+  context: createContext,
   plugins: [
     useJWT({
       singingKeyProviders: [createInlineSigningKeyProvider(SECRET)],
@@ -22,8 +24,10 @@ export const yoga = createYoga({
     }),
     useSofa({
       basePath: "/",
+      depthLimit: 7,
       swaggerUI: {
         endpoint: "/swagger",
+        defaultModelExpandDepth: 3,
       },
     }),
   ],
