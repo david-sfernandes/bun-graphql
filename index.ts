@@ -4,13 +4,15 @@ import {
 } from "@graphql-yoga/plugin-jwt";
 import { useSofa } from "@graphql-yoga/plugin-sofa";
 import chalk from "chalk";
-import { createYoga } from "graphql-yoga";
-import SECRET from "./src/constant/secret";
-import { schema } from "./src/schema";
 import figlet from "figlet";
-import { createContext } from "./src/context";
+import { createYoga } from "graphql-yoga";
+import cron from "node-cron";
+import SECRET from "./src/constant/secret";
+import { createContext } from "./src/graphql/context";
+import schema from "./src/graphql/schema";
+import SourceFacade from "./src/sources/source.facade";
 
-export const yoga = createYoga({
+const yoga = createYoga({
   schema,
   context: createContext,
   plugins: [
@@ -39,6 +41,17 @@ Bun.serve({
   port: PORT,
   fetch: yoga.fetch,
 });
+
+cron.schedule(
+  "0 1 * * *",
+  async () => {
+    const terabyteSource = new SourceFacade();
+    await terabyteSource.syncAll();
+  },
+  {
+    timezone: "America/Sao_Paulo",
+  }
+);
 
 console.info(
   figlet.textSync("Terabyte", {

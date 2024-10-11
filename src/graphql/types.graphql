@@ -1,0 +1,61 @@
+type User {
+  id: ID!
+  email: String!
+  name: String!
+  role: String!
+  password: String!
+  createdAt: String!
+  updatedAt: String!
+}
+
+type Device {
+  id: Int!
+  name: String!
+  nickname: String
+  mac: String!
+  brand: String!
+  os: String!
+  processor: String!
+  username: String!
+  serial: String!
+  model: String!
+  type: String!
+  isActive: Boolean!
+  updatedAt: String!
+  syncedAt: String!
+  clientId: Int!
+}
+
+type Client {
+  id: Int!
+  name: String!
+  companyName: String!
+  category: String
+  cnpj: String!
+  isActive: Boolean
+  contractDeviceQty: Int
+  devices: [Device!]
+}
+
+type AuthPayload {
+  token: String!
+}
+
+type Query {
+  user(email: String!): User
+  users: [User!]
+  clients: [Client!]
+  client(id: Int!): Client
+  devices: [Device!]
+  device(id: Int!): Device
+  login(name: String!, password: String!): String
+}
+
+type Mutation {
+  createUser(email: String, name: String!, password: String): User
+}
+
+schema {
+  query: Query
+  mutation: Mutation
+}

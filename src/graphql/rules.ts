@@ -1,5 +1,5 @@
 import { rule } from "graphql-shield";
-import extractPayload from "./extractPayload";
+import extractPayload from "../auth/extractPayload";
 
 const isAdmin = rule()(async (_: any, __: any, ctx: any) => {
   let payload = ctx.jwt?.payload;
