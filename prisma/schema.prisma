@@ -72,7 +72,7 @@ model Device {
 }
 
 model SecurityStatus {
-  id                Int      @id
+  id                String      @id
   name              String
   mac               String
   group             String
@@ -80,8 +80,8 @@ model SecurityStatus {
   isManagedWithBest Boolean
   syncedAt          DateTime @default(now())
 
-  deviceId Int
-  device   Device @relation(fields: [deviceId], references: [id])
+  deviceId Int?
+  device   Device? @relation(fields: [deviceId], references: [id])
 }
 
 model DeviceDetail {

@@ -5,7 +5,7 @@ import BitdefenderService from "@/src/bitdefender/bitdefender.service";
 const key = process.env.BITDEFENDER_KEY_TERABYTE || "";
 const secReportId = process.env.BITDEFENDER_SEC_REPORT_ID || "";
 
-let testCompanyGroups: SecurityGroups[] = [];
+let testCompanyGroups: SecurityGroup[] = [];
 let bitdefenderService: BitdefenderService;
 
 beforeAll(async () => {

@@ -43,7 +43,7 @@ class BitdefenderService {
     return groups.result.items;
   }
 
-  async getSubFolders(companyGroups: SecurityGroups[]) {
+  async getSubFolders(companyGroups: SecurityGroup[]) {
     const subFolders = [];
     for (const group of companyGroups) {
       const groups = await this.getNetworkGroups(group.id);

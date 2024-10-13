@@ -5,7 +5,7 @@ type PayloadAgs = {
   reportId?: string;
 };
 
-type SecurityGroups = {
+type SecurityGroup = {
   id: string;
   name: string;
 };
@@ -13,7 +13,7 @@ type SecurityGroups = {
 type BitdefenderGroupResp = {
   id: string;
   jsonrpc: string;
-  result: SecurityGroups[];
+  result: SecurityGroup[];
 };
 
 type CompaniesGroups = {
@@ -21,11 +21,27 @@ type CompaniesGroups = {
   page: number;
   perPage: number;
   pagesCount: number;
-  items: SecurityGroups[];
+  items: SecurityGroup[];
 };
 
 type CompaniesGroupsResp = {
   result: CompaniesGroups;
+};
+
+type SecurityStatus = {
+  id: string;
+  name: string;
+  label: string;
+  fqdn: string;
+  groupId: string;
+  isManaged: boolean;
+  machineType: string;
+  operatingSystemVersion: string;
+  ip: string;
+  macs: string[];
+  ssid: string;
+  managedWithBest?: boolean;
+  managedRelay?: boolean;
 };
 
 type EndpointListResults = {
@@ -33,21 +49,7 @@ type EndpointListResults = {
   page: number;
   perPage: number;
   pagesCount: number;
-  items: {
-    id: string;
-    name: string;
-    label: string;
-    fqdn: string;
-    groupId: string;
-    isManaged: boolean;
-    machineType: string;
-    operatingSystemVersion: string;
-    ip: string;
-    macs: string[];
-    ssid: string;
-    managedWithBest: boolean;
-    managedRelay: boolean;
-  }[];
+  items: SecurityStatus[];
 };
 
 type EndpointListResultsResp = {
