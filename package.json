@@ -11,7 +11,9 @@
   "scripts": {
     "start": "bun run index.ts",
     "test:sources": "bun test ./test/sources/*.test.ts",
-    "test:utils": "bun test ./test/utils/*.test.ts"
+    "test:utils": "bun test ./test/utils/*.test.ts",
+    "test:milvus": "bun test ./test/milvus/*.test.ts",
+    "test:bitdefender": "bun test ./test/bitdefender/*.test.ts"
   },
   "peerDependencies": {
     "typescript": "^5.6.3"
@@ -21,6 +23,7 @@
     "@graphql-yoga/plugin-jwt": "^3.1.0",
     "@graphql-yoga/plugin-sofa": "^3.7.0",
     "@prisma/client": "^5.20.0",
+    "bun-graphql": "file:",
     "chalk": "^5.3.0",
     "figlet": "^1.8.0",
     "graphql": "16.9.0",
