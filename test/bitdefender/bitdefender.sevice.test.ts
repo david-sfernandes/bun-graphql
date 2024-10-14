@@ -44,16 +44,20 @@ test("Get status by group", async () => {
   expect(status).toBeInstanceOf(Object);
 });
 
-test.only("Get security report URL", async () => {
+test("Get security report URL", async () => {
   const url = await bitdefenderService.getReportUrl();
   console.log("URL: ", url);
   expect(url).toBeString();
   expect(url).toMatch(/http/);
 });
 
-test.only("Return null if security report ID is not set", async () => {
+test("Return null if security report ID is not set", async () => {
   const bitdefenderService = new BitdefenderService(key);
   const url = await bitdefenderService.getReportUrl();
 
   expect(url).toBeNull();
+});
+
+test.only("Get security events from report", async () => {
+  await bitdefenderService.getSecurityEvents();
 });

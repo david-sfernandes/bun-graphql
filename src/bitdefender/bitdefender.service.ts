@@ -1,3 +1,7 @@
+import { parse } from "@std/csv/parse";
+import AdmZip from "adm-zip";
+import { readdir, rmdir } from "node:fs/promises";
+
 class BitdefenderService {
   private readonly url =
     "https://cloud.gravityzone.bitdefender.com/api/v1.0/jsonrpc/network";
@@ -101,11 +105,44 @@ class BitdefenderService {
   }
 
   async getSecurityEvents() {
-    return null;
+    const zipPath = "./temp/securityEvents.zip";
+
+    const reportUrl = await this.getReportUrl();
+    if (!reportUrl) {
+      console.error("Security Events: Report not ready");
+      return null;
+    }
+    const zipFile = await this.downloadZipFile(reportUrl);
+    await Bun.write(zipPath, zipFile);
+    await this.extractCSVFromZip(zipPath);
+    const events = await this.extractEventsFromCSV();
+    await rmdir("./temp", { recursive: true });
+    return events;
   }
 
-  async getEventsFromCSV() {
-    return null;
+  async extractEventsFromCSV() {
+    const files = await readdir("./temp");
+    const csvFile = files.find((file) => file.endsWith(".csv"));
+    const csvContent = await Bun.file(`./temp/${csvFile}`).text();
+    const csvParsed = parse(csvContent, { skipFirstRow: true });
+    return csvParsed;
+  }
+
+  isEventValid(event: Record<string, string>) {
+    return (
+      event["Nome do Endpoint"] && event["Módulo"] != "Controle de Dispositivos"
+    );
+  }
+
+  private async extractCSVFromZip(filePath: string) {
+    const zip = new AdmZip(filePath);
+    zip.extractAllTo("./temp", true);
+  }
+
+  private async downloadZipFile(url: string) {
+    const resp = await fetch(url, { headers: this.headers });
+    const blob = await resp.blob();
+    return blob;
   }
 
   private buildPayload(method: string, args: PayloadAgs = {}) {

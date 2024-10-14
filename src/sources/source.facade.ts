@@ -182,6 +182,35 @@ class SourceFacade {
     }
   }
 
+  async syncSecurityEvents() {
+    prisma.securityEvent.deleteMany({});
+    const events = (await this.bitdefenderService.getSecurityEvents()) || [];
+    await this.saveSecurityEvents(events);
+    console.log(chalk.magenta(`< Updated ${events.length} security events`));
+    return events.length;
+  }
+
+  private async saveSecurityEvents(CSVEvents: Record<string, string>[]) {
+    const mountedEvents = CSVEvents.filter((event) =>
+      this.bitdefenderService.isEventValid(event)
+    ).map((event) => {
+      return {
+        deviceName: event["Nome do Endpoint"],
+        module: event["Módulo"],
+        companyName: event["Nome da Empresa"],
+        endpoint: event["FQDN do Endpoint"],
+        occurrences: parseInt(event["Ocorrências"]),
+        type: event["Tipo de Evento"],
+        username: event["Usuário"],
+        lastOccurrence: new Date(event["Ultima ocorrência"]),
+      };
+    });
+    const insertedRows = await prisma.securityEvent.createMany({
+      data: mountedEvents,
+    });
+    return insertedRows.count;
+  }
+
   async syncAll() {
     const updatedClients = await this.syncClients();
     console.log(chalk.blue(`< Updated ${updatedClients} clients`));
