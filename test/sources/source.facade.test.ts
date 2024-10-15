@@ -33,12 +33,22 @@ test(
   { timeout: 180000 }
 );
 
-test.only(
+test(
   "Sync security events",
   async () => {
     const updatedEvents = await terabyteSource.syncSecurityEvents();
 
     expect(updatedEvents).toBeGreaterThan(0);
+  },
+  { timeout: 180000 }
+);
+
+test.only(
+  "Sync device details",
+  async () => {
+    const updatedDetails = await terabyteSource.syncDeviceDetails();
+
+    expect(updatedDetails).toBeGreaterThan(0);
   },
   { timeout: 180000 }
 );

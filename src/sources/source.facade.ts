@@ -104,6 +104,61 @@ class SourceFacade {
     return devices.length - errQty;
   }
 
+  async syncDeviceDetails() {
+    const deviceDetails = await this.milvusService.getDeviceDetails();
+    for (const detail of deviceDetails) {
+      try {
+        await prisma.deviceDetail.upsert({
+          where: { id: detail.id },
+          update: {
+            clientVersion: detail.versao_client || "",
+            domain: detail.dominio || "",
+            imei1: detail.mobile_sim1_imei || "",
+            imei2: detail.mobile_sim2_imei || "",
+            ramal: detail.ramal || "",
+            totalRam: detail.ram_total || "",
+            totalStorage: detail.mobile_storage_interno_total || "",
+            usedStorage: detail.mobile_storage_interno_utilizado || "",
+            ...(detail.unidade_negocio_id && {
+              businessUnitId: detail.unidade_negocio_id,
+            }),
+            ...(detail.data_compra && { purchaseDate: detail.data_compra }),
+            ...(detail.data_garantia && { warrantyDate: detail.data_garantia }),
+            ...(detail.grupo_dispositivo_id && {
+              groupId: detail.grupo_dispositivo_id,
+            }),
+          },
+          create: {
+            id: detail.id,
+            clientVersion: detail.versao_client || "",
+            domain: detail.dominio || "",
+            imei1: detail.mobile_sim1_imei || "",
+            imei2: detail.mobile_sim2_imei || "",
+            ramal: detail.ramal || "",
+            totalRam: detail.ram_total || "",
+            totalStorage: detail.mobile_storage_interno_total || "",
+            usedStorage: detail.mobile_storage_interno_utilizado || "",
+            ...(detail.unidade_negocio_id && {
+              businessUnitId: detail.unidade_negocio_id,
+            }),
+            ...(detail.data_compra && { purchaseDate: detail.data_compra }),
+            ...(detail.data_garantia && { warrantyDate: detail.data_garantia }),
+            ...(detail.grupo_dispositivo_id && {
+              groupId: detail.grupo_dispositivo_id,
+            }),
+          },
+        });
+      } catch (error) {
+        console.error(
+          chalk.bgRed(
+            `Error on sync device detail: ${detail.id} Unit: ${detail.unidade_negocio_id}`
+          )
+        );
+      }
+    }
+    return deviceDetails.length;
+  }
+
   async deleteOldDevices() {
     const devices = await prisma.device.findMany({
       where: {
@@ -220,11 +275,13 @@ class SourceFacade {
     return insertedRows.count;
   }
 
-  async syncAll() {
+  async syncMainData() {
     const updatedClients = await this.syncClients();
     console.log(chalk.blue(`< Updated ${updatedClients} clients`));
     const updatedDevices = await this.syncDevices();
     console.log(chalk.magenta(`< Updated ${updatedDevices} devices`));
+    const updatedStatus = await this.syncSecurityStatus();
+    console.log(chalk.green(`< Updated ${updatedStatus} security status`));
   }
 }
 

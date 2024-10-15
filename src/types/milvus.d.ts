@@ -130,14 +130,14 @@ type MilvusDeviceDetails = {
   mobile_sim1_imei: string;
   mobile_sim2_imei: string;
   ramal: string;
-  grupo_dispositivo_id: number;
-  unidade_negocio_id: number;
-  data_exclusao: string;
+  grupo_dispositivo_id?: number;
+  unidade_negocio_id?: number;
+  data_exclusao?: string;
   ram_total: string;
   mobile_storage_interno_total: string;
   mobile_storage_interno_utilizado: string;
-  data_compra: string;
-  data_garantia: string;
+  data_compra?: string;
+  data_garantia?: string;
   versao_client: string;
 };
 

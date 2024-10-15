@@ -97,12 +97,22 @@ model SecurityStatus {
 }
 
 model DeviceDetail {
-  id        Int      @id
-  name      String
-  value     String
-  updatedAt DateTime @updatedAt
-  deviceId  Int      @unique
-  device    Device   @relation(fields: [deviceId], references: [id])
+  id             Int           @id @default(autoincrement())
+  groupId        Int?
+  ramal          String
+  imei1          String
+  imei2          String
+  domain         String
+  totalRam       String
+  totalStorage   String
+  usedStorage    String
+  purchaseDate   DateTime?
+  warrantyDate   DateTime?
+  clientVersion  String
+  businessUnitId Int?
+  businessUnit   BusinessUnit? @relation(fields: [businessUnitId], references: [id])
+  updatedAt      DateTime      @updatedAt
+  device         Device?       @relation(fields: [id], references: [id])
 }
 
 model SecurityEvent {
@@ -138,11 +148,12 @@ model Disclaimer {
 }
 
 model BusinessUnit {
-  id          Int     @id
-  description String
-  street      Boolean
-  clientId    Int     @unique
-  Client      Client  @relation(fields: [clientId], references: [id])
+  id            Int            @id
+  description   String
+  street        String
+  clientId      Int
+  client        Client         @relation(fields: [clientId], references: [id])
+  deviceDetails DeviceDetail[]
 }
 
 model MicrosoftSku {

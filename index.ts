@@ -6,11 +6,12 @@ import { useSofa } from "@graphql-yoga/plugin-sofa";
 import chalk from "chalk";
 import figlet from "figlet";
 import { createYoga } from "graphql-yoga";
-import cron from "node-cron";
 import SECRET from "./src/constant/secret";
+import dailyTask from "./src/cron/daily";
+import monthlyTask from "./src/cron/monthly";
+import weeklyTask from "./src/cron/weekly";
 import { createContext } from "./src/graphql/context";
 import schema from "./src/graphql/schema";
-import SourceFacade from "./src/sources/source.facade";
 
 const yoga = createYoga({
   schema,
@@ -42,16 +43,9 @@ Bun.serve({
   fetch: yoga.fetch,
 });
 
-cron.schedule(
-  "0 1 * * *",
-  async () => {
-    const terabyteSource = new SourceFacade();
-    await terabyteSource.syncAll();
-  },
-  {
-    timezone: "America/Sao_Paulo",
-  }
-);
+dailyTask.start();
+monthlyTask.start();
+weeklyTask.start();
 
 console.info(
   figlet.textSync("Terabyte", {
