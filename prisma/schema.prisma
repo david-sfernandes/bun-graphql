@@ -31,15 +31,14 @@ model User {
 }
 
 model Client {
-  id                Int      @id
-  name              String
-  companyName       String
-  category          String   @default("D") @db.Char(1)
-  cnpj              String
-  isActive          Boolean  @default(false)
-  contractDeviceQty Int      @default(0)
-  updatedAt         DateTime @updatedAt
-
+  id                      Int                      @id
+  name                    String
+  companyName             String
+  category                String                   @default("D") @db.Char(1)
+  cnpj                    String
+  isActive                Boolean                  @default(false)
+  contractDeviceQty       Int                      @default(0)
+  updatedAt               DateTime                 @updatedAt
   businessUnits           BusinessUnit[]
   devices                 Device[]
   recomendations          Recomendation[]
@@ -49,39 +48,37 @@ model Client {
 }
 
 model Device {
-  id        Int      @id
-  name      String
-  nickname  String
-  mac       String
-  brand     String
-  os        String
-  processor String
-  username  String
-  serial    String
-  model     String
-  type      String
-  isActive  Boolean
-  updatedAt DateTime @updatedAt
-  syncedAt  DateTime @default(now())
-
+  id             Int              @id
+  name           String
+  nickname       String
+  mac            String
+  brand          String
+  os             String
+  processor      String
+  username       String
+  serial         String
+  model          String
+  type           String
+  isActive       Boolean
+  updatedAt      DateTime         @updatedAt
+  syncedAt       DateTime         @default(now())
   securityStatus SecurityStatus[]
+  securityEvents SecurityEvent[]
   deviceDetail   DeviceDetail?
-
-  clientId Int
-  client   Client @relation(fields: [clientId], references: [id])
+  clientId       Int
+  client         Client           @relation(fields: [clientId], references: [id])
 }
 
 model SecurityStatus {
-  id                String      @id
+  id                String   @id
   name              String
   mac               String
   group             String
   isManaged         Boolean
   isManagedWithBest Boolean
   syncedAt          DateTime @default(now())
-
-  deviceId Int?
-  device   Device? @relation(fields: [deviceId], references: [id])
+  deviceId          Int?
+  device            Device?  @relation(fields: [deviceId], references: [id])
 }
 
 model DeviceDetail {
@@ -89,9 +86,8 @@ model DeviceDetail {
   name      String
   value     String
   updatedAt DateTime @updatedAt
-
-  deviceId Int    @unique
-  device   Device @relation(fields: [deviceId], references: [id])
+  deviceId  Int      @unique
+  device    Device   @relation(fields: [deviceId], references: [id])
 }
 
 model SecurityEvent {
@@ -104,6 +100,8 @@ model SecurityEvent {
   module         String
   type           String
   companyName    String
+  device         Device?  @relation(fields: [deviceId], references: [id])
+  deviceId       Int?
 }
 
 model Recomendation {
@@ -111,9 +109,8 @@ model Recomendation {
   text      String   @db.Text
   createdAt DateTime @default(now())
   updatedAt DateTime @updatedAt
-
-  clientId Int    @unique
-  client   Client @relation(fields: [clientId], references: [id])
+  clientId  Int      @unique
+  client    Client   @relation(fields: [clientId], references: [id])
 }
 
 model Disclaimer {
@@ -121,48 +118,42 @@ model Disclaimer {
   text      String   @db.Text
   createdAt DateTime @default(now())
   updatedAt DateTime @updatedAt
-
-  clientId Int    @unique
-  client   Client @relation(fields: [clientId], references: [id])
+  clientId  Int      @unique
+  client    Client   @relation(fields: [clientId], references: [id])
 }
 
 model BusinessUnit {
   id          Int     @id
   description String
   street      Boolean
-
-  clientId Int    @unique
-  Client   Client @relation(fields: [clientId], references: [id])
+  clientId    Int     @unique
+  Client      Client  @relation(fields: [clientId], references: [id])
 }
 
 model MicrosoftSku {
-  id   String @id
-  name String
-
+  id                      String                   @id
+  name                    String
   microsoftAccounts       MicrosoftAccount[]
   microsoftSubscribedSkus MicrosoftSubscribedSku[]
 }
 
 model MicrosoftAccount {
-  id          String   @id
-  displayName String
-  email       String
-  updatedAt   DateTime @updatedAt
-
+  id            String         @id
+  displayName   String
+  email         String
+  updatedAt     DateTime       @updatedAt
   microsoftSkus MicrosoftSku[]
-
-  clientId Int
-  client   Client @relation(fields: [clientId], references: [id])
+  clientId      Int
+  client        Client         @relation(fields: [clientId], references: [id])
 }
 
 model MicrosoftSubscribedSku {
-  id        String   @id @default(cuid())
+  id        String       @id @default(cuid())
   qty       Int
   used      Int
-  updatedAt DateTime @updatedAt
-
-  skuId    String
-  sku      MicrosoftSku @relation(fields: [skuId], references: [id])
-  clientId Int
-  client   Client       @relation(fields: [clientId], references: [id])
+  updatedAt DateTime     @updatedAt
+  skuId     String
+  sku       MicrosoftSku @relation(fields: [skuId], references: [id])
+  clientId  Int
+  client    Client       @relation(fields: [clientId], references: [id])
 }

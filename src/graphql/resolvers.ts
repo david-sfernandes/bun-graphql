@@ -1,7 +1,7 @@
 import { GraphQLError } from "graphql";
+import jwt from "jsonwebtoken";
 import SECRET from "../constant/secret";
 import type { GraphQLContext } from "../types/context";
-import jwt from "jsonwebtoken";
 
 const resolvers = {
   Client: {
@@ -37,6 +37,15 @@ const resolvers = {
         where: { id },
       });
       return device;
+    },
+    async securityEvents(
+      _: any,
+      { clientId }: { clientId: number },
+      ctx: GraphQLContext
+    ) {
+      return await ctx.prisma.securityEvent.findMany({
+        where: { device: { clientId: clientId } },
+      });
     },
     async login(
       _: any,

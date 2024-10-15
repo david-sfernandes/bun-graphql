@@ -37,6 +37,19 @@ type Client {
   devices: [Device!]
 }
 
+type SecurityEvent {
+  id: Int!
+  deviceName: String!
+  endpoint: String!
+  username: String!
+  occurrences: Int!
+  lastOccurrence: String!
+  module: String!
+  type: String!
+  companyName: String!
+  deviceId: Int
+}
+
 type AuthPayload {
   token: String!
 }
@@ -49,6 +62,7 @@ type Query {
   devices: [Device!]
   device(id: Int!): Device
   login(name: String!, password: String!): String
+  securityEvents(clientId: Int!): [SecurityEvent!]
 }
 
 type Mutation {

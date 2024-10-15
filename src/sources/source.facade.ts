@@ -191,10 +191,18 @@ class SourceFacade {
   }
 
   private async saveSecurityEvents(CSVEvents: Record<string, string>[]) {
-    const mountedEvents = CSVEvents.filter((event) =>
+    const mountedEvents = [];
+    CSVEvents = CSVEvents.filter((event) =>
       this.bitdefenderService.isEventValid(event)
-    ).map((event) => {
-      return {
+    );
+
+    for (const event of CSVEvents) {
+      const device = await prisma.device.findFirst({
+        where: {
+          OR: [{ mac: event["MAC"] }, { name: event["Nome do Endpoint"] }],
+        },
+      });
+      mountedEvents.push({
         deviceName: event["Nome do Endpoint"],
         module: event["Módulo"],
         companyName: event["Nome da Empresa"],
@@ -203,8 +211,9 @@ class SourceFacade {
         type: event["Tipo de Evento"],
         username: event["Usuário"],
         lastOccurrence: new Date(event["Ultima ocorrência"]),
-      };
-    });
+        deviceId: device?.id || null,
+      });
+    }
     const insertedRows = await prisma.securityEvent.createMany({
       data: mountedEvents,
     });
