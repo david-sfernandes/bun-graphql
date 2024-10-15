@@ -9,9 +9,6 @@ const permissions = shield(
       "*": allow,
     },
   },
-  {
-    fallbackError: "Sorry! Not Authorised.",
-  }
 );
 
 export default permissions;

@@ -3,7 +3,7 @@ import SECRET from "../constant/secret";
 
 const extractPayload = (authHeader: any) => {
   if (!authHeader) {
-    return false;
+    return null;
   }
   const token = authHeader.split(" ")[1];
   const payload = jwt.verify(token, SECRET);

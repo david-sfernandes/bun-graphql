@@ -28,6 +28,19 @@ model User {
   password  String
   createdAt DateTime @default(now())
   updatedAt DateTime @updatedAt
+  clients   Client[]
+}
+
+model Invite {
+  id        String    @id @default(cuid())
+  email     String    @unique
+  token     String    @unique
+  role      Role
+  usedAt    DateTime?
+  createdAt DateTime  @default(now())
+  updatedAt DateTime  @updatedAt
+  expiresAt DateTime  @default(dbgenerated("NOW() + interval '7 days'"))
+  clients   Client[]
 }
 
 model Client {
@@ -45,6 +58,8 @@ model Client {
   disclaimers             Disclaimer[]
   microsotAccounts        MicrosoftAccount[]
   microsoftSubscribedSkus MicrosoftSubscribedSku[]
+  invites                 Invite[]
+  users                   User[]
 }
 
 model Device {
