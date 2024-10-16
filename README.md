@@ -8,6 +8,7 @@ This project was created using `bun init` in bun v1.1.27. [Bun](https://bun.sh) 
 - [API Documentation](#api-documentation)
 - [Prisma](#prisma)
 - [Examples](#examples)
+- [Deploy](#deploy)
 
 [![Tecnologias Utilizadas](https://skillicons.dev/icons?i=js,ts,bun,graphql,prisma&theme=dark)](https://skillicons.dev)
 
@@ -98,4 +99,16 @@ Prisma Studio will be up on http://localhost:5555
 {
   login(name: "username", password: "password")
 }
+```
+
+## Deploy
+```bash
+# To install dependecies in production mode
+bun i --production
+
+# To generate prisma client
+bunx prisma generate
+
+# To start server
+bun start
 ```
