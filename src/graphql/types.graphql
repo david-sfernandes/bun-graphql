@@ -20,6 +20,22 @@ type Invite {
   expiresAt: String!
 }
 
+type Client {
+  id: Int!
+  name: String!
+  companyName: String!
+  category: String
+  cnpj: String!
+  isActive: Boolean
+  contractDeviceQty: Int
+  updatedAt: String!
+  devices: [Device!]
+  recomendations: [Recomendation]
+  disclaimers: [Disclaimer]
+  microsotAccounts: [MicrosoftAccount]
+  microsoftSubscribedSkus: [MicrosoftSubscribedSku]
+}
+
 type Device {
   id: Int!
   name: String!
@@ -35,18 +51,39 @@ type Device {
   isActive: Boolean!
   updatedAt: String!
   syncedAt: String!
+  securityStatus: [SecurityStatus]
+  securityEvents: [SecurityEvent]
+  deviceDetails: DeviceDetail
   clientId: Int!
 }
 
-type Client {
+type SecurityStatus {
+  id: String!
+  name: String
+  mac: String
+  group: String
+  isManaged: Boolean
+  isManagedWithBest: Boolean
+  syncedAt: String
+  deviceId: Int
+}
+
+type DeviceDetail {
   id: Int!
-  name: String!
-  companyName: String!
-  category: String
-  cnpj: String!
-  isActive: Boolean
-  contractDeviceQty: Int
-  devices: [Device!]
+  groupId: Int
+  ramal: String
+  imei1: String
+  imei2: String
+  domain: String
+  totalRam: String
+  totalStorage: String
+  usedStorage: String
+  purchaseDate: String
+  warrantyDate: String
+  clientVersion: String
+  businessUnitId: Int
+  businessUnit: BusinessUnit
+  updatedAt: String
 }
 
 type SecurityEvent {
@@ -60,6 +97,53 @@ type SecurityEvent {
   type: String!
   companyName: String!
   deviceId: Int
+}
+
+type Recomendation {
+  id: Int!
+  text: String!
+  createdAt: String!
+  updatedAt: String!
+  clientId: Int!
+}
+
+type Disclaimer {
+  id: Int!
+  text: String!
+  createdAt: String!
+  updatedAt: String!
+  clientId: Int!
+}
+
+type BusinessUnit {
+  id: Int!
+  description: String
+  street: String
+  clientId: Int
+}
+
+type MicrosoftSku {
+  id: String
+  name: String
+}
+
+type MicrosoftAccount {
+  id: Int!
+  displayName: String
+  email: String
+  updatedAt: String
+  microsoftSkus: [MicrosoftSku]
+}
+
+type MicrosoftSubscribedSku {
+  id: String!
+  qty: Int
+  used: Int
+  updatedAt: String
+  skuId: String
+  sku: MicrosoftSku
+  clientId: Int
+  client: Client
 }
 
 type AuthPayload {

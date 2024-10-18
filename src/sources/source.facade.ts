@@ -170,11 +170,17 @@ class SourceFacade {
     console.log(`- Deleted ${devices.length} old devices`);
   }
 
-  async syncSecurityStatus() {
-    let groups = await this.bitdefenderService.getNetworkGroups();
+  async syncCompanySecurityStatus() {
+    let groups = await this.bitdefenderService.getCompaniesGroups();
     await this.syncStatusByGroup(groups);
 
-    groups = await this.bitdefenderService.getCompaniesGroups();
+    const subFolders = await this.bitdefenderService.getSubFolders(groups);
+    await this.syncStatusByGroup(subFolders);
+    return groups.length;
+  }
+
+  async syncNetworkSecurityStatus() {
+    let groups = await this.bitdefenderService.getNetworkGroups();
     await this.syncStatusByGroup(groups);
 
     const subFolders = await this.bitdefenderService.getSubFolders(groups);
@@ -273,15 +279,6 @@ class SourceFacade {
       data: mountedEvents,
     });
     return insertedRows.count;
-  }
-
-  async syncMainData() {
-    const updatedClients = await this.syncClients();
-    console.log(chalk.blue(`< Updated ${updatedClients} clients`));
-    const updatedDevices = await this.syncDevices();
-    console.log(chalk.magenta(`< Updated ${updatedDevices} devices`));
-    const updatedStatus = await this.syncSecurityStatus();
-    console.log(chalk.green(`< Updated ${updatedStatus} security status`));
   }
 }
 

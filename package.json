@@ -10,7 +10,9 @@
     "@types/uuid": "^10.0.0"
   },
   "scripts": {
-    "start": "bun run index.ts",
+    "dev": "bun run index.ts",
+    "build": "bun build ./index.ts --outdir ./build --target bun",
+    "start": "bun ./build/index.js",
     "test:sources": "bun test ./test/sources/*.test.ts",
     "test:utils": "bun test ./test/utils/*.test.ts",
     "test:milvus": "bun test ./test/milvus/*.test.ts",

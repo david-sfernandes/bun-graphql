@@ -130,7 +130,7 @@ model SecurityEvent {
 }
 
 model Recomendation {
-  id        Int      @id
+  id        Int      @id @default(autoincrement())
   text      String   @db.Text
   createdAt DateTime @default(now())
   updatedAt DateTime @updatedAt
@@ -139,7 +139,7 @@ model Recomendation {
 }
 
 model Disclaimer {
-  id        Int      @id
+  id        Int      @id @default(autoincrement())
   text      String   @db.Text
   createdAt DateTime @default(now())
   updatedAt DateTime @updatedAt

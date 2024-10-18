@@ -24,9 +24,19 @@ test(
 );
 
 test(
-  "Sync all security status",
+  "Sync all network security status",
   async () => {
-    const updatedStatus = await terabyteSource.syncSecurityStatus();
+    const updatedStatus = await terabyteSource.syncNetworkSecurityStatus();
+
+    expect(updatedStatus).toBeGreaterThan(0);
+  },
+  { timeout: 180000 }
+);
+
+test.only(
+  "Sync all companies security status",
+  async () => {
+    const updatedStatus = await terabyteSource.syncCompanySecurityStatus();
 
     expect(updatedStatus).toBeGreaterThan(0);
   },
@@ -40,10 +50,10 @@ test(
 
     expect(updatedEvents).toBeGreaterThan(0);
   },
-  { timeout: 180000 }
+  { timeout: 60000 }
 );
 
-test.only(
+test(
   "Sync device details",
   async () => {
     const updatedDetails = await terabyteSource.syncDeviceDetails();

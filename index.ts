@@ -7,7 +7,7 @@ import chalk from "chalk";
 import figlet from "figlet";
 import { createYoga } from "graphql-yoga";
 import SECRET from "./src/constant/secret";
-import dailyTask from "./src/cron/daily";
+import { dailyTask1, dailyTask2 } from "./src/cron/daily";
 import monthlyTask from "./src/cron/monthly";
 import weeklyTask from "./src/cron/weekly";
 import { createContext } from "./src/graphql/context";
@@ -43,7 +43,8 @@ Bun.serve({
   fetch: yoga.fetch,
 });
 
-dailyTask.start();
+dailyTask1.start();
+dailyTask2.start();
 monthlyTask.start();
 weeklyTask.start();
 

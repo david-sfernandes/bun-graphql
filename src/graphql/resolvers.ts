@@ -13,6 +13,30 @@ const resolvers = {
       });
     },
   },
+  Device: {
+    securityEvents: async (parent: any, _: any, ctx: GraphQLContext) => {
+      return await ctx.prisma.securityEvent.findMany({
+        where: { deviceId: parent.id },
+      });
+    },
+    securityStatus: async (parent: any, _: any, ctx: GraphQLContext) => {
+      return await ctx.prisma.securityStatus.findMany({
+        where: { deviceId: parent.id }
+      });
+    },
+    deviceDetails: async (parent: any, _: any, ctx: GraphQLContext) => {
+      return await ctx.prisma.device.findFirst({
+        where: { id: parent.id }
+      });
+    }
+  },
+  DeviceDetail: {
+    businessUnit: async (parent: any, _: any, ctx: GraphQLContext) => {
+      return await ctx.prisma.businessUnit.findFirst({
+        where: { id: parent.businessUnitId }
+      });
+    }
+  },
   Query: {
     async user(_: any, { email }: { email: string }, ctx: GraphQLContext) {
       return await ctx.prisma.user.findUnique({
@@ -47,7 +71,9 @@ const resolvers = {
       if (payload?.scope === "CLIENT" && !payload?.clients.includes(clientId)) {
         return new Error("Not authorized to access this device.");
       }
-      return await ctx.prisma.device.findMany({ where: { clientId } });
+      return await ctx.prisma.device.findMany({
+        where: { clientId },
+      });
     },
     async device(_: any, { id }: { id: number }, ctx: GraphQLContext) {
       return await ctx.prisma.device.findUnique({
@@ -99,11 +125,16 @@ const resolvers = {
       }: { email: string; name: string; password: string },
       ctx: GraphQLContext
     ) {
+      const hashPassword = await Bun.password.hash(password, {
+        algorithm: "bcrypt",
+        cost: 4,
+      });
       return await ctx.prisma.user.create({
         data: {
           email,
           name,
-          password,
+          password: hashPassword,
+          role: "ADMIN",
         },
       });
     },

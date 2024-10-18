@@ -15,7 +15,7 @@ This project was created using `bun init` in bun v1.1.27. [Bun](https://bun.sh) 
 
 ## Quickstart
 
-To install dependencies:
+To install all dependencies:
 
 ```bash
 bun install
@@ -30,8 +30,9 @@ bun run index.ts
 or:
 
 ```bash
-bun start
+bun dev
 ```
+To deploy this application see [Deploy section](#deploy)
 
 > ### Note
 > For default this application run on port **8081**
@@ -108,6 +109,9 @@ bun i --production
 
 # To generate prisma client
 bunx prisma generate
+
+#To build the a single file application
+bun run build
 
 # To start server
 bun start
