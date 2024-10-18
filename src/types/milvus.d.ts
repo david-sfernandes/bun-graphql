@@ -144,3 +144,68 @@ type MilvusDeviceDetails = {
 type MilvusDeviceDetailsResp = {
   lista: MilvusDeviceDetails[];
 };
+
+type Ticket = {
+  id: number
+  tipo_ticket: string
+  categoria_primaria: string
+  categoria_secundaria: string
+  total_avaliacao: number
+  tecnico: string
+  mesa_trabalho: string
+  data_solucao: string
+  dispositivo_vinculado: string
+  data_resposta: string
+  setor: string
+  prioridade: string
+  codigo: number
+  cliente: string
+  assunto: string
+  contato: string
+  data_criacao: string
+  total_horas: string
+  origem: string
+  status: string
+  urgencia: string
+  status_sla_resposta: string
+  sla_resposta_tempo: string
+  status_sla_solucao: string
+  sla_solucao_tempo: string
+};
+
+type MilvusTicket = {
+  id: number;
+  tipo_ticket: string;
+  categoria_primaria: string;
+  categoria_secundaria: string;
+  total_avaliacao: number;
+  tecnico: string;
+  mesa_trabalho: string;
+  data_solucao: string;
+  dispositivo_vinculado: {
+    hostname: string;
+  };
+  data_resposta: string;
+  setor: string;
+  prioridade: string;
+  codigo: number;
+  cliente: string;
+  assunto: string;
+  contato: string;
+  data_criacao: string;
+  total_horas: string;
+  origem: string;
+  status: string;
+  urgencia: string;
+  sla: {
+    resposta: { tempo_gasto: string };
+    solucao: { tempo_gasto: string };
+  };
+  status_sla_resposta: string;
+  status_sla_solucao: string;
+};
+
+type MilvusTicketResp = {
+  meta: MilvusMeta;
+  lista: MilvusTicket[];
+};

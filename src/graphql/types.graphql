@@ -146,6 +146,34 @@ type MicrosoftSubscribedSku {
   client: Client
 }
 
+type Ticket {
+  id: Int!
+  tipo_ticket: String
+  categoria_primaria: String
+  categoria_secundaria: String
+  total_avaliacao: Int
+  tecnico: String
+  mesa_trabalho: String
+  data_solucao: String
+  dispositivo_vinculado: String
+  data_resposta: String
+  setor: String
+  prioridade: String
+  codigo: Int
+  cliente: String
+  assunto: String
+  contato: String
+  data_criacao: String
+  total_horas: String
+  origem: String
+  status: String
+  urgencia: String
+  status_sla_resposta: String
+  sla_resposta_tempo: String
+  status_sla_solucao: String
+  sla_solucao_tempo: String
+}
+
 type AuthPayload {
   token: String!
   name: String!
@@ -159,6 +187,7 @@ type Query {
   client(id: Int!): Client
   devices(clientId: Int!): [Device!]
   device(id: Int!): Device
+  tickets(clientId: Int!): [Ticket!]
   login(email: String!, password: String!): AuthPayload
   securityEvents(clientId: Int!): [SecurityEvent!]
 }
@@ -168,6 +197,10 @@ type Mutation {
   createInvite(email: String!, role: String!, clients: [Int!]): Invite
   createUserWithInvite(email: String!, name: String!, password: String!, token: String!): User
   updatePassword(email: String!, password: String!, newPassword: String!): User
+  createRecomendation(text: String!, clientId: Int!): Recomendation
+  createDisclaimer(text: String!, clientId: Int!): Disclaimer
+  updateRecomendation(id: Int!, text: String!): Recomendation
+  updateDisclaimer(id: Int!, text: String!): Disclaimer
 }
 
 schema {

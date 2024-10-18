@@ -111,6 +111,42 @@ class MilvusService {
     return deviceDetails.lista;
   }
 
+  async getTickets(clientId: number) {
+    const tickets: MilvusTicketResp = await this.getTicketsByPage(1, clientId);
+    if (tickets.meta.paginate.last_page === 1) return tickets.lista;
+    for (let i = 2; i <= tickets.meta.paginate.last_page; i++) {
+      const response = await this.getTicketsByPage(i, clientId);
+      tickets.lista = tickets.lista.concat(response.lista);
+    }
+    return this.formatTickets(tickets.lista);
+  }
+
+  private async getTicketsByPage(page: number = 1, clientId: number) {
+    const payload = this.buildPayload({
+      cliente_id: clientId,
+      data_hora_criacao_inicial: `${firstDayOfMonth()} 00:00:00`,
+      data_hora_criacao_final: `${lastDayOfMonth()} 23:59:59`,
+    });
+    const url = `${this.baseUrl}/chamado/listagem?is_descending=true&order_by=codigo&total_registros=200&pagina=${page}`;
+    const resp = await fetch(url, {
+      method: "POST",
+      headers: this.headers,
+      body: payload,
+    });
+    return await resp.json();
+  }
+
+  private formatTickets(tickets: MilvusTicket[]) {
+    const formattedTickets: Ticket[] = tickets.map((ticket) => ({
+      ...ticket,
+      dispositivo_vinculado: ticket.dispositivo_vinculado.hostname,
+      sla_resposta_tempo: ticket.sla?.resposta.tempo_gasto || "",
+      sla_solucao_tempo: ticket.sla?.solucao.tempo_gasto || "",
+    }));
+
+    return formattedTickets;
+  }
+
   private buildPayload(payload: MilvusPayload) {
     const reqPayload = { filtro_body: payload };
     return JSON.stringify(reqPayload);

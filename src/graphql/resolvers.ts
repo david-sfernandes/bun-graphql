@@ -3,7 +3,11 @@ import jwt from "jsonwebtoken";
 import { v1 as uuidv1 } from "uuid";
 import validatePassword from "../auth/validatePassword";
 import SECRET from "../constant/secret";
+import MilvusService from "../milvus/milvus.service";
 import type { GraphQLContext } from "../types/context";
+
+const milvusKey = Bun.env.MILVUS_KEY_TERABYTE || "";
+const milvusService = new MilvusService(milvusKey);
 
 const resolvers = {
   Client: {
@@ -21,21 +25,21 @@ const resolvers = {
     },
     securityStatus: async (parent: any, _: any, ctx: GraphQLContext) => {
       return await ctx.prisma.securityStatus.findMany({
-        where: { deviceId: parent.id }
+        where: { deviceId: parent.id },
       });
     },
     deviceDetails: async (parent: any, _: any, ctx: GraphQLContext) => {
       return await ctx.prisma.device.findFirst({
-        where: { id: parent.id }
+        where: { id: parent.id },
       });
-    }
+    },
   },
   DeviceDetail: {
     businessUnit: async (parent: any, _: any, ctx: GraphQLContext) => {
       return await ctx.prisma.businessUnit.findFirst({
-        where: { id: parent.businessUnitId }
+        where: { id: parent.businessUnitId },
       });
-    }
+    },
   },
   Query: {
     async user(_: any, { email }: { email: string }, ctx: GraphQLContext) {
@@ -79,6 +83,10 @@ const resolvers = {
       return await ctx.prisma.device.findUnique({
         where: { id },
       });
+    },
+    async tickets(_: any, { clientId }: { clientId: number }) {
+      const tickets = milvusService.getTickets(clientId);
+      return tickets;
     },
     async securityEvents(
       _: any,
@@ -223,6 +231,50 @@ const resolvers = {
         data: {
           password: hashPassword,
         },
+      });
+    },
+    async createRecomendation(
+      _: any,
+      { text, clientId }: { text: string; clientId: number },
+      ctx: GraphQLContext
+    ) {
+      return await ctx.prisma.recomendation.create({
+        data: {
+          text,
+          clientId,
+        },
+      });
+    },
+    async createDisclaimer(
+      _: any,
+      { text, clientId }: { text: string; clientId: number },
+      ctx: GraphQLContext
+    ) {
+      return await ctx.prisma.disclaimer.create({
+        data: {
+          text,
+          clientId,
+        },
+      });
+    },
+    async updateRecomendation(
+      _: any,
+      { id, text }: { id: number; text: string },
+      ctx: GraphQLContext
+    ) {
+      return await ctx.prisma.recomendation.update({
+        where: { id },
+        data: { text },
+      });
+    },
+    async updateDisclaimer(
+      _: any,
+      { id, text }: { id: number; text: string },
+      ctx: GraphQLContext
+    ) {
+      return await ctx.prisma.disclaimer.update({
+        where: { id },
+        data: { text },
       });
     },
   },
