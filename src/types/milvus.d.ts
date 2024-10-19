@@ -1,3 +1,18 @@
+type MilvusBusinessUnitResp = {
+  status_code: number;
+  dropdown: {
+    id: number;
+    cep: string;
+    logradouro: string;
+    numero: string;
+    complemento: string;
+    bairro: string;
+    cidade: string;
+    estado: string;
+    descricao: string;
+  };
+};
+
 type MilvusClient = {
   id: number;
   nome_fantasia: string?;
@@ -8,17 +23,6 @@ type MilvusClient = {
 
 type MilvusClientResp = {
   lista: MilvusClient[];
-};
-
-type MilvusMeta = {
-  paginate: {
-    current_page: number;
-    total: number;
-    to: number;
-    from: number;
-    last_page: number;
-    per_page: string;
-  };
 };
 
 type MilvusDevice = {
@@ -58,71 +62,6 @@ type MilvusDeviceResp = {
   lista: MilvusDevice[];
 };
 
-type MilvusTicket = {
-  id: number;
-  tipo_ticket: string;
-  categoria_primaria: string;
-  categoria_secundaria: string;
-  total_avaliacao: number;
-  tecnico: string;
-  mesa_trabalho: string;
-  data_solucao: string;
-  dispositivo_vinculado: { hostname: string };
-  data_resposta: string;
-  setor: string;
-  prioridade: string;
-  codigo: number;
-  cliente: string;
-  assunto: string;
-  contato: string;
-  data_criacao: string;
-  total_horas: string;
-  origem: string;
-  status: string;
-  urgencia: string;
-  sla: MilvusSla?;
-  status_sla_resposta: string;
-  status_sla_solucao: string;
-};
-
-type MilvusTicketResp = {
-  meta: MilvusMeta;
-  lista: MilvusTicket[];
-};
-
-type MilvusSla = {
-  resposta: {
-    tempo_gasto: string;
-  };
-  solucao: {
-    tempo_gasto: string;
-  };
-};
-
-type MilvusPayload = {
-  assunto?: string;
-  cliente_id?: number;
-  data_hora_criacao_inicial?: string;
-  data_hora_criacao_final?: string;
-  chamado_categoria_primaria?: string;
-  chamado_categoria_secundaria?: string;
-};
-
-type MilvusBusinessUnitResp = {
-  status_code: number;
-  dropdown: {
-    id: number;
-    cep: string;
-    logradouro: string;
-    numero: string;
-    complemento: string;
-    bairro: string;
-    cidade: string;
-    estado: string;
-    descricao: string;
-  };
-};
-
 type MilvusDeviceDetails = {
   id: number;
   cliente_id: number;
@@ -145,32 +84,33 @@ type MilvusDeviceDetailsResp = {
   lista: MilvusDeviceDetails[];
 };
 
-type Ticket = {
-  id: number
-  tipo_ticket: string
-  categoria_primaria: string
-  categoria_secundaria: string
-  total_avaliacao: number
-  tecnico: string
-  mesa_trabalho: string
-  data_solucao: string
-  dispositivo_vinculado: string
-  data_resposta: string
-  setor: string
-  prioridade: string
-  codigo: number
-  cliente: string
-  assunto: string
-  contato: string
-  data_criacao: string
-  total_horas: string
-  origem: string
-  status: string
-  urgencia: string
-  status_sla_resposta: string
-  sla_resposta_tempo: string
-  status_sla_solucao: string
-  sla_solucao_tempo: string
+type MilvusMeta = {
+  paginate: {
+    current_page: number;
+    total: number;
+    to: number;
+    from: number;
+    last_page: number;
+    per_page: string;
+  };
+};
+
+type MilvusPayload = {
+  assunto?: string;
+  cliente_id?: number;
+  data_hora_criacao_inicial?: string;
+  data_hora_criacao_final?: string;
+  chamado_categoria_primaria?: string;
+  chamado_categoria_secundaria?: string;
+};
+
+type MilvusSla = {
+  resposta: {
+    tempo_gasto: string;
+  };
+  solucao: {
+    tempo_gasto: string;
+  };
 };
 
 type MilvusTicket = {
@@ -182,9 +122,7 @@ type MilvusTicket = {
   tecnico: string;
   mesa_trabalho: string;
   data_solucao: string;
-  dispositivo_vinculado: {
-    hostname: string;
-  };
+  dispositivo_vinculado: { hostname: string } | null;
   data_resposta: string;
   setor: string;
   prioridade: string;
@@ -208,4 +146,32 @@ type MilvusTicket = {
 type MilvusTicketResp = {
   meta: MilvusMeta;
   lista: MilvusTicket[];
+};
+
+type Ticket = {
+  id: number;
+  tipo_ticket: string;
+  categoria_primaria: string;
+  categoria_secundaria: string;
+  total_avaliacao: number;
+  tecnico: string;
+  mesa_trabalho: string;
+  data_solucao: string;
+  dispositivo_vinculado: string;
+  data_resposta: string;
+  setor: string;
+  prioridade: string;
+  codigo: number;
+  cliente: string;
+  assunto: string;
+  contato: string;
+  data_criacao: string;
+  total_horas: string;
+  origem: string;
+  status: string;
+  urgencia: string;
+  status_sla_resposta: string;
+  sla_resposta_tempo: string;
+  status_sla_solucao: string;
+  sla_solucao_tempo: string;
 };

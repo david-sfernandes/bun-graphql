@@ -52,37 +52,6 @@ class MilvusService {
     return devices;
   }
 
-  async getClientTickets(clientId: number) {
-    const tickets: MilvusTicket[] = [];
-    let page = 1;
-    let response = await this.getClientTicketsByPage(clientId, page);
-    tickets.push(...response.lista);
-    while (
-      response.meta.paginate.current_page < response.meta.paginate.last_page
-    ) {
-      page++;
-      response = await this.getClientTicketsByPage(clientId, page);
-      tickets.push(...response.lista);
-    }
-    return tickets;
-  }
-
-  async getClientTicketsByPage(clientId: number, page: number = 1) {
-    const url = `${this.baseUrl}/chamado/listagem?is_descending=true&order_by=codigo&total_registros=200&pagina=${page}`;
-    const payload = this.buildPayload({
-      cliente_id: clientId,
-      data_hora_criacao_inicial: `${firstDayOfMonth()} 00:00:00`,
-      data_hora_criacao_final: `${lastDayOfMonth()} 23:59:59`,
-    });
-    const resp = await fetch(url, {
-      method: "POST",
-      headers: this.headers,
-      body: payload,
-    });
-    const tickets: MilvusTicketResp = await resp.json();
-    return tickets;
-  }
-
   async getClientBusinessUnits(clientId: number, key: string) {
     const url = `https://api.milvus.com.br/api/clienteendereco/dropdown?cliente_id=${clientId}`;
     const resp = await fetch(url, {
@@ -112,16 +81,20 @@ class MilvusService {
   }
 
   async getTickets(clientId: number) {
-    const tickets: MilvusTicketResp = await this.getTicketsByPage(1, clientId);
-    if (tickets.meta.paginate.last_page === 1) return tickets.lista;
-    for (let i = 2; i <= tickets.meta.paginate.last_page; i++) {
+    const milvusTickets: MilvusTicketResp = await this.getTicketsByPage(
+      1,
+      clientId
+    );
+    const tickets: Ticket[] = this.formatTickets(milvusTickets.lista);
+    if (milvusTickets.meta.paginate.last_page === 1) return tickets;
+    for (let i = 2; i <= milvusTickets.meta.paginate.last_page; i++) {
       const response = await this.getTicketsByPage(i, clientId);
-      tickets.lista = tickets.lista.concat(response.lista);
+      tickets.push(...this.formatTickets(response.lista));
     }
-    return this.formatTickets(tickets.lista);
+    return tickets;
   }
 
-  private async getTicketsByPage(page: number = 1, clientId: number) {
+  async getTicketsByPage(page: number = 1, clientId: number) {
     const payload = this.buildPayload({
       cliente_id: clientId,
       data_hora_criacao_inicial: `${firstDayOfMonth()} 00:00:00`,
@@ -138,8 +111,29 @@ class MilvusService {
 
   private formatTickets(tickets: MilvusTicket[]) {
     const formattedTickets: Ticket[] = tickets.map((ticket) => ({
-      ...ticket,
-      dispositivo_vinculado: ticket.dispositivo_vinculado.hostname,
+      id: ticket.id,
+      assunto: ticket.assunto,
+      categoria_primaria: ticket.categoria_primaria,
+      categoria_secundaria: ticket.categoria_secundaria,
+      cliente: ticket.cliente,
+      codigo: ticket.codigo,
+      data_criacao: ticket.data_criacao,
+      contato: ticket.contato,
+      data_resposta: ticket.data_resposta,
+      data_solucao: ticket.data_solucao,
+      mesa_trabalho: ticket.mesa_trabalho,
+      prioridade: ticket.prioridade,
+      status: ticket.status,
+      origem: ticket.origem,
+      setor: ticket.setor,
+      tecnico: ticket.tecnico,
+      tipo_ticket: ticket.tipo_ticket,
+      total_avaliacao: ticket.total_avaliacao,
+      urgencia: ticket.urgencia,
+      total_horas: ticket.total_horas,
+      status_sla_resposta: ticket.status_sla_resposta,
+      status_sla_solucao: ticket.status_sla_solucao,
+      dispositivo_vinculado: ticket.dispositivo_vinculado?.hostname || "",
       sla_resposta_tempo: ticket.sla?.resposta.tempo_gasto || "",
       sla_solucao_tempo: ticket.sla?.solucao.tempo_gasto || "",
     }));

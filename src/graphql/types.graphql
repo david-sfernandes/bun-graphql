@@ -32,7 +32,7 @@ type Client {
   devices: [Device!]
   recomendations: [Recomendation]
   disclaimers: [Disclaimer]
-  microsotAccounts: [MicrosoftAccount]
+  microsoftAccounts: [MicrosoftAccount]
   microsoftSubscribedSkus: [MicrosoftSubscribedSku]
 }
 
@@ -128,7 +128,7 @@ type MicrosoftSku {
 }
 
 type MicrosoftAccount {
-  id: Int!
+  id: String!
   displayName: String
   email: String
   updatedAt: String
@@ -185,11 +185,13 @@ type Query {
   users: [User!]
   clients: [Client!]
   client(id: Int!): Client
-  devices(clientId: Int!): [Device!]
+  devices(clientId: Int!, typeFilter: [String]): [Device!]
   device(id: Int!): Device
   tickets(clientId: Int!): [Ticket!]
   login(email: String!, password: String!): AuthPayload
   securityEvents(clientId: Int!): [SecurityEvent!]
+  microsoftAccount(clientId: Int!): [MicrosoftAccount!]
+  microsoftSubscribedSku(clientId: Int!): [MicrosoftSubscribedSku!]
 }
 
 type Mutation {

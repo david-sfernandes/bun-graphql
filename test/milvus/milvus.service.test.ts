@@ -13,7 +13,14 @@ test("Get client list", async () => {
 });
 
 test("Get first page of tickets by client", async () => {
-  const tickets = await milvusService.getClientTicketsByPage(87070, 1);
+  const tickets = await milvusService.getTicketsByPage(87070, 1);
 
   expect(tickets).toBeInstanceOf(Object);
+});
+
+test.only("Get client tickets", async () => {
+  const tickets: Ticket[] = await milvusService.getTickets(87070);
+
+  expect(tickets).toBeInstanceOf(Array);
+  expect(tickets.length).toBeGreaterThan(0);
 });

@@ -16,6 +16,30 @@ const resolvers = {
         where: { clientId: parent.id },
       });
     },
+    microsoftAccounts: async (parent: any, _: any, ctx: GraphQLContext) => {
+      return await ctx.prisma.microsoftAccount.findMany({
+        where: { clientId: parent.id },
+      });
+    },
+    microsoftSubscribedSkus: async (
+      parent: any,
+      _: any,
+      ctx: GraphQLContext
+    ) => {
+      return await ctx.prisma.microsoftSubscribedSku.findMany({
+        where: { clientId: parent.id },
+      });
+    },
+    recomendations: async (parent: any, _: any, ctx: GraphQLContext) => {
+      return await ctx.prisma.recomendation.findMany({
+        where: { clientId: parent.id },
+      });
+    },
+    disclaimers: async (parent: any, _: any, ctx: GraphQLContext) => {
+      return await ctx.prisma.disclaimer.findMany({
+        where: { clientId: parent.id },
+      });
+    },
   },
   Device: {
     securityEvents: async (parent: any, _: any, ctx: GraphQLContext) => {
@@ -38,6 +62,20 @@ const resolvers = {
     businessUnit: async (parent: any, _: any, ctx: GraphQLContext) => {
       return await ctx.prisma.businessUnit.findFirst({
         where: { id: parent.businessUnitId },
+      });
+    },
+  },
+  MicrosoftSubscribedSku: {
+    sku: async (parent: any, _: any, ctx: GraphQLContext) => {
+      return await ctx.prisma.microsoftSku.findFirst({
+        where: { id: parent.skuId },
+      });
+    },
+  },
+  MicrosoftAccount: {
+    microsoftSkus: async (parent: any, _: any, ctx: GraphQLContext) => {
+      return await ctx.prisma.microsoftSku.findMany({
+        where: { microsoftAccounts: { some: { id: parent.id } } },
       });
     },
   },
@@ -68,15 +106,18 @@ const resolvers = {
     },
     async devices(
       _: any,
-      { clientId }: { clientId: number },
+      { clientId, typeFilter }: { clientId: number; typeFilter?: string[] },
       ctx: GraphQLContext
     ) {
       const payload = ctx.jwt?.payload;
+      const where =
+        typeFilter && typeFilter.length > 0 ? { type: { in: typeFilter } } : {};
+
       if (payload?.scope === "CLIENT" && !payload?.clients.includes(clientId)) {
         return new Error("Not authorized to access this device.");
       }
       return await ctx.prisma.device.findMany({
-        where: { clientId },
+        where: { clientId, ...where },
       });
     },
     async device(_: any, { id }: { id: number }, ctx: GraphQLContext) {
@@ -85,7 +126,7 @@ const resolvers = {
       });
     },
     async tickets(_: any, { clientId }: { clientId: number }) {
-      const tickets = milvusService.getTickets(clientId);
+      const tickets: Ticket[] = await milvusService.getTickets(clientId);
       return tickets;
     },
     async securityEvents(
@@ -121,6 +162,24 @@ const resolvers = {
       );
 
       return { token, name: user?.name, role: user?.role };
+    },
+    async microsoftAccount(
+      _: any,
+      { clientId }: { clientId: number },
+      ctx: GraphQLContext
+    ) {
+      return await ctx.prisma.microsoftAccount.findMany({
+        where: { clientId },
+      });
+    },
+    async microsoftSubscribedSku(
+      _: any,
+      { clientId }: { clientId: number },
+      ctx: GraphQLContext
+    ) {
+      return await ctx.prisma.microsoftSubscribedSku.findMany({
+        where: { clientId },
+      });
     },
   },
   Mutation: {

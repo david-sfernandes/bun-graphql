@@ -56,7 +56,7 @@ model Client {
   devices                 Device[]
   recomendations          Recomendation[]
   disclaimers             Disclaimer[]
-  microsotAccounts        MicrosoftAccount[]
+  microsoftAccounts       MicrosoftAccount[]
   microsoftSubscribedSkus MicrosoftSubscribedSku[]
   invites                 Invite[]
   users                   User[]
