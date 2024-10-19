@@ -134,7 +134,7 @@ model Recomendation {
   text      String   @db.Text
   createdAt DateTime @default(now())
   updatedAt DateTime @updatedAt
-  clientId  Int      @unique
+  clientId  Int      
   client    Client   @relation(fields: [clientId], references: [id])
 }
 
@@ -143,7 +143,7 @@ model Disclaimer {
   text      String   @db.Text
   createdAt DateTime @default(now())
   updatedAt DateTime @updatedAt
-  clientId  Int      @unique
+  clientId  Int      
   client    Client   @relation(fields: [clientId], references: [id])
 }
 

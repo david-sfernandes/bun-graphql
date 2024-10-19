@@ -336,6 +336,24 @@ const resolvers = {
         data: { text },
       });
     },
+    async deleteRecomendation(
+      _: any,
+      { id }: { id: number },
+      ctx: GraphQLContext
+    ) {
+      return await ctx.prisma.recomendation.delete({
+        where: { id },
+      });
+    },
+    async deleteDisclaimer(
+      _: any,
+      { id }: { id: number },
+      ctx: GraphQLContext
+    ) {
+      return await ctx.prisma.disclaimer.delete({
+        where: { id },
+      });
+    },
   },
 };
 

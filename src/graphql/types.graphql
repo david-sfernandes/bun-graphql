@@ -203,6 +203,8 @@ type Mutation {
   createDisclaimer(text: String!, clientId: Int!): Disclaimer
   updateRecomendation(id: Int!, text: String!): Recomendation
   updateDisclaimer(id: Int!, text: String!): Disclaimer
+  deleteRecomendation(id: Int!): Recomendation
+  deleteDisclaimer(id: Int!): Disclaimer
 }
 
 schema {
