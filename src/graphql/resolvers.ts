@@ -61,7 +61,7 @@ const resolvers = {
   DeviceDetail: {
     businessUnit: async (parent: any, _: any, ctx: GraphQLContext) => {
       return await ctx.prisma.businessUnit.findFirst({
-        where: { id: parent.businessUnitId },
+        where: { deviceDetails: { some: { id: parent.id } } },
       });
     },
   },
@@ -94,6 +94,7 @@ const resolvers = {
       if (role === "CLIENT") {
         return await ctx.prisma.client.findMany({
           where: { id: { in: ctx.jwt?.payload.clients } },
+          orderBy: { category: "asc" },
         });
       }
       return await ctx.prisma.client.findMany();
