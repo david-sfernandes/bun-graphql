@@ -12,12 +12,12 @@ const dailyTask1 = cron.schedule(
     console.log(chalk.magenta(`< Updated ${countDevices} devices`));
     const countStatus = await terabyteSource.syncNetworkSecurityStatus();
     console.log(
-      chalk.green(`< Updated ${countStatus} network security status`)
+      chalk.green(`< Updated ${countStatus} network security status`),
     );
   },
   {
     timezone: "America/Sao_Paulo",
-  }
+  },
 );
 
 const dailyTask2 = cron.schedule(
@@ -26,13 +26,12 @@ const dailyTask2 = cron.schedule(
     const terabyteSource = new SourceFacade();
     const countStatus = await terabyteSource.syncCompanySecurityStatus();
     console.log(
-      chalk.green(`< Updated ${countStatus} company security status`)
+      chalk.green(`< Updated ${countStatus} company security status`),
     );
   },
   {
     timezone: "America/Sao_Paulo",
-  }
+  },
 );
 
 export { dailyTask1, dailyTask2 };
-

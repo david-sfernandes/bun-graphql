@@ -14,8 +14,8 @@ class SourceFacade {
 
   constructor() {
     this.milvusKey = Bun.env.MILVUS_KEY_TERABYTE || "";
-    this.bitdefenderKey = process.env.BITDEFENDER_KEY_TERABYTE || "";
-    this.securityReportId = process.env.BITDEFENDER_SEC_REPORT_ID || "";
+    this.bitdefenderKey = Bun.env.BITDEFENDER_KEY_TERABYTE || "";
+    this.securityReportId = Bun.env.BITDEFENDER_SEC_REPORT_ID || "";
 
     this.bitdefenderService = new BitdefenderService(
       this.bitdefenderKey,
