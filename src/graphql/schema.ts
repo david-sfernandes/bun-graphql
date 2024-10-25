@@ -4,7 +4,7 @@ import { createSchema } from "graphql-yoga";
 import permissions from "./permissions";
 
 const baseSchema = createSchema({
-  typeDefs: await loadFiles("./**/types.graphql"),
+  typeDefs: await loadFiles("./**/*.graphql"),
   resolvers: await loadFiles("./**/resolvers.ts"),
 });
 

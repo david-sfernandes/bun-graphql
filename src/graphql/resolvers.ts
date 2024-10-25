@@ -3,8 +3,9 @@ import jwt from "jsonwebtoken";
 import { v1 as uuidv1 } from "uuid";
 import validatePassword from "../auth/validatePassword";
 import SECRET from "../constant/secret";
-import MilvusService from "../milvus/milvus.service";
+import MilvusService from "../services/milvus.service";
 import type { GraphQLContext } from "../types/context";
+import type { MicrosoftSku } from "@prisma/client";
 
 const milvusKey = Bun.env.MILVUS_KEY_TERABYTE || "";
 const milvusService = new MilvusService(milvusKey);
@@ -24,7 +25,7 @@ const resolvers = {
     microsoftSubscribedSkus: async (
       parent: any,
       _: any,
-      ctx: GraphQLContext
+      ctx: GraphQLContext,
     ) => {
       return await ctx.prisma.microsoftSubscribedSku.findMany({
         where: { clientId: parent.id },
@@ -108,11 +109,12 @@ const resolvers = {
     async devices(
       _: any,
       { clientId, typeFilter }: { clientId: number; typeFilter?: string[] },
-      ctx: GraphQLContext
+      ctx: GraphQLContext,
     ) {
       const payload = ctx.jwt?.payload;
-      const where =
-        typeFilter && typeFilter.length > 0 ? { type: { in: typeFilter } } : {};
+      const where = typeFilter && typeFilter.length > 0
+        ? { type: { in: typeFilter } }
+        : {};
 
       if (payload?.scope === "CLIENT" && !payload?.clients.includes(clientId)) {
         return new Error("Not authorized to access this device.");
@@ -133,7 +135,7 @@ const resolvers = {
     async securityEvents(
       _: any,
       { clientId }: { clientId: number },
-      ctx: GraphQLContext
+      ctx: GraphQLContext,
     ) {
       return await ctx.prisma.securityEvent.findMany({
         where: { device: { clientId: clientId } },
@@ -142,7 +144,7 @@ const resolvers = {
     async login(
       _: any,
       { email, password }: { email: string; password: string },
-      ctx: GraphQLContext
+      ctx: GraphQLContext,
     ) {
       const user = await ctx.prisma.user.findUnique({
         where: { email },
@@ -159,7 +161,7 @@ const resolvers = {
           clients: user?.clients.map((client) => client.id),
         },
         SECRET,
-        { expiresIn: "1d" }
+        { expiresIn: "1d" },
       );
 
       return { token, name: user?.name, role: user?.role };
@@ -167,7 +169,7 @@ const resolvers = {
     async microsoftAccount(
       _: any,
       { clientId }: { clientId: number },
-      ctx: GraphQLContext
+      ctx: GraphQLContext,
     ) {
       return await ctx.prisma.microsoftAccount.findMany({
         where: { clientId },
@@ -176,7 +178,7 @@ const resolvers = {
     async microsoftSubscribedSku(
       _: any,
       { clientId }: { clientId: number },
-      ctx: GraphQLContext
+      ctx: GraphQLContext,
     ) {
       return await ctx.prisma.microsoftSubscribedSku.findMany({
         where: { clientId },
@@ -191,7 +193,7 @@ const resolvers = {
         name,
         password,
       }: { email: string; name: string; password: string },
-      ctx: GraphQLContext
+      ctx: GraphQLContext,
     ) {
       const hashPassword = await Bun.password.hash(password, {
         algorithm: "bcrypt",
@@ -213,7 +215,7 @@ const resolvers = {
         role,
         clients,
       }: { email: string; role: Role; clients: number[] },
-      ctx: GraphQLContext
+      ctx: GraphQLContext,
     ) {
       if (role === "ADMIN") {
         throw new GraphQLError("Cannot create an admin invite!");
@@ -238,7 +240,7 @@ const resolvers = {
         password,
         token,
       }: { email: string; name: string; password: string; token: string },
-      ctx: GraphQLContext
+      ctx: GraphQLContext,
     ) {
       const invite = await ctx.prisma.invite.findUnique({
         where: { token },
@@ -276,7 +278,7 @@ const resolvers = {
         password,
         newPassword,
       }: { email: string; password: string; newPassword: string },
-      ctx: GraphQLContext
+      ctx: GraphQLContext,
     ) {
       const user = await ctx.prisma.user.findUnique({ where: { email } });
       const isPasswordValid = await validatePassword(user, password);
@@ -296,7 +298,7 @@ const resolvers = {
     async createRecomendation(
       _: any,
       { text, clientId }: { text: string; clientId: number },
-      ctx: GraphQLContext
+      ctx: GraphQLContext,
     ) {
       return await ctx.prisma.recomendation.create({
         data: {
@@ -308,7 +310,7 @@ const resolvers = {
     async createDisclaimer(
       _: any,
       { text, clientId }: { text: string; clientId: number },
-      ctx: GraphQLContext
+      ctx: GraphQLContext,
     ) {
       return await ctx.prisma.disclaimer.create({
         data: {
@@ -320,7 +322,7 @@ const resolvers = {
     async updateRecomendation(
       _: any,
       { id, text }: { id: number; text: string },
-      ctx: GraphQLContext
+      ctx: GraphQLContext,
     ) {
       return await ctx.prisma.recomendation.update({
         where: { id },
@@ -330,7 +332,7 @@ const resolvers = {
     async updateDisclaimer(
       _: any,
       { id, text }: { id: number; text: string },
-      ctx: GraphQLContext
+      ctx: GraphQLContext,
     ) {
       return await ctx.prisma.disclaimer.update({
         where: { id },
@@ -340,7 +342,7 @@ const resolvers = {
     async deleteRecomendation(
       _: any,
       { id }: { id: number },
-      ctx: GraphQLContext
+      ctx: GraphQLContext,
     ) {
       return await ctx.prisma.recomendation.delete({
         where: { id },
@@ -349,11 +351,38 @@ const resolvers = {
     async deleteDisclaimer(
       _: any,
       { id }: { id: number },
-      ctx: GraphQLContext
+      ctx: GraphQLContext,
     ) {
       return await ctx.prisma.disclaimer.delete({
         where: { id },
       });
+    },
+    // async updateMSSkus(
+    //   _: any,
+    //   { microsoftSkus }: { microsoftSkus: MicrosoftSku[] },
+    //   ctx: GraphQLContext,
+    // ) {
+    //   microsoftSkus.forEach(async (sku) => {
+    //     await ctx.prisma.microsoftSku.upsert({
+    //       where: { id: sku.id },
+    //       update: { name: sku.name },
+    //       create: sku,
+    //     });
+    //   });
+    // },
+    // async updateMSSubscribedSkus(
+    //   _: any,
+    //   { subscribedSkus }: { subscribedSkus: any },
+    //   ctx: GraphQLContext,
+    // ) {
+    //   console.log(subscribedSkus);
+    // },
+    async updateMSAccounts(
+      _: any,
+      { value }: { value: ReqMSAccount[] },
+      ctx: GraphQLContext,
+    ) {
+      console.log(value.length);
     },
   },
 };

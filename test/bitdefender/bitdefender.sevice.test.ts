@@ -1,6 +1,6 @@
 import { beforeAll, expect, test } from "bun:test";
 
-import BitdefenderService from "@/src/bitdefender/bitdefender.service";
+import BitdefenderService from "@/src/services/bitdefender.service";
 
 const key = process.env.BITDEFENDER_KEY_TERABYTE || "";
 const secReportId = process.env.BITDEFENDER_SEC_REPORT_ID || "";

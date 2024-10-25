@@ -1,7 +1,7 @@
 import chalk from "chalk";
-import BitdefenderService from "../bitdefender/bitdefender.service";
+import BitdefenderService from "../services/bitdefender.service";
 import prisma from "../db/prisma";
-import MilvusService from "../milvus/milvus.service";
+import MilvusService from "../services/milvus.service";
 import cleanNumericString from "../utils/cleanNumericString";
 
 class SourceFacade {

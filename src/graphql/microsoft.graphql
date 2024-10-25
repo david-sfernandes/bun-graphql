@@ -1,0 +1,21 @@
+input ReqMSAccount {
+  id: String!
+  displayName: String
+  mail: String
+  userPrincipalName: String
+  assignedLicenses: [ReqMSAccountSku]
+}
+
+input ReqMSAccountSku {
+  disabledPlans: [String]
+  skuId: String
+}
+
+type Mutation {
+  
+  updateMSAccounts(value: [ReqMSAccount]): [MicrosoftAccount]
+}
+
+schema {
+  mutation: Mutation
+}
