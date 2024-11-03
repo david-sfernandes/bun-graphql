@@ -36,6 +36,16 @@ type Client {
   microsoftSubscribedSkus: [MicrosoftSubscribedSku]
 }
 
+input ReqClient {
+  id: Int!
+  name: String!
+  companyName: String!
+  category: String
+  cnpj: String!
+  isActive: Boolean
+  contractDeviceQty: Int
+}
+
 type Device {
   id: Int!
   name: String!
@@ -197,12 +207,18 @@ type Query {
 type Mutation {
   createUser(email: String, name: String!, password: String): User
   createInvite(email: String!, role: String!, clients: [Int!]): Invite
-  createUserWithInvite(email: String!, name: String!, password: String!, token: String!): User
+  createUserWithInvite(
+    email: String!
+    name: String!
+    password: String!
+    token: String!
+  ): User
   updatePassword(email: String!, password: String!, newPassword: String!): User
   createRecomendation(text: String!, clientId: Int!): Recomendation
   createDisclaimer(text: String!, clientId: Int!): Disclaimer
   updateRecomendation(id: Int!, text: String!): Recomendation
   updateDisclaimer(id: Int!, text: String!): Disclaimer
+  updateClient(client: ReqClient!): Client
   deleteRecomendation(id: Int!): Recomendation
   deleteDisclaimer(id: Int!): Disclaimer
 }

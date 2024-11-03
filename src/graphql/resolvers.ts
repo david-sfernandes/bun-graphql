@@ -25,7 +25,7 @@ const resolvers = {
     microsoftSubscribedSkus: async (
       parent: any,
       _: any,
-      ctx: GraphQLContext,
+      ctx: GraphQLContext
     ) => {
       return await ctx.prisma.microsoftSubscribedSku.findMany({
         where: { clientId: parent.id },
@@ -109,12 +109,11 @@ const resolvers = {
     async devices(
       _: any,
       { clientId, typeFilter }: { clientId: number; typeFilter?: string[] },
-      ctx: GraphQLContext,
+      ctx: GraphQLContext
     ) {
       const payload = ctx.jwt?.payload;
-      const where = typeFilter && typeFilter.length > 0
-        ? { type: { in: typeFilter } }
-        : {};
+      const where =
+        typeFilter && typeFilter.length > 0 ? { type: { in: typeFilter } } : {};
 
       if (payload?.scope === "CLIENT" && !payload?.clients.includes(clientId)) {
         return new Error("Not authorized to access this device.");
@@ -135,7 +134,7 @@ const resolvers = {
     async securityEvents(
       _: any,
       { clientId }: { clientId: number },
-      ctx: GraphQLContext,
+      ctx: GraphQLContext
     ) {
       return await ctx.prisma.securityEvent.findMany({
         where: { device: { clientId: clientId } },
@@ -144,7 +143,7 @@ const resolvers = {
     async login(
       _: any,
       { email, password }: { email: string; password: string },
-      ctx: GraphQLContext,
+      ctx: GraphQLContext
     ) {
       const user = await ctx.prisma.user.findUnique({
         where: { email },
@@ -161,7 +160,7 @@ const resolvers = {
           clients: user?.clients.map((client) => client.id),
         },
         SECRET,
-        { expiresIn: "1d" },
+        { expiresIn: "1d" }
       );
 
       return { token, name: user?.name, role: user?.role };
@@ -169,7 +168,7 @@ const resolvers = {
     async microsoftAccount(
       _: any,
       { clientId }: { clientId: number },
-      ctx: GraphQLContext,
+      ctx: GraphQLContext
     ) {
       return await ctx.prisma.microsoftAccount.findMany({
         where: { clientId },
@@ -178,7 +177,7 @@ const resolvers = {
     async microsoftSubscribedSku(
       _: any,
       { clientId }: { clientId: number },
-      ctx: GraphQLContext,
+      ctx: GraphQLContext
     ) {
       return await ctx.prisma.microsoftSubscribedSku.findMany({
         where: { clientId },
@@ -193,7 +192,7 @@ const resolvers = {
         name,
         password,
       }: { email: string; name: string; password: string },
-      ctx: GraphQLContext,
+      ctx: GraphQLContext
     ) {
       const hashPassword = await Bun.password.hash(password, {
         algorithm: "bcrypt",
@@ -215,7 +214,7 @@ const resolvers = {
         role,
         clients,
       }: { email: string; role: Role; clients: number[] },
-      ctx: GraphQLContext,
+      ctx: GraphQLContext
     ) {
       if (role === "ADMIN") {
         throw new GraphQLError("Cannot create an admin invite!");
@@ -240,7 +239,7 @@ const resolvers = {
         password,
         token,
       }: { email: string; name: string; password: string; token: string },
-      ctx: GraphQLContext,
+      ctx: GraphQLContext
     ) {
       const invite = await ctx.prisma.invite.findUnique({
         where: { token },
@@ -271,6 +270,13 @@ const resolvers = {
       });
       return user;
     },
+    async updateClient(
+      _: any,
+      { client }: { client: any },
+      ctx: GraphQLContext
+    ) {
+      console.log(client);
+    },
     async updatePassword(
       _: any,
       {
@@ -278,7 +284,7 @@ const resolvers = {
         password,
         newPassword,
       }: { email: string; password: string; newPassword: string },
-      ctx: GraphQLContext,
+      ctx: GraphQLContext
     ) {
       const user = await ctx.prisma.user.findUnique({ where: { email } });
       const isPasswordValid = await validatePassword(user, password);
@@ -298,7 +304,7 @@ const resolvers = {
     async createRecomendation(
       _: any,
       { text, clientId }: { text: string; clientId: number },
-      ctx: GraphQLContext,
+      ctx: GraphQLContext
     ) {
       return await ctx.prisma.recomendation.create({
         data: {
@@ -310,7 +316,7 @@ const resolvers = {
     async createDisclaimer(
       _: any,
       { text, clientId }: { text: string; clientId: number },
-      ctx: GraphQLContext,
+      ctx: GraphQLContext
     ) {
       return await ctx.prisma.disclaimer.create({
         data: {
@@ -322,7 +328,7 @@ const resolvers = {
     async updateRecomendation(
       _: any,
       { id, text }: { id: number; text: string },
-      ctx: GraphQLContext,
+      ctx: GraphQLContext
     ) {
       return await ctx.prisma.recomendation.update({
         where: { id },
@@ -332,7 +338,7 @@ const resolvers = {
     async updateDisclaimer(
       _: any,
       { id, text }: { id: number; text: string },
-      ctx: GraphQLContext,
+      ctx: GraphQLContext
     ) {
       return await ctx.prisma.disclaimer.update({
         where: { id },
@@ -342,7 +348,7 @@ const resolvers = {
     async deleteRecomendation(
       _: any,
       { id }: { id: number },
-      ctx: GraphQLContext,
+      ctx: GraphQLContext
     ) {
       return await ctx.prisma.recomendation.delete({
         where: { id },
@@ -351,7 +357,7 @@ const resolvers = {
     async deleteDisclaimer(
       _: any,
       { id }: { id: number },
-      ctx: GraphQLContext,
+      ctx: GraphQLContext
     ) {
       return await ctx.prisma.disclaimer.delete({
         where: { id },
@@ -380,7 +386,7 @@ const resolvers = {
     async updateMSAccounts(
       _: any,
       { value }: { value: ReqMSAccount[] },
-      ctx: GraphQLContext,
+      ctx: GraphQLContext
     ) {
       console.log(value.length);
     },
