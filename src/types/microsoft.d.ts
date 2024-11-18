@@ -14,3 +14,27 @@ type ReqMSAccount = {
 type ReqMSAccountSku = {
   skuId: string;
 };
+
+type ReqMSSubscribedSku = {
+  accountName: string;
+  accountId: string;
+  appliesTo: string;
+  capabilityStatus: string;
+  consumedUnits: number;
+  id: string;
+  skuId: string;
+  skuPartNumber: string;
+  subscriptionIds: string[];
+  prepaidUnits: {
+    enabled: number;
+    suspended: number;
+    warning: number;
+    lockedOut: number;
+  };
+  servicePlans: {
+    servicePlanId: string;
+    servicePlanName: string;
+    provisioningStatus: string;
+    appliesTo: string;
+  }[];
+}

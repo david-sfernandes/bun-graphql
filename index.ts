@@ -56,5 +56,6 @@ console.info(
   })
 );
 console.info(
-  chalk.green(`Server is running on http://localhost:${PORT}/graphql`)
+  chalk.green(`GraphQL Server: http://localhost:${PORT}/graphql`),
+  chalk.green(`\nREST Documentation: http://localhost:${PORT}/swagger`)
 );

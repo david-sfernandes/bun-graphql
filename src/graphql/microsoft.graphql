@@ -11,9 +11,42 @@ input ReqMSAccountSku {
   skuId: String
 }
 
+input ReqMSSubscribedSku {
+  skuId: String
+  accountName: String
+  accountId: String
+  appliesTo: String
+  capabilityStatus: String
+  consumedUnits: Int
+  id: String
+  skuPartNumber: String
+  subscriptionIds: [String]
+  prepaidUnits: ReqMSSubscribedSkuPrepaidUnits
+  servicePlans: [ReqMSSubscribedSkuServicePlan]
+}
+
+input ReqMSSubscribedSkuPrepaidUnits {
+  enabled: Int
+  suspended: Int
+  warning: Int
+  lockedOut: Int
+}
+
+input ReqMSSubscribedSkuServicePlan {
+  servicePlanId: String
+  servicePlanName: String
+  provisioningStatus: String
+  appliesTo: String
+}
+
+type PostResp { 
+  success: Int
+  failed: Int 
+}
+
 type Mutation {
-  
-  updateMSAccounts(value: [ReqMSAccount]): [MicrosoftAccount]
+  updateMSAccounts(value: [ReqMSAccount]): PostResp
+  updateMSSubscribedSkus(value: [ReqMSSubscribedSku]): PostResp
 }
 
 schema {
