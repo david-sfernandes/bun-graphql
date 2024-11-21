@@ -1,4 +1,4 @@
-import SourceFacade from "@/src/sources/source.facade";
+import SourceFacade from "@/sources/source.facade";
 import { expect, test } from "bun:test";
 
 const terabyteSource = new SourceFacade();
@@ -10,7 +10,7 @@ test(
 
     expect(updatedClients).toBeGreaterThan(0);
   },
-  { timeout: 60000 }
+  { timeout: 60000 },
 );
 
 test(
@@ -20,7 +20,7 @@ test(
 
     expect(updatedDevices).toBeGreaterThan(0);
   },
-  { timeout: 300000 }
+  { timeout: 300000 },
 );
 
 test(
@@ -30,7 +30,7 @@ test(
 
     expect(updatedStatus).toBeGreaterThan(0);
   },
-  { timeout: 180000 }
+  { timeout: 180000 },
 );
 
 test.only(
@@ -40,7 +40,7 @@ test.only(
 
     expect(updatedStatus).toBeGreaterThan(0);
   },
-  { timeout: 180000 }
+  { timeout: 180000 },
 );
 
 test(
@@ -50,7 +50,7 @@ test(
 
     expect(updatedEvents).toBeGreaterThan(0);
   },
-  { timeout: 60000 }
+  { timeout: 60000 },
 );
 
 test(
@@ -60,5 +60,5 @@ test(
 
     expect(updatedDetails).toBeGreaterThan(0);
   },
-  { timeout: 180000 }
+  { timeout: 180000 },
 );

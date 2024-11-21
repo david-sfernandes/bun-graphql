@@ -1,0 +1,119 @@
+type Client {
+  id: Int!
+  name: String!
+  companyName: String!
+  category: String
+  cnpj: String!
+  isActive: Boolean
+  contractDeviceQty: Int
+  updatedAt: String!
+  devices: [Device!]
+  recomendations: [Recomendation]
+  disclaimers: [Disclaimer]
+  microsoftAccounts: [MicrosoftAccount]
+  microsoftSubscribedSkus: [MicrosoftSubscribedSku]
+}
+
+type Device {
+  id: Int!
+  name: String!
+  nickname: String
+  mac: String!
+  brand: String!
+  os: String!
+  processor: String!
+  username: String!
+  serial: String!
+  model: String!
+  type: String!
+  isActive: Boolean!
+  updatedAt: String!
+  syncedAt: String!
+  securityStatus: [SecurityStatus]
+  securityEvents: [SecurityEvent]
+  deviceDetails: DeviceDetail
+  clientId: Int!
+}
+
+type DeviceDetail {
+  id: Int!
+  groupId: Int
+  ramal: String
+  imei1: String
+  imei2: String
+  domain: String
+  totalRam: String
+  totalStorage: String
+  usedStorage: String
+  purchaseDate: String
+  warrantyDate: String
+  clientVersion: String
+  businessUnitId: Int
+  businessUnit: BusinessUnit
+  updatedAt: String
+}
+
+type BusinessUnit {
+  id: Int!
+  description: String
+  street: String
+  clientId: Int
+}
+
+type Ticket {
+  id: Int!
+  tipo_ticket: String
+  categoria_primaria: String
+  categoria_secundaria: String
+  total_avaliacao: Int
+  tecnico: String
+  mesa_trabalho: String
+  data_solucao: String
+  dispositivo_vinculado: String
+  data_resposta: String
+  setor: String
+  prioridade: String
+  codigo: Int
+  cliente: String
+  assunto: String
+  contato: String
+  data_criacao: String
+  total_horas: String
+  origem: String
+  status: String
+  urgencia: String
+  status_sla_resposta: String
+  sla_resposta_tempo: String
+  status_sla_solucao: String
+  sla_solucao_tempo: String
+}
+
+# Input
+input ReqClient {
+  id: Int!
+  name: String!
+  companyName: String!
+  category: String
+  cnpj: String!
+  isActive: Boolean
+  contractDeviceQty: Int
+}
+
+# Schema
+type Query {
+  clients: [Client!]
+  client(id: Int!): Client
+  devices(clientId: Int!, typeFilter: [String]): [Device!]
+  device(id: Int!): Device
+  tickets(clientId: Int!): [Ticket!]
+}
+
+type Mutation {
+  updateClient(client: ReqClient!): Client
+  
+}
+
+schema {
+  query: Query
+  mutation: Mutation
+}

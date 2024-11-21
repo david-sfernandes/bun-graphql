@@ -3,12 +3,12 @@
   "module": "index.ts",
   "type": "module",
   "devDependencies": {
-    "@types/adm-zip": "^0.5.5",
-    "@types/bun": "^1.1.11",
+    "@types/adm-zip": "^0.5.6",
+    "@types/bun": "^1.1.13",
     "@types/figlet": "^1.7.0",
     "@types/node-cron": "^3.0.11",
     "@types/uuid": "^10.0.0",
-    "bun-types": "^1.1.32"
+    "bun-types": "^1.1.36"
   },
   "scripts": {
     "dev": "bun run index.ts",
@@ -24,9 +24,9 @@
   },
   "dependencies": {
     "@graphql-tools/load-files": "^7.0.0",
-    "@graphql-yoga/plugin-jwt": "^3.1.0",
-    "@graphql-yoga/plugin-sofa": "^3.7.0",
-    "@prisma/client": "^5.20.0",
+    "@graphql-yoga/plugin-jwt": "^3.4.3",
+    "@graphql-yoga/plugin-sofa": "^3.10.3",
+    "@prisma/client": "^5.22.0",
     "@std/csv": "npm:@jsr/std__csv",
     "adm-zip": "^0.5.16",
     "chalk": "^5.3.0",
@@ -34,9 +34,9 @@
     "graphql": "^16.9.0",
     "graphql-middleware": "^6.1.35",
     "graphql-shield": "^7.6.5",
-    "graphql-yoga": "^5.7.0",
+    "graphql-yoga": "^5.10.3",
     "node-cron": "^3.0.3",
-    "prisma": "^5.20.0",
+    "prisma": "^5.22.0",
     "sofa-api": "^0.18.7",
     "uuid": "^10.0.0"
   }

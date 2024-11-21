@@ -31,7 +31,7 @@ const yoga = createYoga({
       swaggerUI: {
         endpoint: "/swagger",
         defaultModelExpandDepth: 3,
-      },
+      }
     }),
   ],
 });

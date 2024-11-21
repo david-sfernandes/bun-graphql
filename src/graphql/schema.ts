@@ -5,7 +5,7 @@ import permissions from "./permissions";
 
 const baseSchema = createSchema({
   typeDefs: await loadFiles("./**/*.graphql"),
-  resolvers: await loadFiles("./**/resolvers.ts"),
+  resolvers: await loadFiles("./**/*.resolver.ts"),
 });
 
 const schema = applyMiddleware(baseSchema, permissions);

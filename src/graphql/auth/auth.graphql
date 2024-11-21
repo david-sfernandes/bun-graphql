@@ -1,0 +1,50 @@
+type User {
+  id: ID!
+  email: String!
+  name: String!
+  role: String!
+  password: String!
+  createdAt: String!
+  updatedAt: String!
+  clients: [Client!]
+}
+
+type Invite {
+  id: ID!
+  email: String!
+  token: String!
+  role: String!
+  clients: [Client!]
+  createdAt: String!
+  updatedAt: String!
+  expiresAt: String!
+}
+
+type AuthPayload {
+  token: String!
+  name: String!
+  role: String!
+}
+
+# Schema
+type Query {
+  user(email: String!): User
+  login(email: String!, password: String!): AuthPayload
+}
+
+type Mutation {
+  createUser(email: String, name: String!, password: String): User
+  createInvite(email: String!, role: String!, clients: [Int!]): Invite
+  createUserWithInvite(
+    email: String!
+    name: String!
+    password: String!
+    token: String!
+  ): User
+  updatePassword(email: String!, password: String!, newPassword: String!): User
+}
+
+schema {
+  query: Query
+  mutation: Mutation
+}

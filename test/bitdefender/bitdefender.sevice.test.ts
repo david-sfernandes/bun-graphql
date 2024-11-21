@@ -1,6 +1,6 @@
 import { beforeAll, expect, test } from "bun:test";
 
-import BitdefenderService from "@/src/services/bitdefender.service";
+import BitdefenderService from "@/services/bitdefender.service";
 
 const key = process.env.BITDEFENDER_KEY_TERABYTE || "";
 const secReportId = process.env.BITDEFENDER_SEC_REPORT_ID || "";
@@ -12,7 +12,7 @@ beforeAll(async () => {
   bitdefenderService = new BitdefenderService(key, secReportId);
   testCompanyGroups = (await bitdefenderService.getCompaniesGroups()).slice(
     0,
-    3
+    3,
   );
 });
 

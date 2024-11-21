@@ -1,0 +1,32 @@
+type SecurityStatus {
+  id: String!
+  name: String
+  mac: String
+  group: String
+  isManaged: Boolean
+  isManagedWithBest: Boolean
+  syncedAt: String
+  deviceId: Int
+}
+
+type SecurityEvent {
+  id: Int!
+  deviceName: String!
+  endpoint: String!
+  username: String!
+  occurrences: Int!
+  lastOccurrence: String!
+  module: String!
+  type: String!
+  companyName: String!
+  deviceId: Int
+}
+
+# Schema
+type Query {
+  securityEvents(clientId: Int!): [SecurityEvent!]
+}
+
+schema {
+  query: Query
+}

@@ -47,15 +47,6 @@ class BitdefenderService {
     return groups.result.items;
   }
 
-  // async getSubFolders(companyGroups: SecurityGroup[]) {
-  //   const ignoreGroups = new Set(["Excluídos"]);
-  //   const subFolders = [];
-  //   for (const group of companyGroups) {
-  //     const groups = await this.getNetworkGroups(group.id);
-  //     subFolders.push(...groups.filter((g) => !ignoreGroups.has(g.name)));
-  //   }
-  //   return subFolders;
-  // }
   async getSubFolders(companyGroups: SecurityGroup[]) {
     const ignoreGroups = new Set(["Excluídos"]);
     const subFolders = [];

@@ -1,5 +1,5 @@
+import MilvusService from "@/services/milvus.service";
 import { expect, test } from "bun:test";
-import MilvusService from "../../src/services/milvus.service";
 
 const key = Bun.env.MILVUS_KEY_TERABYTE || "";
 

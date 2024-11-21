@@ -1,0 +1,29 @@
+type Recomendation {
+  id: Int!
+  text: String!
+  createdAt: String!
+  updatedAt: String!
+  clientId: Int!
+}
+
+type Disclaimer {
+  id: Int!
+  text: String!
+  createdAt: String!
+  updatedAt: String!
+  clientId: Int!
+}
+
+# Schema
+type Mutation {
+  createRecomendation(text: String!, clientId: Int!): Recomendation
+  createDisclaimer(text: String!, clientId: Int!): Disclaimer
+  updateRecomendation(id: Int!, text: String!): Recomendation
+  updateDisclaimer(id: Int!, text: String!): Disclaimer
+  deleteRecomendation(id: Int!): Recomendation
+  deleteDisclaimer(id: Int!): Disclaimer
+}
+
+schema {
+  mutation: Mutation
+}

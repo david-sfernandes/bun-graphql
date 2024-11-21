@@ -1,3 +1,33 @@
+type MicrosoftSku {
+  id: String
+  name: String
+}
+
+type MicrosoftAccount {
+  id: String!
+  displayName: String
+  email: String
+  updatedAt: String
+  microsoftSkus: [MicrosoftSku]
+}
+
+type MicrosoftSubscribedSku {
+  id: String!
+  qty: Int
+  used: Int
+  updatedAt: String
+  skuId: String
+  sku: MicrosoftSku
+  clientId: Int
+  client: Client
+}
+
+type PostResp { 
+  success: Int
+  failed: Int 
+}
+
+# Inputs
 input ReqMSAccount {
   id: String!
   displayName: String
@@ -39,9 +69,10 @@ input ReqMSSubscribedSkuServicePlan {
   appliesTo: String
 }
 
-type PostResp { 
-  success: Int
-  failed: Int 
+# Schema
+type Query {
+  microsoftAccount(clientId: Int!): [MicrosoftAccount!]
+  microsoftSubscribedSku(clientId: Int!): [MicrosoftSubscribedSku!]
 }
 
 type Mutation {
@@ -50,5 +81,6 @@ type Mutation {
 }
 
 schema {
+  query: Query
   mutation: Mutation
 }
