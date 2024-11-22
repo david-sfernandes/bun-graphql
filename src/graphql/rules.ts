@@ -1,6 +1,8 @@
 import { rule } from "graphql-shield";
 import extractPayload from "../auth/extractPayload";
 
+const mainRoles: Role[] = ["ADMIN", "MANAGER", "CLIENT", "TECHNICIAN"];
+
 const getPayload = (ctx: any) => {
   let payload = ctx.jwt?.payload;
   if (!payload) {
@@ -12,23 +14,32 @@ const getPayload = (ctx: any) => {
 
 const isAdmin = rule()(async (_: any, __: any, ctx: any) => {
   let payload = getPayload(ctx);
-  return payload?.role === "ADMIN";
+  return payload?.scope === "ADMIN";
 });
 
 const isAuthorized = rule()(async (_: any, __: any, ctx: any) => {
   let payload = getPayload(ctx);
-  return !!payload;
+  return payload && payload.scope && mainRoles.includes(payload.scope);
 });
 
 const isManager = rule()(async (_: any, __: any, ctx: any) => {
   let payload = getPayload(ctx);
-  return payload?.role === "MANAGER";
+  return payload?.scope === "MANAGER";
+});
+
+const isBot = rule()(async (_: any, __: any, ctx: any) => {
+  let payload = getPayload(ctx);
+  return payload?.scope === "BOT";
 });
 
 const isClient = rule()(async (_: any, __: any, ctx: any) => {
   let payload = getPayload(ctx);
-  return payload?.role === "CLIENT";
+  return payload?.scope === "CLIENT";
 });
 
-export { isAdmin, isAuthorized, isClient, isManager };
+const isTechnician = rule()(async (_: any, __: any, ctx: any) => {
+  let payload = getPayload(ctx);
+  return payload?.scope === "TECHNICIAN";
+});
 
+export { isAdmin, isAuthorized, isBot, isClient, isManager };

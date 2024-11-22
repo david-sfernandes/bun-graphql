@@ -1,4 +1,4 @@
-type Role = "CLIENT" | "ADMIN" | "TECHNICIAN" | "MANAGER";
+type Role = "CLIENT" | "ADMIN" | "TECHNICIAN" | "MANAGER" | "BOT";
 
 type JwtPayload = {
   sub: string;

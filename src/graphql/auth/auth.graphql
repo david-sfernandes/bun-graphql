@@ -1,8 +1,16 @@
+enum Role {
+  CLIENT
+  ADMIN
+  TECHNICIAN
+  MANAGER
+  BOT
+}
+
 type User {
   id: ID!
   email: String!
   name: String!
-  role: String!
+  role: Role!
   password: String!
   createdAt: String!
   updatedAt: String!
@@ -13,7 +21,7 @@ type Invite {
   id: ID!
   email: String!
   token: String!
-  role: String!
+  role: Role!
   clients: [Client!]
   createdAt: String!
   updatedAt: String!
@@ -23,7 +31,7 @@ type Invite {
 type AuthPayload {
   token: String!
   name: String!
-  role: String!
+  role: Role!
 }
 
 # Schema
@@ -34,7 +42,7 @@ type Query {
 
 type Mutation {
   createUser(email: String, name: String!, password: String): User
-  createInvite(email: String!, role: String!, clients: [Int!]): Invite
+  createInvite(email: String!, role: Role!, clients: [Int!]): Invite
   createUserWithInvite(
     email: String!
     name: String!

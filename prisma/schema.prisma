@@ -18,6 +18,7 @@ enum Role {
   ADMIN
   TECHNICIAN
   MANAGER
+  BOT
 }
 
 model User {
