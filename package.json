@@ -12,8 +12,9 @@
   },
   "scripts": {
     "dev": "bun run index.ts",
-    "build": "bun build ./index.ts --outdir ./build --target bun",
-    "start": "bun ./build/index.js",
+    "output": "bun build ./index.ts --outdir ./out --target bun",
+    "start": "bun ./out/index.js",
+    "deploy": "bun output && bun start",
     "test:sources": "bun test ./test/sources/*.test.ts",
     "test:utils": "bun test ./test/utils/*.test.ts",
     "test:milvus": "bun test ./test/milvus/*.test.ts",

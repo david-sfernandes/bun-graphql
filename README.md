@@ -110,9 +110,6 @@ bun i --production
 # To generate prisma client
 bunx prisma generate
 
-#To build the a single file application
-bun run build
-
-# To start server
-bun start
+# To build a single file app and start it
+bun run deploy
 ```
