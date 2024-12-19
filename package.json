@@ -21,7 +21,7 @@
     "test:bitdefender": "bun test ./test/bitdefender/*.test.ts"
   },
   "peerDependencies": {
-    "typescript": "^5.6.3"
+    "typescript": "^5.7.2"
   },
   "dependencies": {
     "@graphql-tools/load-files": "^7.0.0",
@@ -39,6 +39,6 @@
     "node-cron": "^3.0.3",
     "prisma": "^6.1.0",
     "sofa-api": "^0.18.8",
-    "uuid": "^10.0.0"
+    "uuid": "^11.0.3"
   }
 }
