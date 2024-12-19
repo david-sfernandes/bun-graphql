@@ -7,10 +7,11 @@ import { v1 as uuidv1 } from "uuid";
 
 const resolvers = {
   Query: {
-    async user(_: any, { email }: { email: string }, ctx: GraphQLContext) {
-      return await ctx.prisma.user.findUnique({
-        where: { email },
-      });
+    async users(_: any, __: any, ctx: GraphQLContext) {
+      return await ctx.prisma.user.findMany();
+    },
+    async invites(_: any, __: any, ctx: GraphQLContext) {
+      return await ctx.prisma.invite.findMany();
     },
     async login(
       _: any,
@@ -22,7 +23,7 @@ const resolvers = {
         include: { clients: true },
       });
       const isPasswordValid = await validatePassword(user, password);
-      if (!isPasswordValid) return new Error("Invalid password.");
+      if (!isPasswordValid || !user?.isActive) return new Error("Invalid password.");
 
       const token = jwt.sign(
         {
@@ -70,6 +71,7 @@ const resolvers = {
       }: { email: string; role: Role; clients: number[] },
       ctx: GraphQLContext,
     ) {
+      console.log("role", role);
       if (role === "ADMIN") {
         throw new GraphQLError("Cannot create an admin invite!");
       }
@@ -145,6 +147,31 @@ const resolvers = {
         where: { email },
         data: {
           password: hashPassword,
+        },
+      });
+    },
+    async deleteInvite(
+      _: any,
+      { id }: { id: string },
+      ctx: GraphQLContext,
+    ) {
+      const invite = await ctx.prisma.invite.findUnique({ where: { id } });
+      if (!invite) throw new GraphQLError("Invite not found!");
+      if (invite.usedAt) throw new GraphQLError("Invite already used!");
+      return await ctx.prisma.invite.delete({ where: { id } });
+    },
+    async blockUser(
+      _: any,
+      { email }: { email: string },
+      ctx: GraphQLContext,
+    ) {
+      const user = await ctx.prisma.user.findUnique({ where: { email } });
+      if (!user) throw new GraphQLError("User not found!");
+      if(user.role === "ADMIN") throw new GraphQLError("Cannot block an admin!");
+      return await ctx.prisma.user.update({
+        where: { email },
+        data: {
+          isActive: false,
         },
       });
     },

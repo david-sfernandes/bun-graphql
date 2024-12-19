@@ -9,6 +9,7 @@ const getPayload = (ctx: any) => {
     // Extract token from headers when using Sofa/RestAPI
     payload = extractPayload(ctx.request.headers.get("authorization"));
   }
+  ctx.request.headers.set("clients", payload?.clients);
   return payload;
 };
 
@@ -42,4 +43,4 @@ const isTechnician = rule()(async (_: any, __: any, ctx: any) => {
   return payload?.scope === "TECHNICIAN";
 });
 
-export { isAdmin, isAuthorized, isBot, isClient, isManager };
+export { isAdmin, isAuthorized, isBot, isClient, isManager, isTechnician };

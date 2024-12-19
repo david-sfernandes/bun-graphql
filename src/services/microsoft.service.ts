@@ -1,7 +1,7 @@
 import type { PrismaClient } from "@prisma/client";
 
 class MicrosoftService {
-  async upsertAccount(prisma: PrismaClient, account: ReqMSAccount) {
+  async upsertAccount(prisma: PrismaClient, account: ReqMSAccount, clientId: number) {
     await prisma.microsoftAccount.upsert({
       where: { id: account.id },
       update: {
@@ -17,7 +17,7 @@ class MicrosoftService {
         id: account.id,
         displayName: account.displayName,
         email: account.mail ? account.mail : account.userPrincipalName,
-        client: { connect: { id: 86632 } },
+        client: { connect: { id: clientId } },
         microsoftSkus: {
           connect: account.assignedLicenses.map((sku) => ({
             id: sku.skuId,
@@ -30,12 +30,13 @@ class MicrosoftService {
   async upsertSubscribedSku(
     prisma: PrismaClient,
     subscribedSku: ReqMSSubscribedSku,
+    clientId: number,
   ) {
     await prisma.microsoftSubscribedSku.upsert({
       where: {
         skuClient: {
           skuId: subscribedSku.skuId,
-          clientId: 87070,
+          clientId: clientId,
         },
       },
       update: {
@@ -44,7 +45,7 @@ class MicrosoftService {
       },
       create: {
         skuId: subscribedSku.skuId,
-        clientId: 87070,
+        clientId: clientId,
         qty: subscribedSku.prepaidUnits.enabled,
         used: subscribedSku.consumedUnits,
       },

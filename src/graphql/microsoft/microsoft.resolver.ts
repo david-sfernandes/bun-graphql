@@ -45,10 +45,11 @@ const resolvers = {
       ctx: GraphQLContext,
     ) {
       let failed = 0;
+      const clientId = ctx.request.headers.get("clients") || 0;
 
       for (const account of value) {
         try {
-          await microsoftService.upsertAccount(ctx.prisma, account);
+          await microsoftService.upsertAccount(ctx.prisma, account, +clientId);
         } catch (error) {
           failed++;
           console.error(error);
@@ -56,6 +57,7 @@ const resolvers = {
       }
       if (failed > 0) console.error(`Failed to update ${failed} accounts`);
       return { success: value.length - failed, failed };
+      // return { success: 0, failed: 0 };
     },
     async updateMSSubscribedSkus(
       _: any,
@@ -63,10 +65,12 @@ const resolvers = {
       ctx: GraphQLContext,
     ) {
       let failed = 0;
+      const clientId = ctx.request.headers.get("clients") || 0;
+
 
       for (const sku of value) {
         try {
-          await microsoftService.upsertSubscribedSku(ctx.prisma, sku);
+          await microsoftService.upsertSubscribedSku(ctx.prisma, sku, +clientId);
         } catch (error) {
           failed++;
           console.error(error);

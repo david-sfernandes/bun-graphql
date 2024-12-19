@@ -27,7 +27,7 @@
     "@graphql-tools/load-files": "^7.0.0",
     "@graphql-yoga/plugin-jwt": "^3.4.6",
     "@graphql-yoga/plugin-sofa": "^3.10.6",
-    "@prisma/client": "^5.22.0",
+    "@prisma/client": "^6.1.0",
     "@std/csv": "npm:@jsr/std__csv",
     "adm-zip": "^0.5.16",
     "chalk": "^5.4.0",
@@ -37,7 +37,7 @@
     "graphql-shield": "^7.6.5",
     "graphql-yoga": "^5.10.6",
     "node-cron": "^3.0.3",
-    "prisma": "^5.22.0",
+    "prisma": "^6.1.0",
     "sofa-api": "^0.18.8",
     "uuid": "^10.0.0"
   }

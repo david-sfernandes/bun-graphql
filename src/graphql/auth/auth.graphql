@@ -11,7 +11,7 @@ type User {
   email: String!
   name: String!
   role: Role!
-  password: String!
+  isActive: Boolean!
   createdAt: String!
   updatedAt: String!
   clients: [Client!]
@@ -23,6 +23,7 @@ type Invite {
   token: String!
   role: Role!
   clients: [Client!]
+  usedAt: String
   createdAt: String!
   updatedAt: String!
   expiresAt: String!
@@ -36,8 +37,9 @@ type AuthPayload {
 
 # Schema
 type Query {
-  user(email: String!): User
   login(email: String!, password: String!): AuthPayload
+  invites: [Invite!]
+  users: [User!]
 }
 
 type Mutation {
@@ -50,6 +52,8 @@ type Mutation {
     token: String!
   ): User
   updatePassword(email: String!, password: String!, newPassword: String!): User
+  deleteInvite(id: ID!): Invite
+  blockUser(email: String!): User
 }
 
 schema {

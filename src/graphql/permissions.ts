@@ -1,10 +1,11 @@
-import { allow, and, not, shield } from "graphql-shield";
+import { allow, or, and, not, shield } from "graphql-shield";
 import { isAdmin, isAuthorized, isBot, isManager } from "./rules";
 
 const permissions = shield(
   {
     Query: {
-      "user": and(isAdmin, isManager),
+      "users": isAdmin,
+      "invites": isAdmin,
       "login": allow,
       "securityEvents": and(isAuthorized, not(isBot)),
       "microsoftAccount": and(isAuthorized, not(isBot)),
@@ -17,18 +18,18 @@ const permissions = shield(
     },
     Mutation: {
       "createUser": isAdmin,
-      "createInvite": and(isAdmin, isManager),
+      "createInvite": or(isAdmin, isManager),
       "createUserWithInvite": allow,
       "updatePassword": and(isAuthorized, not(isBot)),
-      "createRecomendation": and(isAdmin, isManager),
-      "createDisclaimer": and(isAdmin, isManager),
-      "updateRecomendation": and(isAdmin, isManager),
-      "updateDisclaimer": and(isAdmin, isManager),
-      "deleteRecomendation": and(isAdmin, isManager),
-      "deleteDisclaimer": and(isAdmin, isManager),
-      "updateMSAccounts": and(isBot, isAdmin),
-      "updateMSSubscribedSkus": and(isBot, isAdmin),
-      "updateClient": and(isAdmin, isManager),
+      "createRecomendation": or(isAdmin, isManager),
+      "createDisclaimer": or(isAdmin, isManager),
+      "updateRecomendation": or(isAdmin, isManager),
+      "updateDisclaimer": or(isAdmin, isManager),
+      "deleteRecomendation": or(isAdmin, isManager),
+      "deleteDisclaimer": or(isAdmin, isManager),
+      "updateMSAccounts": or(isBot, isAdmin),
+      "updateMSSubscribedSkus": or(isBot, isAdmin),
+      "updateClient": or(isAdmin, isManager),
     },
   },
 );
