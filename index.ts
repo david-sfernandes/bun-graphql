@@ -1,3 +1,4 @@
+import prisma from "@/db/prisma";
 import {
   createInlineSigningKeyProvider,
   useJWT,
@@ -10,12 +11,11 @@ import SECRET from "./src/constant/secret";
 import { dailyTask1, dailyTask2 } from "./src/cron/daily";
 import monthlyTask from "./src/cron/monthly";
 import weeklyTask from "./src/cron/weekly";
-import { createContext } from "./src/graphql/context";
 import schema from "./src/graphql/schema";
 
 const yoga = createYoga({
   schema,
-  context: createContext,
+  context: { prisma: prisma },
   plugins: [
     useJWT({
       singingKeyProviders: [createInlineSigningKeyProvider(SECRET)],
