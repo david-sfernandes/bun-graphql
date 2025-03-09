@@ -1,5 +1,6 @@
 import MilvusService from "@/services/milvus.service";
 import type { GraphQLContext } from "@/types/context";
+import type { Client } from "@prisma/client";
 
 const milvusKey = Bun.env.MILVUS_KEY_TERABYTE || "";
 const milvusService = new MilvusService(milvusKey);
@@ -19,7 +20,7 @@ const resolvers = {
     microsoftSubscribedSkus: async (
       parent: any,
       _: any,
-      ctx: GraphQLContext,
+      ctx: GraphQLContext
     ) => {
       return await ctx.prisma.microsoftSubscribedSku.findMany({
         where: { clientId: parent.id },
@@ -81,12 +82,11 @@ const resolvers = {
     async devices(
       _: any,
       { clientId, typeFilter }: { clientId: number; typeFilter?: string[] },
-      ctx: GraphQLContext,
+      ctx: GraphQLContext
     ) {
       const payload = ctx.jwt?.payload;
-      const where = typeFilter && typeFilter.length > 0
-        ? { type: { in: typeFilter } }
-        : {};
+      const where =
+        typeFilter && typeFilter.length > 0 ? { type: { in: typeFilter } } : {};
 
       if (payload?.scope === "CLIENT" && !payload?.clients.includes(clientId)) {
         return new Error("Not authorized to access this device.");
@@ -108,10 +108,13 @@ const resolvers = {
   Mutation: {
     async updateClient(
       _: any,
-      { client }: { client: any },
-      ctx: GraphQLContext,
+      { client }: { client: Client },
+      ctx: GraphQLContext
     ) {
-      console.log(client);
+      return await ctx.prisma.client.update({
+        where: { id: client.id },
+        data: client,
+      });
     },
   },
 };

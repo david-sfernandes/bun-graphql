@@ -22,9 +22,9 @@ type MicrosoftSubscribedSku {
   client: Client
 }
 
-type PostResp { 
+type PostResp {
   success: Int
-  failed: Int 
+  failed: Int
 }
 
 # Inputs

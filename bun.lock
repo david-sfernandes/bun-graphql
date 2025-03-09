@@ -1,0 +1,424 @@
+{
+  "lockfileVersion": 1,
+  "workspaces": {
+    "": {
+      "name": "bun-graphql",
+      "dependencies": {
+        "@graphql-tools/load-files": "^7.0.0",
+        "@graphql-yoga/plugin-jwt": "^3.4.6",
+        "@graphql-yoga/plugin-sofa": "^3.10.6",
+        "@prisma/client": "^6.1.0",
+        "@std/csv": "npm:@jsr/std__csv",
+        "adm-zip": "^0.5.16",
+        "chalk": "^5.4.0",
+        "figlet": "^1.8.0",
+        "graphql": "^16.10.0",
+        "graphql-middleware": "^6.1.35",
+        "graphql-shield": "^7.6.5",
+        "graphql-yoga": "^5.10.6",
+        "node-cron": "^3.0.3",
+        "prisma": "^6.1.0",
+        "sofa-api": "^0.18.8",
+        "uuid": "^11.0.3",
+      },
+      "devDependencies": {
+        "@types/adm-zip": "^0.5.7",
+        "@types/bun": "^1.1.14",
+        "@types/figlet": "^1.7.0",
+        "@types/node-cron": "^3.0.11",
+        "@types/uuid": "^10.0.0",
+        "bun-types": "^1.1.40",
+      },
+      "peerDependencies": {
+        "typescript": "^5.7.2",
+      },
+    },
+  },
+  "packages": {
+    "@babel/runtime": ["@babel/runtime@7.25.9", "", { "dependencies": { "regenerator-runtime": "^0.14.0" } }, ""],
+
+    "@envelop/core": ["@envelop/core@5.0.2", "", { "dependencies": { "@envelop/types": "5.0.0", "tslib": "^2.5.0" } }, ""],
+
+    "@envelop/types": ["@envelop/types@5.0.0", "", { "dependencies": { "tslib": "^2.5.0" } }, ""],
+
+    "@graphql-tools/batch-execute": ["@graphql-tools/batch-execute@8.5.1", "", { "dependencies": { "@graphql-tools/utils": "8.9.0", "dataloader": "2.1.0", "tslib": "^2.4.0", "value-or-promise": "1.0.11" }, "peerDependencies": { "graphql": "^14.0.0 || ^15.0.0 || ^16.0.0 || ^17.0.0" } }, ""],
+
+    "@graphql-tools/delegate": ["@graphql-tools/delegate@8.8.1", "", { "dependencies": { "@graphql-tools/batch-execute": "8.5.1", "@graphql-tools/schema": "8.5.1", "@graphql-tools/utils": "8.9.0", "dataloader": "2.1.0", "tslib": "~2.4.0", "value-or-promise": "1.0.11" }, "peerDependencies": { "graphql": "^14.0.0 || ^15.0.0 || ^16.0.0 || ^17.0.0" } }, ""],
+
+    "@graphql-tools/executor": ["@graphql-tools/executor@1.3.9", "", { "dependencies": { "@graphql-tools/utils": "^10.6.4", "@graphql-typed-document-node/core": "^3.2.0", "@repeaterjs/repeater": "^3.0.4", "@whatwg-node/disposablestack": "^0.0.5", "tslib": "^2.4.0", "value-or-promise": "^1.0.12" }, "peerDependencies": { "graphql": "^14.0.0 || ^15.0.0 || ^16.0.0 || ^17.0.0" } }, ""],
+
+    "@graphql-tools/load-files": ["@graphql-tools/load-files@7.0.0", "", { "dependencies": { "globby": "11.1.0", "tslib": "^2.4.0", "unixify": "1.0.0" }, "peerDependencies": { "graphql": "^14.0.0 || ^15.0.0 || ^16.0.0 || ^17.0.0" } }, ""],
+
+    "@graphql-tools/merge": ["@graphql-tools/merge@8.3.1", "", { "dependencies": { "@graphql-tools/utils": "8.9.0", "tslib": "^2.4.0" }, "peerDependencies": { "graphql": "^14.0.0 || ^15.0.0 || ^16.0.0 || ^17.0.0" } }, ""],
+
+    "@graphql-tools/schema": ["@graphql-tools/schema@8.5.1", "", { "dependencies": { "@graphql-tools/merge": "8.3.1", "@graphql-tools/utils": "8.9.0", "tslib": "^2.4.0", "value-or-promise": "1.0.11" }, "peerDependencies": { "graphql": "^14.0.0 || ^15.0.0 || ^16.0.0 || ^17.0.0" } }, ""],
+
+    "@graphql-tools/utils": ["@graphql-tools/utils@10.6.4", "", { "dependencies": { "@graphql-typed-document-node/core": "^3.1.1", "cross-inspect": "1.0.1", "dset": "^3.1.2", "tslib": "^2.4.0" }, "peerDependencies": { "graphql": "^14.0.0 || ^15.0.0 || ^16.0.0 || ^17.0.0" } }, ""],
+
+    "@graphql-typed-document-node/core": ["@graphql-typed-document-node/core@3.2.0", "", { "peerDependencies": { "graphql": "^0.8.0 || ^0.9.0 || ^0.10.0 || ^0.11.0 || ^0.12.0 || ^0.13.0 || ^14.0.0 || ^15.0.0 || ^16.0.0 || ^17.0.0" } }, ""],
+
+    "@graphql-yoga/logger": ["@graphql-yoga/logger@2.0.0", "", { "dependencies": { "tslib": "^2.5.2" } }, ""],
+
+    "@graphql-yoga/plugin-jwt": ["@graphql-yoga/plugin-jwt@3.4.6", "", { "dependencies": { "@whatwg-node/server-plugin-cookies": "^1.0.3", "jsonwebtoken": "^9.0.0", "jwks-rsa": "^3.0.0", "tslib": "^2.4.0" }, "peerDependencies": { "graphql": "^15.2.0 || ^16.0.0", "graphql-yoga": "^5.10.6" } }, ""],
+
+    "@graphql-yoga/plugin-sofa": ["@graphql-yoga/plugin-sofa@3.10.6", "", { "dependencies": { "@graphql-tools/utils": "^10.3.2", "sofa-api": "^0.18.7" }, "peerDependencies": { "graphql": "^15.2.0 || ^16.0.0", "graphql-yoga": "^5.10.6" } }, ""],
+
+    "@graphql-yoga/subscription": ["@graphql-yoga/subscription@5.0.2", "", { "dependencies": { "@graphql-yoga/typed-event-target": "^3.0.1", "@repeaterjs/repeater": "^3.0.4", "@whatwg-node/events": "^0.1.0", "tslib": "^2.5.2" } }, ""],
+
+    "@graphql-yoga/typed-event-target": ["@graphql-yoga/typed-event-target@3.0.1", "", { "dependencies": { "@repeaterjs/repeater": "^3.0.4", "tslib": "^2.5.2" } }, ""],
+
+    "@jsr/std__bytes": ["@jsr/std__bytes@1.0.4", "", {}, ""],
+
+    "@jsr/std__streams": ["@jsr/std__streams@1.0.8", "", { "dependencies": { "@jsr/std__bytes": "^1.0.3" } }, ""],
+
+    "@kamilkisiela/fast-url-parser": ["@kamilkisiela/fast-url-parser@1.1.4", "", {}, ""],
+
+    "@nodelib/fs.scandir": ["@nodelib/fs.scandir@2.1.5", "", { "dependencies": { "@nodelib/fs.stat": "2.0.5", "run-parallel": "^1.1.9" } }, ""],
+
+    "@nodelib/fs.stat": ["@nodelib/fs.stat@2.0.5", "", {}, ""],
+
+    "@nodelib/fs.walk": ["@nodelib/fs.walk@1.2.8", "", { "dependencies": { "@nodelib/fs.scandir": "2.1.5", "fastq": "^1.6.0" } }, ""],
+
+    "@prisma/client": ["@prisma/client@6.1.0", "", { "peerDependencies": { "prisma": "*" } }, ""],
+
+    "@prisma/debug": ["@prisma/debug@6.1.0", "", {}, ""],
+
+    "@prisma/engines": ["@prisma/engines@6.1.0", "", { "dependencies": { "@prisma/debug": "6.1.0", "@prisma/engines-version": "6.1.0-21.11f085a2012c0f4778414c8db2651556ee0ef959", "@prisma/fetch-engine": "6.1.0", "@prisma/get-platform": "6.1.0" } }, ""],
+
+    "@prisma/engines-version": ["@prisma/engines-version@6.1.0-21.11f085a2012c0f4778414c8db2651556ee0ef959", "", {}, ""],
+
+    "@prisma/fetch-engine": ["@prisma/fetch-engine@6.1.0", "", { "dependencies": { "@prisma/debug": "6.1.0", "@prisma/engines-version": "6.1.0-21.11f085a2012c0f4778414c8db2651556ee0ef959", "@prisma/get-platform": "6.1.0" } }, ""],
+
+    "@prisma/get-platform": ["@prisma/get-platform@6.1.0", "", { "dependencies": { "@prisma/debug": "6.1.0" } }, ""],
+
+    "@repeaterjs/repeater": ["@repeaterjs/repeater@3.0.6", "", {}, ""],
+
+    "@sinclair/typebox": ["@sinclair/typebox@0.33.17", "", {}, ""],
+
+    "@std/csv": ["@jsr/std__csv@1.0.4", "", { "dependencies": { "@jsr/std__streams": "^1.0.8" } }, ""],
+
+    "@types/adm-zip": ["@types/adm-zip@0.5.7", "", { "dependencies": { "@types/node": "*" } }, ""],
+
+    "@types/body-parser": ["@types/body-parser@1.19.5", "", { "dependencies": { "@types/connect": "*", "@types/node": "*" } }, ""],
+
+    "@types/bun": ["@types/bun@1.1.14", "", { "dependencies": { "bun-types": "1.1.37" } }, ""],
+
+    "@types/connect": ["@types/connect@3.4.38", "", { "dependencies": { "@types/node": "*" } }, ""],
+
+    "@types/express": ["@types/express@4.17.21", "", { "dependencies": { "@types/body-parser": "*", "@types/express-serve-static-core": "^4.17.33", "@types/qs": "*", "@types/serve-static": "*" } }, ""],
+
+    "@types/express-serve-static-core": ["@types/express-serve-static-core@4.19.6", "", { "dependencies": { "@types/node": "*", "@types/qs": "*", "@types/range-parser": "*", "@types/send": "*" } }, ""],
+
+    "@types/figlet": ["@types/figlet@1.7.0", "", {}, ""],
+
+    "@types/http-errors": ["@types/http-errors@2.0.4", "", {}, ""],
+
+    "@types/jsonwebtoken": ["@types/jsonwebtoken@9.0.7", "", { "dependencies": { "@types/node": "*" } }, ""],
+
+    "@types/lodash": ["@types/lodash@4.17.12", "", {}, ""],
+
+    "@types/mime": ["@types/mime@1.3.5", "", {}, ""],
+
+    "@types/node": ["@types/node@20.12.14", "", { "dependencies": { "undici-types": "~5.26.4" } }, ""],
+
+    "@types/node-cron": ["@types/node-cron@3.0.11", "", {}, ""],
+
+    "@types/qs": ["@types/qs@6.9.16", "", {}, ""],
+
+    "@types/range-parser": ["@types/range-parser@1.2.7", "", {}, ""],
+
+    "@types/send": ["@types/send@0.17.4", "", { "dependencies": { "@types/mime": "^1", "@types/node": "*" } }, ""],
+
+    "@types/serve-static": ["@types/serve-static@1.15.7", "", { "dependencies": { "@types/http-errors": "*", "@types/node": "*", "@types/send": "*" } }, ""],
+
+    "@types/uuid": ["@types/uuid@10.0.0", "", {}, ""],
+
+    "@types/ws": ["@types/ws@8.5.12", "", { "dependencies": { "@types/node": "*" } }, ""],
+
+    "@types/yup": ["@types/yup@0.29.13", "", {}, ""],
+
+    "@whatwg-node/cookie-store": ["@whatwg-node/cookie-store@0.2.2", "", { "dependencies": { "tslib": "^2.3.1" } }, ""],
+
+    "@whatwg-node/disposablestack": ["@whatwg-node/disposablestack@0.0.5", "", { "dependencies": { "tslib": "^2.6.3" } }, ""],
+
+    "@whatwg-node/events": ["@whatwg-node/events@0.1.2", "", { "dependencies": { "tslib": "^2.6.3" } }, ""],
+
+    "@whatwg-node/fetch": ["@whatwg-node/fetch@0.10.1", "", { "dependencies": { "@whatwg-node/node-fetch": "^0.7.1", "urlpattern-polyfill": "^10.0.0" } }, ""],
+
+    "@whatwg-node/node-fetch": ["@whatwg-node/node-fetch@0.7.3", "", { "dependencies": { "@kamilkisiela/fast-url-parser": "^1.1.4", "busboy": "^1.6.0", "fast-querystring": "^1.1.1", "tslib": "^2.6.3" } }, ""],
+
+    "@whatwg-node/server": ["@whatwg-node/server@0.9.64", "", { "dependencies": { "@whatwg-node/disposablestack": "^0.0.5", "@whatwg-node/fetch": "^0.10.0", "tslib": "^2.6.3" } }, ""],
+
+    "@whatwg-node/server-plugin-cookies": ["@whatwg-node/server-plugin-cookies@1.0.3", "", { "dependencies": { "@whatwg-node/cookie-store": "0.2.2", "tslib": "^2.6.3" }, "peerDependencies": { "@whatwg-node/server": "^0.9.44" } }, ""],
+
+    "adm-zip": ["adm-zip@0.5.16", "", {}, ""],
+
+    "ansi-colors": ["ansi-colors@4.1.3", "", {}, ""],
+
+    "array-union": ["array-union@2.1.0", "", {}, ""],
+
+    "braces": ["braces@3.0.3", "", { "dependencies": { "fill-range": "^7.1.1" } }, ""],
+
+    "buffer-equal-constant-time": ["buffer-equal-constant-time@1.0.1", "", {}, ""],
+
+    "bun-types": ["bun-types@1.1.40", "", { "dependencies": { "@types/node": "~20.12.8", "@types/ws": "~8.5.10" } }, ""],
+
+    "busboy": ["busboy@1.6.0", "", { "dependencies": { "streamsearch": "^1.1.0" } }, ""],
+
+    "call-bind": ["call-bind@1.0.7", "", { "dependencies": { "es-define-property": "^1.0.0", "es-errors": "^1.3.0", "function-bind": "^1.1.2", "get-intrinsic": "^1.2.4", "set-function-length": "^1.2.1" } }, ""],
+
+    "chalk": ["chalk@5.4.0", "", {}, ""],
+
+    "cross-inspect": ["cross-inspect@1.0.1", "", { "dependencies": { "tslib": "^2.4.0" } }, ""],
+
+    "dataloader": ["dataloader@2.1.0", "", {}, ""],
+
+    "debug": ["debug@4.3.7", "", { "dependencies": { "ms": "^2.1.3" } }, ""],
+
+    "define-data-property": ["define-data-property@1.1.4", "", { "dependencies": { "es-define-property": "^1.0.0", "es-errors": "^1.3.0", "gopd": "^1.0.1" } }, ""],
+
+    "dir-glob": ["dir-glob@3.0.1", "", { "dependencies": { "path-type": "^4.0.0" } }, ""],
+
+    "dot-case": ["dot-case@3.0.4", "", { "dependencies": { "no-case": "^3.0.4", "tslib": "^2.0.3" } }, ""],
+
+    "dset": ["dset@3.1.4", "", {}, ""],
+
+    "ecdsa-sig-formatter": ["ecdsa-sig-formatter@1.0.11", "", { "dependencies": { "safe-buffer": "^5.0.1" } }, ""],
+
+    "es-define-property": ["es-define-property@1.0.0", "", { "dependencies": { "get-intrinsic": "^1.2.4" } }, ""],
+
+    "es-errors": ["es-errors@1.3.0", "", {}, ""],
+
+    "fast-decode-uri-component": ["fast-decode-uri-component@1.0.1", "", {}, ""],
+
+    "fast-glob": ["fast-glob@3.3.2", "", { "dependencies": { "@nodelib/fs.stat": "^2.0.2", "@nodelib/fs.walk": "^1.2.3", "glob-parent": "^5.1.2", "merge2": "^1.3.0", "micromatch": "^4.0.4" } }, ""],
+
+    "fast-querystring": ["fast-querystring@1.1.2", "", { "dependencies": { "fast-decode-uri-component": "^1.0.1" } }, ""],
+
+    "fastq": ["fastq@1.17.1", "", { "dependencies": { "reusify": "^1.0.4" } }, ""],
+
+    "fets": ["fets@0.8.3", "", { "dependencies": { "@sinclair/typebox": "^0.33.0", "@whatwg-node/cookie-store": "^0.2.0", "@whatwg-node/fetch": "^0.9.4", "@whatwg-node/server": "^0.9.15", "hotscript": "^1.0.11", "json-schema-to-ts": "^3.0.0", "qs": "^6.11.2", "ts-toolbelt": "^9.6.0", "tslib": "^2.3.1" } }, ""],
+
+    "figlet": ["figlet@1.8.0", "", { "bin": "bin/index.js" }, ""],
+
+    "fill-range": ["fill-range@7.1.1", "", { "dependencies": { "to-regex-range": "^5.0.1" } }, ""],
+
+    "function-bind": ["function-bind@1.1.2", "", {}, ""],
+
+    "get-intrinsic": ["get-intrinsic@1.2.4", "", { "dependencies": { "es-errors": "^1.3.0", "function-bind": "^1.1.2", "has-proto": "^1.0.1", "has-symbols": "^1.0.3", "hasown": "^2.0.0" } }, ""],
+
+    "glob-parent": ["glob-parent@5.1.2", "", { "dependencies": { "is-glob": "^4.0.1" } }, ""],
+
+    "globby": ["globby@11.1.0", "", { "dependencies": { "array-union": "^2.1.0", "dir-glob": "^3.0.1", "fast-glob": "^3.2.9", "ignore": "^5.2.0", "merge2": "^1.4.1", "slash": "^3.0.0" } }, ""],
+
+    "gopd": ["gopd@1.0.1", "", { "dependencies": { "get-intrinsic": "^1.1.3" } }, ""],
+
+    "graphql": ["graphql@16.10.0", "", {}, ""],
+
+    "graphql-middleware": ["graphql-middleware@6.1.35", "", { "dependencies": { "@graphql-tools/delegate": "^8.8.1", "@graphql-tools/schema": "^8.5.1" }, "peerDependencies": { "graphql": "^0.12.0 || ^0.13.0 || ^14.0.0 || ^15.0.0 || ^16.0.0" } }, ""],
+
+    "graphql-shield": ["graphql-shield@7.6.5", "", { "dependencies": { "@types/yup": "0.29.13", "object-hash": "^3.0.0", "tslib": "^2.4.0", "yup": "^0.32.0" }, "peerDependencies": { "graphql": "^0.11.0 || ^0.12.0 || ^0.13.0 || ^14.0.0 || ^15.0.0 || ^16.0.0", "graphql-middleware": "^2.0.0 || ^3.0.0 || ^4.0.0 || ^6.0.0" } }, ""],
+
+    "graphql-yoga": ["graphql-yoga@5.10.6", "", { "dependencies": { "@envelop/core": "^5.0.2", "@graphql-tools/executor": "^1.3.7", "@graphql-tools/schema": "^10.0.11", "@graphql-tools/utils": "^10.6.2", "@graphql-yoga/logger": "^2.0.0", "@graphql-yoga/subscription": "^5.0.2", "@whatwg-node/fetch": "^0.10.1", "@whatwg-node/server": "^0.9.63", "dset": "^3.1.1", "lru-cache": "^10.0.0", "tslib": "^2.8.1" }, "peerDependencies": { "graphql": "^15.2.0 || ^16.0.0" } }, ""],
+
+    "has-property-descriptors": ["has-property-descriptors@1.0.2", "", { "dependencies": { "es-define-property": "^1.0.0" } }, ""],
+
+    "has-proto": ["has-proto@1.0.3", "", {}, ""],
+
+    "has-symbols": ["has-symbols@1.0.3", "", {}, ""],
+
+    "hasown": ["hasown@2.0.2", "", { "dependencies": { "function-bind": "^1.1.2" } }, ""],
+
+    "hotscript": ["hotscript@1.0.13", "", {}, ""],
+
+    "ignore": ["ignore@5.3.2", "", {}, ""],
+
+    "is-extglob": ["is-extglob@2.1.1", "", {}, ""],
+
+    "is-glob": ["is-glob@4.0.3", "", { "dependencies": { "is-extglob": "^2.1.1" } }, ""],
+
+    "is-number": ["is-number@7.0.0", "", {}, ""],
+
+    "jose": ["jose@4.15.9", "", {}, ""],
+
+    "json-schema-to-ts": ["json-schema-to-ts@3.1.1", "", { "dependencies": { "@babel/runtime": "^7.18.3", "ts-algebra": "^2.0.0" } }, ""],
+
+    "jsonwebtoken": ["jsonwebtoken@9.0.2", "", { "dependencies": { "jws": "^3.2.2", "lodash.includes": "^4.3.0", "lodash.isboolean": "^3.0.3", "lodash.isinteger": "^4.0.4", "lodash.isnumber": "^3.0.3", "lodash.isplainobject": "^4.0.6", "lodash.isstring": "^4.0.1", "lodash.once": "^4.0.0", "ms": "^2.1.1", "semver": "^7.5.4" } }, ""],
+
+    "jwa": ["jwa@1.4.1", "", { "dependencies": { "buffer-equal-constant-time": "1.0.1", "ecdsa-sig-formatter": "1.0.11", "safe-buffer": "^5.0.1" } }, ""],
+
+    "jwks-rsa": ["jwks-rsa@3.1.0", "", { "dependencies": { "@types/express": "^4.17.17", "@types/jsonwebtoken": "^9.0.2", "debug": "^4.3.4", "jose": "^4.14.6", "limiter": "^1.1.5", "lru-memoizer": "^2.2.0" } }, ""],
+
+    "jws": ["jws@3.2.2", "", { "dependencies": { "jwa": "^1.4.1", "safe-buffer": "^5.0.1" } }, ""],
+
+    "limiter": ["limiter@1.1.5", "", {}, ""],
+
+    "lodash": ["lodash@4.17.21", "", {}, ""],
+
+    "lodash-es": ["lodash-es@4.17.21", "", {}, ""],
+
+    "lodash.clonedeep": ["lodash.clonedeep@4.5.0", "", {}, ""],
+
+    "lodash.includes": ["lodash.includes@4.3.0", "", {}, ""],
+
+    "lodash.isboolean": ["lodash.isboolean@3.0.3", "", {}, ""],
+
+    "lodash.isinteger": ["lodash.isinteger@4.0.4", "", {}, ""],
+
+    "lodash.isnumber": ["lodash.isnumber@3.0.3", "", {}, ""],
+
+    "lodash.isplainobject": ["lodash.isplainobject@4.0.6", "", {}, ""],
+
+    "lodash.isstring": ["lodash.isstring@4.0.1", "", {}, ""],
+
+    "lodash.once": ["lodash.once@4.1.1", "", {}, ""],
+
+    "lower-case": ["lower-case@2.0.2", "", { "dependencies": { "tslib": "^2.0.3" } }, ""],
+
+    "lru-cache": ["lru-cache@10.4.3", "", {}, ""],
+
+    "lru-memoizer": ["lru-memoizer@2.3.0", "", { "dependencies": { "lodash.clonedeep": "^4.5.0", "lru-cache": "6.0.0" } }, ""],
+
+    "merge2": ["merge2@1.4.1", "", {}, ""],
+
+    "micromatch": ["micromatch@4.0.8", "", { "dependencies": { "braces": "^3.0.3", "picomatch": "^2.3.1" } }, ""],
+
+    "ms": ["ms@2.1.3", "", {}, ""],
+
+    "nanoclone": ["nanoclone@0.2.1", "", {}, ""],
+
+    "no-case": ["no-case@3.0.4", "", { "dependencies": { "lower-case": "^2.0.2", "tslib": "^2.0.3" } }, ""],
+
+    "node-cron": ["node-cron@3.0.3", "", { "dependencies": { "uuid": "8.3.2" } }, ""],
+
+    "normalize-path": ["normalize-path@2.1.1", "", { "dependencies": { "remove-trailing-separator": "^1.0.1" } }, ""],
+
+    "object-hash": ["object-hash@3.0.0", "", {}, ""],
+
+    "object-inspect": ["object-inspect@1.13.2", "", {}, ""],
+
+    "openapi-types": ["openapi-types@12.1.3", "", {}, ""],
+
+    "param-case": ["param-case@3.0.4", "", { "dependencies": { "dot-case": "^3.0.4", "tslib": "^2.0.3" } }, ""],
+
+    "path-type": ["path-type@4.0.0", "", {}, ""],
+
+    "picomatch": ["picomatch@2.3.1", "", {}, ""],
+
+    "prisma": ["prisma@6.1.0", "", { "dependencies": { "@prisma/engines": "6.1.0" }, "bin": "build/index.js" }, ""],
+
+    "property-expr": ["property-expr@2.0.6", "", {}, ""],
+
+    "qs": ["qs@6.13.0", "", { "dependencies": { "side-channel": "^1.0.6" } }, ""],
+
+    "queue-microtask": ["queue-microtask@1.2.3", "", {}, ""],
+
+    "regenerator-runtime": ["regenerator-runtime@0.14.1", "", {}, ""],
+
+    "remove-trailing-separator": ["remove-trailing-separator@1.1.0", "", {}, ""],
+
+    "reusify": ["reusify@1.0.4", "", {}, ""],
+
+    "run-parallel": ["run-parallel@1.2.0", "", { "dependencies": { "queue-microtask": "^1.2.2" } }, ""],
+
+    "safe-buffer": ["safe-buffer@5.2.1", "", {}, ""],
+
+    "semver": ["semver@7.6.3", "", { "bin": "bin/semver.js" }, ""],
+
+    "set-function-length": ["set-function-length@1.2.2", "", { "dependencies": { "define-data-property": "^1.1.4", "es-errors": "^1.3.0", "function-bind": "^1.1.2", "get-intrinsic": "^1.2.4", "gopd": "^1.0.1", "has-property-descriptors": "^1.0.2" } }, ""],
+
+    "side-channel": ["side-channel@1.0.6", "", { "dependencies": { "call-bind": "^1.0.7", "es-errors": "^1.3.0", "get-intrinsic": "^1.2.4", "object-inspect": "^1.13.1" } }, ""],
+
+    "slash": ["slash@3.0.0", "", {}, ""],
+
+    "sofa-api": ["sofa-api@0.18.8", "", { "dependencies": { "@graphql-tools/utils": "^10.0.0", "@whatwg-node/fetch": "^0.10.0", "ansi-colors": "^4.1.3", "fets": "^0.8.0", "openapi-types": "^12.1.0", "param-case": "^3.0.4", "qs": "^6.11.2", "title-case": "^3.0.3", "tslib": "^2.5.0" }, "peerDependencies": { "graphql": "^15.0.0 || ^16.0.0" } }, ""],
+
+    "streamsearch": ["streamsearch@1.1.0", "", {}, ""],
+
+    "title-case": ["title-case@3.0.3", "", { "dependencies": { "tslib": "^2.0.3" } }, ""],
+
+    "to-regex-range": ["to-regex-range@5.0.1", "", { "dependencies": { "is-number": "^7.0.0" } }, ""],
+
+    "toposort": ["toposort@2.0.2", "", {}, ""],
+
+    "ts-algebra": ["ts-algebra@2.0.0", "", {}, ""],
+
+    "ts-toolbelt": ["ts-toolbelt@9.6.0", "", {}, ""],
+
+    "tslib": ["tslib@2.8.0", "", {}, ""],
+
+    "typescript": ["typescript@5.7.2", "", { "bin": { "tsc": "bin/tsc", "tsserver": "bin/tsserver" } }, ""],
+
+    "undici-types": ["undici-types@5.26.5", "", {}, ""],
+
+    "unixify": ["unixify@1.0.0", "", { "dependencies": { "normalize-path": "^2.1.1" } }, ""],
+
+    "urlpattern-polyfill": ["urlpattern-polyfill@10.0.0", "", {}, ""],
+
+    "uuid": ["uuid@11.0.3", "", { "bin": "dist/esm/bin/uuid" }, ""],
+
+    "value-or-promise": ["value-or-promise@1.0.11", "", {}, ""],
+
+    "yallist": ["yallist@4.0.0", "", {}, ""],
+
+    "yup": ["yup@0.32.11", "", { "dependencies": { "@babel/runtime": "^7.15.4", "@types/lodash": "^4.14.175", "lodash": "^4.17.21", "lodash-es": "^4.17.21", "nanoclone": "^0.2.1", "property-expr": "^2.0.4", "toposort": "^2.0.2" } }, ""],
+
+    "@graphql-tools/batch-execute/@graphql-tools/utils": ["@graphql-tools/utils@8.9.0", "", { "dependencies": { "tslib": "^2.4.0" }, "peerDependencies": { "graphql": "^14.0.0 || ^15.0.0 || ^16.0.0 || ^17.0.0" } }, ""],
+
+    "@graphql-tools/delegate/@graphql-tools/utils": ["@graphql-tools/utils@8.9.0", "", { "dependencies": { "tslib": "^2.4.0" }, "peerDependencies": { "graphql": "^14.0.0 || ^15.0.0 || ^16.0.0 || ^17.0.0" } }, ""],
+
+    "@graphql-tools/delegate/tslib": ["tslib@2.4.1", "", {}, ""],
+
+    "@graphql-tools/executor/tslib": ["tslib@2.8.1", "", {}, ""],
+
+    "@graphql-tools/executor/value-or-promise": ["value-or-promise@1.0.12", "", {}, ""],
+
+    "@graphql-tools/merge/@graphql-tools/utils": ["@graphql-tools/utils@8.9.0", "", { "dependencies": { "tslib": "^2.4.0" }, "peerDependencies": { "graphql": "^14.0.0 || ^15.0.0 || ^16.0.0 || ^17.0.0" } }, ""],
+
+    "@graphql-tools/schema/@graphql-tools/utils": ["@graphql-tools/utils@8.9.0", "", { "dependencies": { "tslib": "^2.4.0" }, "peerDependencies": { "graphql": "^14.0.0 || ^15.0.0 || ^16.0.0 || ^17.0.0" } }, ""],
+
+    "@graphql-tools/utils/tslib": ["tslib@2.8.1", "", {}, ""],
+
+    "@graphql-yoga/plugin-jwt/tslib": ["tslib@2.8.1", "", {}, ""],
+
+    "@graphql-yoga/plugin-sofa/sofa-api": ["sofa-api@0.18.7", "", { "dependencies": { "@graphql-tools/utils": "^10.0.0", "@whatwg-node/fetch": "^0.9.14", "ansi-colors": "^4.1.3", "fets": "^0.8.0", "openapi-types": "^12.1.0", "param-case": "^3.0.4", "qs": "^6.11.2", "title-case": "^3.0.3", "tslib": "^2.5.0" }, "peerDependencies": { "graphql": "^15.0.0 || ^16.0.0" } }, ""],
+
+    "@graphql-yoga/subscription/tslib": ["tslib@2.8.1", "", {}, ""],
+
+    "@graphql-yoga/typed-event-target/tslib": ["tslib@2.8.1", "", {}, ""],
+
+    "@types/bun/bun-types": ["bun-types@1.1.37", "", { "dependencies": { "@types/node": "~20.12.8", "@types/ws": "~8.5.10" } }, ""],
+
+    "@whatwg-node/disposablestack/tslib": ["tslib@2.8.1", "", {}, ""],
+
+    "@whatwg-node/server/tslib": ["tslib@2.8.1", "", {}, ""],
+
+    "fets/@whatwg-node/fetch": ["@whatwg-node/fetch@0.9.22", "", { "dependencies": { "@whatwg-node/node-fetch": "^0.5.27", "urlpattern-polyfill": "^10.0.0" } }, ""],
+
+    "fets/@whatwg-node/server": ["@whatwg-node/server@0.9.50", "", { "dependencies": { "@whatwg-node/fetch": "^0.9.22", "tslib": "^2.6.3" } }, ""],
+
+    "graphql-yoga/@graphql-tools/schema": ["@graphql-tools/schema@10.0.13", "", { "dependencies": { "@graphql-tools/merge": "^9.0.14", "@graphql-tools/utils": "^10.6.4", "tslib": "^2.4.0", "value-or-promise": "^1.0.12" }, "peerDependencies": { "graphql": "^14.0.0 || ^15.0.0 || ^16.0.0 || ^17.0.0" } }, ""],
+
+    "graphql-yoga/tslib": ["tslib@2.8.1", "", {}, ""],
+
+    "lru-memoizer/lru-cache": ["lru-cache@6.0.0", "", { "dependencies": { "yallist": "^4.0.0" } }, ""],
+
+    "node-cron/uuid": ["uuid@8.3.2", "", { "bin": "dist/bin/uuid" }, ""],
+
+    "sofa-api/tslib": ["tslib@2.8.1", "", {}, ""],
+
+    "@graphql-tools/delegate/@graphql-tools/utils/tslib": ["tslib@2.8.0", "", {}, ""],
+
+    "@graphql-yoga/plugin-sofa/sofa-api/@graphql-tools/utils": ["@graphql-tools/utils@10.5.5", "", { "dependencies": { "@graphql-typed-document-node/core": "^3.1.1", "cross-inspect": "1.0.1", "dset": "^3.1.2", "tslib": "^2.4.0" }, "peerDependencies": { "graphql": "^14.0.0 || ^15.0.0 || ^16.0.0 || ^17.0.0" } }, ""],
+
+    "@graphql-yoga/plugin-sofa/sofa-api/@whatwg-node/fetch": ["@whatwg-node/fetch@0.9.22", "", { "dependencies": { "@whatwg-node/node-fetch": "^0.5.27", "urlpattern-polyfill": "^10.0.0" } }, ""],
+
+    "fets/@whatwg-node/fetch/@whatwg-node/node-fetch": ["@whatwg-node/node-fetch@0.5.27", "", { "dependencies": { "@kamilkisiela/fast-url-parser": "^1.1.4", "busboy": "^1.6.0", "fast-querystring": "^1.1.1", "tslib": "^2.6.3" } }, ""],
+
+    "graphql-yoga/@graphql-tools/schema/@graphql-tools/merge": ["@graphql-tools/merge@9.0.14", "", { "dependencies": { "@graphql-tools/utils": "^10.6.4", "tslib": "^2.4.0" }, "peerDependencies": { "graphql": "^14.0.0 || ^15.0.0 || ^16.0.0 || ^17.0.0" } }, ""],
+
+    "graphql-yoga/@graphql-tools/schema/value-or-promise": ["value-or-promise@1.0.12", "", {}, ""],
+
+    "@graphql-yoga/plugin-sofa/sofa-api/@whatwg-node/fetch/@whatwg-node/node-fetch": ["@whatwg-node/node-fetch@0.5.27", "", { "dependencies": { "@kamilkisiela/fast-url-parser": "^1.1.4", "busboy": "^1.6.0", "fast-querystring": "^1.1.1", "tslib": "^2.6.3" } }, ""],
+  }
+}

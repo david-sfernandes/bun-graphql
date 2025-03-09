@@ -53,8 +53,7 @@ class MilvusService {
   }
 
   async getClientBusinessUnits(clientId: number, key: string) {
-    const url =
-      `https://api.milvus.com.br/api/clienteendereco/dropdown?cliente_id=${clientId}`;
+    const url = `https://api.milvus.com.br/api/clienteendereco/dropdown?cliente_id=${clientId}`;
     const resp = await fetch(url, {
       headers: {
         "Content-Type": "application/json",
@@ -75,8 +74,7 @@ class MilvusService {
   }
 
   async getClientDeviceDetails(client_id: number) {
-    const url =
-      `https://apiintegracao.milvus.com.br/api/dispositivos/buscar?cliente=${client_id}`;
+    const url = `https://apiintegracao.milvus.com.br/api/dispositivos/buscar?cliente=${client_id}`;
     const resp = await fetch(url, { headers: this.headers });
     const deviceDetails: MilvusDeviceDetailsResp = await resp.json();
     return deviceDetails.lista;
@@ -85,7 +83,7 @@ class MilvusService {
   async getTickets(clientId: number) {
     const milvusTickets: MilvusTicketResp = await this.getTicketsByPage(
       1,
-      clientId,
+      clientId
     );
     const tickets: Ticket[] = this.formatTickets(milvusTickets.lista);
     if (milvusTickets.meta.paginate.last_page === 1) return tickets;
@@ -102,8 +100,7 @@ class MilvusService {
       data_hora_criacao_inicial: `${firstDayOfMonth()} 00:00:00`,
       data_hora_criacao_final: `${lastDayOfMonth()} 23:59:59`,
     });
-    const url =
-      `${this.baseUrl}/chamado/listagem?is_descending=true&order_by=codigo&total_registros=200&pagina=${page}`;
+    const url = `${this.baseUrl}/chamado/listagem?is_descending=true&order_by=codigo&total_registros=200&pagina=${page}`;
     const resp = await fetch(url, {
       method: "POST",
       headers: this.headers,

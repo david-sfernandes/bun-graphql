@@ -19,7 +19,7 @@ class SourceFacade {
 
     this.bitdefenderService = new BitdefenderService(
       this.bitdefenderKey,
-      this.securityReportId,
+      this.securityReportId
     );
     this.milvusService = new MilvusService(this.milvusKey);
   }
@@ -151,8 +151,8 @@ class SourceFacade {
       } catch (error) {
         console.error(
           chalk.bgRed(
-            `Error on sync device detail: ${detail.id} Unit: ${detail.unidade_negocio_id}`,
-          ),
+            `Error on sync device detail: ${detail.id} Unit: ${detail.unidade_negocio_id}`
+          )
         );
       }
     }
@@ -192,20 +192,18 @@ class SourceFacade {
     for (const group of groups) {
       if (!group.id || !group.name) continue;
       const statusList = await this.bitdefenderService.getStausByGroup(
-        group.id,
+        group.id
       );
       await this.upsertStatusList(statusList, group.name);
       console.log(
-        chalk.yellow(
-          `< Updated ${statusList.length} status from ${group.name}`,
-        ),
+        chalk.yellow(`< Updated ${statusList.length} status from ${group.name}`)
       );
     }
   }
 
   private async upsertStatusList(
     statusList: SecurityStatus[],
-    groupName: string,
+    groupName: string
   ) {
     for (const status of statusList) {
       const device = await prisma.device.findFirst({
@@ -228,8 +226,8 @@ class SourceFacade {
           group: groupName,
           id: status.id,
           isManaged: status.isManaged,
-          isManagedWithBest: status?.managedWithBest || status?.managedRelay ||
-            false,
+          isManagedWithBest:
+            status?.managedWithBest || status?.managedRelay || false,
           mac: status.macs[0],
           name: status.name,
           syncedAt: new Date(),

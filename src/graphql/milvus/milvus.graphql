@@ -110,7 +110,6 @@ type Query {
 
 type Mutation {
   updateClient(client: ReqClient!): Client
-  
 }
 
 schema {

@@ -37,4 +37,4 @@ type ReqMSSubscribedSku = {
     provisioningStatus: string;
     appliesTo: string;
   }[];
-}
+};
