@@ -3,7 +3,7 @@ import type { GraphQLContext } from "@/types/context";
 const resolvers = {
   Mutation: {
     async createRecomendation(
-      _: any,
+      _: unknown,
       { text, clientId }: { text: string; clientId: number },
       ctx: GraphQLContext
     ) {
@@ -12,7 +12,7 @@ const resolvers = {
       });
     },
     async createDisclaimer(
-      _: any,
+      _: unknown,
       { text, clientId }: { text: string; clientId: number },
       ctx: GraphQLContext
     ) {
@@ -21,7 +21,7 @@ const resolvers = {
       });
     },
     async updateRecomendation(
-      _: any,
+      _: unknown,
       { id, text }: { id: number; text: string },
       ctx: GraphQLContext
     ) {
@@ -31,7 +31,7 @@ const resolvers = {
       });
     },
     async updateDisclaimer(
-      _: any,
+      _: unknown,
       { id, text }: { id: number; text: string },
       ctx: GraphQLContext
     ) {
@@ -41,7 +41,7 @@ const resolvers = {
       });
     },
     async deleteRecomendation(
-      _: any,
+      _: unknown,
       { id }: { id: number },
       ctx: GraphQLContext
     ) {
@@ -50,7 +50,7 @@ const resolvers = {
       });
     },
     async deleteDisclaimer(
-      _: any,
+      _: unknown,
       { id }: { id: number },
       ctx: GraphQLContext
     ) {

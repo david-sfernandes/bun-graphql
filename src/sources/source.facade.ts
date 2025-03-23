@@ -171,7 +171,7 @@ class SourceFacade {
   }
 
   async syncCompanySecurityStatus() {
-    let groups = await this.bitdefenderService.getCompaniesGroups();
+    const groups = await this.bitdefenderService.getCompaniesGroups();
     await this.syncStatusByGroup(groups);
 
     const subFolders = await this.bitdefenderService.getSubFolders(groups);
@@ -180,7 +180,7 @@ class SourceFacade {
   }
 
   async syncNetworkSecurityStatus() {
-    let groups = await this.bitdefenderService.getNetworkGroups();
+    const groups = await this.bitdefenderService.getNetworkGroups();
     await this.syncStatusByGroup(groups);
 
     const subFolders = await this.bitdefenderService.getSubFolders(groups);
@@ -253,24 +253,24 @@ class SourceFacade {
 
   private async saveSecurityEvents(CSVEvents: Record<string, string>[]) {
     const mountedEvents = [];
-    CSVEvents = CSVEvents.filter((event) =>
+    const filteredEvents = CSVEvents.filter((event) =>
       this.bitdefenderService.isEventValid(event)
     );
 
-    for (const event of CSVEvents) {
+    for (const event of filteredEvents) {
       const device = await prisma.device.findFirst({
         where: {
-          OR: [{ mac: event["MAC"] }, { name: event["Nome do Endpoint"] }],
+          OR: [{ mac: event.MAC }, { name: event["Nome do Endpoint"] }],
         },
       });
       mountedEvents.push({
         deviceName: event["Nome do Endpoint"],
-        module: event["Módulo"],
+        module: event.Módulo,
         companyName: event["Nome da Empresa"],
         endpoint: event["FQDN do Endpoint"],
-        occurrences: parseInt(event["Ocorrências"]),
+        occurrences: Number.parseInt(event.Ocorrências),
         type: event["Tipo de Evento"],
-        username: event["Usuário"],
+        username: event.Usuário,
         lastOccurrence: new Date(event["Ultima ocorrência"]),
         deviceId: device?.id || null,
       });

@@ -3,7 +3,7 @@ import type { GraphQLContext } from "@/types/context";
 const resolvers = {
   Query: {
     async securityEvents(
-      _: any,
+      _: unknown,
       { clientId }: { clientId: number },
       ctx: GraphQLContext,
     ) {

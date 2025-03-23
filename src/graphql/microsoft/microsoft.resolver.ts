@@ -5,14 +5,14 @@ const microsoftService = new MicrosoftService();
 
 const resolvers = {
   MicrosoftSubscribedSku: {
-    sku: async (parent: any, _: any, ctx: GraphQLContext) => {
+    sku: async (parent: { skuId: string }, _: unknown, ctx: GraphQLContext) => {
       return await ctx.prisma.microsoftSku.findFirst({
         where: { id: parent.skuId },
       });
     },
   },
   MicrosoftAccount: {
-    microsoftSkus: async (parent: any, _: any, ctx: GraphQLContext) => {
+    microsoftSkus: async (parent: { id: string }, _: unknown, ctx: GraphQLContext) => {
       return await ctx.prisma.microsoftSku.findMany({
         where: { microsoftAccounts: { some: { id: parent.id } } },
       });
@@ -20,7 +20,7 @@ const resolvers = {
   },
   Query: {
     async microsoftAccount(
-      _: any,
+      _: unknown,
       { clientId }: { clientId: number },
       ctx: GraphQLContext
     ) {
@@ -29,7 +29,7 @@ const resolvers = {
       });
     },
     async microsoftSubscribedSku(
-      _: any,
+      _: unknown,
       { clientId }: { clientId: number },
       ctx: GraphQLContext
     ) {
@@ -40,7 +40,7 @@ const resolvers = {
   },
   Mutation: {
     async updateMSAccounts(
-      _: any,
+      _: unknown,
       { value }: { value: ReqMSAccount[] },
       ctx: GraphQLContext
     ) {
@@ -59,7 +59,7 @@ const resolvers = {
       return { success: value.length - failed, failed };
     },
     async updateMSSubscribedSkus(
-      _: any,
+      _: unknown,
       { value }: { value: ReqMSSubscribedSku[] },
       ctx: GraphQLContext
     ) {

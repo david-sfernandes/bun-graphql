@@ -17,14 +17,14 @@ class MilvusService {
     const url = `${this.baseUrl}/cliente/busca`;
     const resp = await fetch(url, { headers: this.headers });
     if (!resp.ok) {
-      console.error("Error fetching clients" + resp.statusText);
-      throw new Error("Error fetching clients" + resp.statusText);
+      console.error(`Error fetching clients ${resp.statusText}`);
+      throw new Error(`Error fetching clients ${resp.statusText}`);
     }
     const clients: MilvusClientResp = await resp.json();
     return clients.lista;
   }
 
-  async getDevicesByPage(page: number = 1) {
+  async getDevicesByPage(page = 1) {
     const path =
       "/dispositivos/listagem?total_registros=1000&order_by=id&is_descending=false&pagina=";
     const url = `${this.baseUrl}${path}${page}`;
@@ -94,7 +94,7 @@ class MilvusService {
     return tickets;
   }
 
-  async getTicketsByPage(page: number = 1, clientId: number) {
+  async getTicketsByPage(clientId: number, page = 1) {
     const payload = this.buildPayload({
       cliente_id: clientId,
       data_hora_criacao_inicial: `${firstDayOfMonth()} 00:00:00`,
