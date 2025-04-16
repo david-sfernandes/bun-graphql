@@ -29,7 +29,7 @@
     "@graphql-yoga/plugin-jwt": "^3.7.2",
     "@graphql-yoga/plugin-sofa": "^3.13.2",
     "@prisma/client": "^6.4.1",
-    "@std/csv": "npm:@jsr/std__csv@^1.0.5",
+    "@std/csv": "npm:@jsr/std__csv",
     "adm-zip": "^0.5.16",
     "chalk": "^5.4.1",
     "figlet": "^1.8.0",

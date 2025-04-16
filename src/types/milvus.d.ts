@@ -15,9 +15,9 @@ type MilvusBusinessUnitResp = {
 
 type MilvusClient = {
   id: number;
-  nome_fantasia: string | undefined;
+  nome_fantasia?: string;
   razao_social: string;
-  cnpj_cpf: string | undefined;
+  cnpj_cpf?: string;
   token: string;
 };
 

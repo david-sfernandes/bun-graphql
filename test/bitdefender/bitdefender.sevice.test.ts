@@ -2,8 +2,8 @@ import { beforeAll, expect, test } from "bun:test";
 
 import BitdefenderService from "@/services/bitdefender.service";
 
-const key = process.env.BITDEFENDER_KEY_TERABYTE || "";
-const secReportId = process.env.BITDEFENDER_SEC_REPORT_ID || "";
+const key = Bun.env.BITDEFENDER_KEY_TERABYTE || "";
+const secReportId = Bun.env.BITDEFENDER_SEC_REPORT_ID || "";
 
 let testCompanyGroups: SecurityGroup[] = [];
 let bitdefenderService: BitdefenderService;

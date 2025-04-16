@@ -18,3 +18,7 @@ type PrismaUser = {
   updatedAt: Date;
   createdAt: Date;
 };
+
+type WithId = {
+  id: number;
+}
