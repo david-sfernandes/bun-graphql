@@ -1,7 +1,6 @@
 import { rule } from "graphql-shield";
 import extractPayload from "../utils/auth/extractPayload";
 import type { GraphQLContext } from "@/types/context";
-import type { GraphQLContext } from "@/types/context";
 
 const mainRoles: Role[] = ["ADMIN", "MANAGER", "CLIENT", "TECHNICIAN"];
 
@@ -17,8 +16,6 @@ const getPayload = (ctx: GraphQLContext) => {
   return payload;
 };
 
-const isAdmin = rule()(async (_: unknown, __: unknown, ctx: GraphQLContext) => {
-  const payload = getPayload(ctx);
 const isAdmin = rule()(async (_: unknown, __: unknown, ctx: GraphQLContext) => {
   const payload = getPayload(ctx);
   return payload?.scope === "ADMIN";
@@ -38,8 +35,6 @@ const isManager = rule()(
   },
 );
 
-const isBot = rule()(async (_: unknown, __: unknown, ctx: GraphQLContext) => {
-  const payload = getPayload(ctx);
 const isBot = rule()(async (_: unknown, __: unknown, ctx: GraphQLContext) => {
   const payload = getPayload(ctx);
   return payload?.scope === "BOT";

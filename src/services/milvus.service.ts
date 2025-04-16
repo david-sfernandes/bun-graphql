@@ -1,4 +1,4 @@
-import { firstDayOfMonth, lastDayOfMonth } from "../utils/dateUtils";
+import { firstDayPreviousMonth, lastDayPreviousMonth } from "../utils/dateUtils";
 
 class MilvusService {
   private readonly key: string;
@@ -82,9 +82,10 @@ class MilvusService {
 
   async getTickets(clientId: number) {
     const milvusTickets: MilvusTicketResp = await this.getTicketsByPage(
-      1,
       clientId,
+      1
     );
+    console.log("Tickets: ", milvusTickets.lista.length);
     const tickets: Ticket[] = this.formatTickets(milvusTickets.lista);
     if (milvusTickets.meta.paginate.last_page === 1) return tickets;
     for (let i = 2; i <= milvusTickets.meta.paginate.last_page; i++) {
@@ -97,8 +98,8 @@ class MilvusService {
   async getTicketsByPage(clientId: number, page = 1) {
     const payload = this.buildPayload({
       cliente_id: clientId,
-      data_hora_criacao_inicial: `${firstDayOfMonth()} 00:00:00`,
-      data_hora_criacao_final: `${lastDayOfMonth()} 23:59:59`,
+      data_hora_criacao_inicial: `${firstDayPreviousMonth()} 00:00:00`,
+      data_hora_criacao_final: `${lastDayPreviousMonth()} 23:59:59`,
     });
     const url = `${this.baseUrl}/chamado/listagem?is_descending=true&order_by=codigo&total_registros=200&pagina=${page}`;
     const resp = await fetch(url, {

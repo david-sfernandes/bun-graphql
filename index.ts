@@ -9,8 +9,8 @@ import figlet from "figlet";
 import { createYoga } from "graphql-yoga";
 import SECRET from "./src/constant/secret";
 import { dailyTask1, dailyTask2 } from "./src/cron/daily";
-import monthlyTask from "./src/cron/monthly";
-import weeklyTask from "./src/cron/weekly";
+import { monthlyTask } from "./src/cron/monthly";
+import { weeklyTask } from "./src/cron/weekly";
 import schema from "./src/graphql/schema";
 
 const yoga = createYoga({
@@ -49,7 +49,7 @@ monthlyTask.start();
 weeklyTask.start();
 
 console.info(
-  figlet.textSync("Terabyte", {
+  figlet.textSync("TerabyteAPI", {
     font: "Standard",
     horizontalLayout: "default",
     verticalLayout: "default",
