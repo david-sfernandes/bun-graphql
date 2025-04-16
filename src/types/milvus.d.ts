@@ -15,9 +15,9 @@ type MilvusBusinessUnitResp = {
 
 type MilvusClient = {
   id: number;
-  nome_fantasia: string?;
+  nome_fantasia: string | undefined;
   razao_social: string;
-  cnpj_cpf: string?;
+  cnpj_cpf: string | undefined;
   token: string;
 };
 
@@ -26,34 +26,34 @@ type MilvusClientResp = {
 };
 
 type MilvusDevice = {
-  apelido: string?;
+  apelido?: string;
   data_compra: string;
   data_garantia: string;
   data_criacao: string;
   data_ultima_atualizacao: string;
   domain: string;
-  fabricante: string?;
-  hostname: string?;
+  fabricante?: string;
+  hostname?: string;
   id: number;
   ip_interno: string;
   is_ativo: boolean;
   ip_externo: string;
-  macaddres: string?;
-  marca: string?;
-  modelo_notebook: string?;
-  numero_serial: string?;
+  macaddres?: string;
+  marca?: string;
+  modelo_notebook?: string;
+  numero_serial?: string;
   nome_fantasia: string;
   observacao: string;
   placa_mae: string;
   placa_mae_serial: string;
-  processador: string?;
+  processador?: string;
   placa_mae_modelo: string;
-  sistema_operacional: string?;
+  sistema_operacional?: string;
   sistema_operacional_licenca: string;
   total_processadores: number;
   tipo_dispositivo_text: string;
   tipo_dispositivo_icone: string;
-  usuario_logado: string?;
+  usuario_logado?: string;
   versao_client: string;
 };
 

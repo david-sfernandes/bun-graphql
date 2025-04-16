@@ -5,14 +5,18 @@ const microsoftService = new MicrosoftService();
 
 const resolvers = {
   MicrosoftSubscribedSku: {
-    sku: async (parent: any, _: any, ctx: GraphQLContext) => {
+    sku: async (parent: { skuId: string }, _: unknown, ctx: GraphQLContext) => {
       return await ctx.prisma.microsoftSku.findFirst({
         where: { id: parent.skuId },
       });
     },
   },
   MicrosoftAccount: {
-    microsoftSkus: async (parent: any, _: any, ctx: GraphQLContext) => {
+    microsoftSkus: async (
+      parent: { id: string },
+      _: unknown,
+      ctx: GraphQLContext,
+    ) => {
       return await ctx.prisma.microsoftSku.findMany({
         where: { microsoftAccounts: { some: { id: parent.id } } },
       });
@@ -20,18 +24,18 @@ const resolvers = {
   },
   Query: {
     async microsoftAccount(
-      _: any,
+      _: unknown,
       { clientId }: { clientId: number },
-      ctx: GraphQLContext
+      ctx: GraphQLContext,
     ) {
       return await ctx.prisma.microsoftAccount.findMany({
         where: { clientId },
       });
     },
     async microsoftSubscribedSku(
-      _: any,
+      _: unknown,
       { clientId }: { clientId: number },
-      ctx: GraphQLContext
+      ctx: GraphQLContext,
     ) {
       return await ctx.prisma.microsoftSubscribedSku.findMany({
         where: { clientId },
@@ -40,9 +44,9 @@ const resolvers = {
   },
   Mutation: {
     async updateMSAccounts(
-      _: any,
+      _: unknown,
       { value }: { value: ReqMSAccount[] },
-      ctx: GraphQLContext
+      ctx: GraphQLContext,
     ) {
       let failed = 0;
       const clientId = ctx.request.headers.get("clients") || 0;
@@ -59,9 +63,9 @@ const resolvers = {
       return { success: value.length - failed, failed };
     },
     async updateMSSubscribedSkus(
-      _: any,
+      _: unknown,
       { value }: { value: ReqMSSubscribedSku[] },
-      ctx: GraphQLContext
+      ctx: GraphQLContext,
     ) {
       let failed = 0;
       const clientId = ctx.request.headers.get("clients") || 0;
@@ -71,7 +75,7 @@ const resolvers = {
           await microsoftService.upsertSubscribedSku(
             ctx.prisma,
             sku,
-            +clientId
+            +clientId,
           );
         } catch (error) {
           failed++;

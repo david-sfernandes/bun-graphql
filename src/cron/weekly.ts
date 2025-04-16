@@ -9,7 +9,7 @@ const weeklyTask = cron.schedule(
   },
   {
     timezone: "America/Sao_Paulo",
-  }
+  },
 );
 
 export default weeklyTask;

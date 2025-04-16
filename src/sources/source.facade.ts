@@ -19,7 +19,7 @@ class SourceFacade {
 
     this.bitdefenderService = new BitdefenderService(
       this.bitdefenderKey,
-      this.securityReportId
+      this.securityReportId,
     );
     this.milvusService = new MilvusService(this.milvusKey);
   }
@@ -151,8 +151,8 @@ class SourceFacade {
       } catch (error) {
         console.error(
           chalk.bgRed(
-            `Error on sync device detail: ${detail.id} Unit: ${detail.unidade_negocio_id}`
-          )
+            `Error on sync device detail: ${detail.id} Unit: ${detail.unidade_negocio_id}`,
+          ),
         );
       }
     }
@@ -171,7 +171,7 @@ class SourceFacade {
   }
 
   async syncCompanySecurityStatus() {
-    let groups = await this.bitdefenderService.getCompaniesGroups();
+    const groups = await this.bitdefenderService.getCompaniesGroups();
     await this.syncStatusByGroup(groups);
 
     const subFolders = await this.bitdefenderService.getSubFolders(groups);
@@ -180,7 +180,7 @@ class SourceFacade {
   }
 
   async syncNetworkSecurityStatus() {
-    let groups = await this.bitdefenderService.getNetworkGroups();
+    const groups = await this.bitdefenderService.getNetworkGroups();
     await this.syncStatusByGroup(groups);
 
     const subFolders = await this.bitdefenderService.getSubFolders(groups);
@@ -192,18 +192,20 @@ class SourceFacade {
     for (const group of groups) {
       if (!group.id || !group.name) continue;
       const statusList = await this.bitdefenderService.getStausByGroup(
-        group.id
+        group.id,
       );
       await this.upsertStatusList(statusList, group.name);
       console.log(
-        chalk.yellow(`< Updated ${statusList.length} status from ${group.name}`)
+        chalk.yellow(
+          `< Updated ${statusList.length} status from ${group.name}`,
+        ),
       );
     }
   }
 
   private async upsertStatusList(
     statusList: SecurityStatus[],
-    groupName: string
+    groupName: string,
   ) {
     for (const status of statusList) {
       const device = await prisma.device.findFirst({
@@ -253,11 +255,11 @@ class SourceFacade {
 
   private async saveSecurityEvents(CSVEvents: Record<string, string>[]) {
     const mountedEvents = [];
-    CSVEvents = CSVEvents.filter((event) =>
-      this.bitdefenderService.isEventValid(event)
+    const filteredEvents = CSVEvents.filter((event) =>
+      this.bitdefenderService.isEventValid(event),
     );
 
-    for (const event of CSVEvents) {
+    for (const event of filteredEvents) {
       const device = await prisma.device.findFirst({
         where: {
           OR: [{ mac: event["MAC"] }, { name: event["Nome do Endpoint"] }],
@@ -268,7 +270,7 @@ class SourceFacade {
         module: event["Módulo"],
         companyName: event["Nome da Empresa"],
         endpoint: event["FQDN do Endpoint"],
-        occurrences: parseInt(event["Ocorrências"]),
+        occurrences: Number.parseInt(event["Ocorrências"]),
         type: event["Tipo de Evento"],
         username: event["Usuário"],
         lastOccurrence: new Date(event["Ultima ocorrência"]),

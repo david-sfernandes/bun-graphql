@@ -7,62 +7,94 @@ const milvusService = new MilvusService(milvusKey);
 
 const resolvers = {
   Client: {
-    devices: async (parent: any, _: any, ctx: GraphQLContext) => {
+    devices: async (
+      parent: { id: number },
+      _: unknown,
+      ctx: GraphQLContext,
+    ) => {
       return await ctx.prisma.device.findMany({
         where: { clientId: parent.id },
       });
     },
-    microsoftAccounts: async (parent: any, _: any, ctx: GraphQLContext) => {
+    microsoftAccounts: async (
+      parent: { id: number },
+      _: unknown,
+      ctx: GraphQLContext,
+    ) => {
       return await ctx.prisma.microsoftAccount.findMany({
         where: { clientId: parent.id },
       });
     },
     microsoftSubscribedSkus: async (
-      parent: any,
-      _: any,
-      ctx: GraphQLContext
+      parent: { id: number },
+      _: unknown,
+      ctx: GraphQLContext,
     ) => {
       return await ctx.prisma.microsoftSubscribedSku.findMany({
         where: { clientId: parent.id },
       });
     },
-    recomendations: async (parent: any, _: any, ctx: GraphQLContext) => {
+    recomendations: async (
+      parent: { id: number },
+      _: unknown,
+      ctx: GraphQLContext,
+    ) => {
       return await ctx.prisma.recomendation.findMany({
         where: { clientId: parent.id },
       });
     },
-    disclaimers: async (parent: any, _: any, ctx: GraphQLContext) => {
+    disclaimers: async (
+      parent: { id: number },
+      _: unknown,
+      ctx: GraphQLContext,
+    ) => {
       return await ctx.prisma.disclaimer.findMany({
         where: { clientId: parent.id },
       });
     },
   },
   Device: {
-    securityEvents: async (parent: any, _: any, ctx: GraphQLContext) => {
+    securityEvents: async (
+      parent: { id: number },
+      _: unknown,
+      ctx: GraphQLContext,
+    ) => {
       return await ctx.prisma.securityEvent.findMany({
         where: { deviceId: parent.id },
       });
     },
-    securityStatus: async (parent: any, _: any, ctx: GraphQLContext) => {
+    securityStatus: async (
+      parent: { id: number },
+      _: unknown,
+      ctx: GraphQLContext,
+    ) => {
       return await ctx.prisma.securityStatus.findMany({
         where: { deviceId: parent.id },
       });
     },
-    deviceDetails: async (parent: any, _: any, ctx: GraphQLContext) => {
+    deviceDetails: async (
+      parent: { id: number },
+      _: unknown,
+      ctx: GraphQLContext,
+    ) => {
       return await ctx.prisma.device.findFirst({
         where: { id: parent.id },
       });
     },
   },
   DeviceDetail: {
-    businessUnit: async (parent: any, _: any, ctx: GraphQLContext) => {
+    businessUnit: async (
+      parent: { id: number },
+      _: unknown,
+      ctx: GraphQLContext,
+    ) => {
       return await ctx.prisma.businessUnit.findFirst({
         where: { deviceDetails: { some: { id: parent.id } } },
       });
     },
   },
   Query: {
-    async clients(_: any, __: any, ctx: GraphQLContext) {
+    async clients(_: unknown, __: unknown, ctx: GraphQLContext) {
       const role = ctx.jwt?.payload.scope;
 
       if (role === "CLIENT") {
@@ -73,16 +105,16 @@ const resolvers = {
       }
       return await ctx.prisma.client.findMany();
     },
-    async client(_: any, { id }: { id: number }, ctx: GraphQLContext) {
+    async client(_: unknown, { id }: { id: number }, ctx: GraphQLContext) {
       const client = await ctx.prisma.client.findUnique({
         where: { id },
       });
       return client;
     },
     async devices(
-      _: any,
+      _: unknown,
       { clientId, typeFilter }: { clientId: number; typeFilter?: string[] },
-      ctx: GraphQLContext
+      ctx: GraphQLContext,
     ) {
       const payload = ctx.jwt?.payload;
       const where =
@@ -95,21 +127,21 @@ const resolvers = {
         where: { clientId, ...where },
       });
     },
-    async device(_: any, { id }: { id: number }, ctx: GraphQLContext) {
+    async device(_: unknown, { id }: { id: number }, ctx: GraphQLContext) {
       return await ctx.prisma.device.findUnique({
         where: { id },
       });
     },
-    async tickets(_: any, { clientId }: { clientId: number }) {
+    async tickets(_: unknown, { clientId }: { clientId: number }) {
       const tickets: Ticket[] = await milvusService.getTickets(clientId);
       return tickets;
     },
   },
   Mutation: {
     async updateClient(
-      _: any,
+      _: unknown,
       { client }: { client: Client },
-      ctx: GraphQLContext
+      ctx: GraphQLContext,
     ) {
       return await ctx.prisma.client.update({
         where: { id: client.id },

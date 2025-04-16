@@ -53,9 +53,9 @@ console.info(
     font: "Standard",
     horizontalLayout: "default",
     verticalLayout: "default",
-  })
+  }),
 );
 console.info(
   chalk.green(`GraphQL Server: http://localhost:${PORT}/graphql`),
-  chalk.green(`\nREST Documentation: http://localhost:${PORT}/swagger`)
+  chalk.green(`\nREST Documentation: http://localhost:${PORT}/swagger`),
 );

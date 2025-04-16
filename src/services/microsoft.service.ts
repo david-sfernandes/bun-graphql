@@ -4,7 +4,7 @@ class MicrosoftService {
   async upsertAccount(
     prisma: PrismaClient,
     account: ReqMSAccount,
-    clientId: number
+    clientId: number,
   ) {
     await prisma.microsoftAccount.upsert({
       where: { id: account.id },
@@ -34,7 +34,7 @@ class MicrosoftService {
   async upsertSubscribedSku(
     prisma: PrismaClient,
     subscribedSku: ReqMSSubscribedSku,
-    clientId: number
+    clientId: number,
   ) {
     await prisma.microsoftSubscribedSku.upsert({
       where: {

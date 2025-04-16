@@ -9,16 +9,16 @@ import { v1 as uuidv1 } from "uuid";
 
 const resolvers = {
   Query: {
-    async users(_: any, __: any, ctx: GraphQLContext) {
+    async users(_: unknown, __: unknown, ctx: GraphQLContext) {
       return await ctx.prisma.user.findMany();
     },
-    async invites(_: any, __: any, ctx: GraphQLContext) {
+    async invites(_: unknown, __: unknown, ctx: GraphQLContext) {
       return await ctx.prisma.invite.findMany();
     },
     async login(
-      _: any,
+      _: unknown,
       { email, password }: { email: string; password: string },
-      ctx: GraphQLContext
+      ctx: GraphQLContext,
     ) {
       const user = await ctx.prisma.user.findUnique({
         where: { email },
@@ -36,7 +36,7 @@ const resolvers = {
           clients: user?.clients.map((client) => client.id),
         },
         SECRET,
-        { expiresIn: "1d" }
+        { expiresIn: "1d" },
       );
 
       return { token, name: user?.name, role: user?.role };
@@ -44,13 +44,13 @@ const resolvers = {
   },
   Mutation: {
     async createUser(
-      _: any,
+      _: unknown,
       {
         email,
         name,
         password,
       }: { email: string; name: string; password: string },
-      ctx: GraphQLContext
+      ctx: GraphQLContext,
     ) {
       const hash = await hashPassword(password);
       return await ctx.prisma.user.create({
@@ -63,13 +63,13 @@ const resolvers = {
       });
     },
     async createInvite(
-      _: any,
+      _: unknown,
       {
         email,
         role,
         clients,
       }: { email: string; role: Role; clients: number[] },
-      ctx: GraphQLContext
+      ctx: GraphQLContext,
     ) {
       console.log("role", role);
       if (role === "ADMIN") {
@@ -88,14 +88,14 @@ const resolvers = {
       });
     },
     async createUserWithInvite(
-      _: any,
+      _: unknown,
       {
         email,
         name,
         password,
         token,
       }: { email: string; name: string; password: string; token: string },
-      ctx: GraphQLContext
+      ctx: GraphQLContext,
     ) {
       const invite = await ctx.prisma.invite.findUnique({
         where: { token },
@@ -108,7 +108,7 @@ const resolvers = {
       const isPasswordValid = await canSavePassword(password);
       if (!isPasswordValid) {
         throw new GraphQLError(
-          "Password must be at least 8 characters long, contain at least one uppercase letter, one lowercase letter, one number and one special character."
+          "Password must be at least 8 characters long, contain at least one uppercase letter, one lowercase letter, one number and one special character.",
         );
       }
       const hash = await hashPassword(password);
@@ -131,13 +131,13 @@ const resolvers = {
       return user;
     },
     async updatePassword(
-      _: any,
+      _: unknown,
       {
         email,
         password,
         newPassword,
       }: { email: string; password: string; newPassword: string },
-      ctx: GraphQLContext
+      ctx: GraphQLContext,
     ) {
       const user = await ctx.prisma.user.findUnique({ where: { email } });
       const isPasswordValid = await validatePassword(user, password);
@@ -149,14 +149,22 @@ const resolvers = {
         data: { password: hash },
       });
     },
-    async deleteInvite(_: any, { id }: { id: string }, ctx: GraphQLContext) {
+    async deleteInvite(
+      _: unknown,
+      { id }: { id: string },
+      ctx: GraphQLContext,
+    ) {
       const invite = await ctx.prisma.invite.findUnique({ where: { id } });
       if (!invite) throw new GraphQLError("Invite not found!");
       if (invite.usedAt) throw new GraphQLError("Invite already used!");
 
       return await ctx.prisma.invite.delete({ where: { id } });
     },
-    async blockUser(_: any, { email }: { email: string }, ctx: GraphQLContext) {
+    async blockUser(
+      _: unknown,
+      { email }: { email: string },
+      ctx: GraphQLContext,
+    ) {
       const user = await ctx.prisma.user.findUnique({ where: { email } });
       if (!user) throw new GraphQLError("User not found!");
       if (user.role === "ADMIN")

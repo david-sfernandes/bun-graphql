@@ -1,4 +1,0 @@
-[test]
-coverageSkipTestFiles = true       # default false
-coverageReporter  = ["text", "lcov"]  # default ["text"]
-coverageDir = "./test"

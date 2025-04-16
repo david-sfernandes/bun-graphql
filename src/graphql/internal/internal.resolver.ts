@@ -3,27 +3,27 @@ import type { GraphQLContext } from "@/types/context";
 const resolvers = {
   Mutation: {
     async createRecomendation(
-      _: any,
+      _: unknown,
       { text, clientId }: { text: string; clientId: number },
-      ctx: GraphQLContext
+      ctx: GraphQLContext,
     ) {
       return await ctx.prisma.recomendation.create({
         data: { text, clientId },
       });
     },
     async createDisclaimer(
-      _: any,
+      _: unknown,
       { text, clientId }: { text: string; clientId: number },
-      ctx: GraphQLContext
+      ctx: GraphQLContext,
     ) {
       return await ctx.prisma.disclaimer.create({
         data: { text, clientId },
       });
     },
     async updateRecomendation(
-      _: any,
+      _: unknown,
       { id, text }: { id: number; text: string },
-      ctx: GraphQLContext
+      ctx: GraphQLContext,
     ) {
       return await ctx.prisma.recomendation.update({
         where: { id },
@@ -31,9 +31,9 @@ const resolvers = {
       });
     },
     async updateDisclaimer(
-      _: any,
+      _: unknown,
       { id, text }: { id: number; text: string },
-      ctx: GraphQLContext
+      ctx: GraphQLContext,
     ) {
       return await ctx.prisma.disclaimer.update({
         where: { id },
@@ -41,18 +41,18 @@ const resolvers = {
       });
     },
     async deleteRecomendation(
-      _: any,
+      _: unknown,
       { id }: { id: number },
-      ctx: GraphQLContext
+      ctx: GraphQLContext,
     ) {
       return await ctx.prisma.recomendation.delete({
         where: { id },
       });
     },
     async deleteDisclaimer(
-      _: any,
+      _: unknown,
       { id }: { id: number },
-      ctx: GraphQLContext
+      ctx: GraphQLContext,
     ) {
       return await ctx.prisma.disclaimer.delete({
         where: { id },

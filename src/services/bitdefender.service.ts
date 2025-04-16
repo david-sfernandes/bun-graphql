@@ -134,7 +134,8 @@ class BitdefenderService {
 
   isEventValid(event: Record<string, string>) {
     return (
-      event["Nome do Endpoint"] && event["Módulo"] != "Controle de Dispositivos"
+      event["Nome do Endpoint"] &&
+      event["Módulo"] !== "Controle de Dispositivos"
     );
   }
 
