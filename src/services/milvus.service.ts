@@ -85,7 +85,6 @@ class MilvusService {
       clientId,
       1
     );
-    console.log("Tickets: ", milvusTickets.lista.length);
     const tickets: Ticket[] = this.formatTickets(milvusTickets.lista);
     if (milvusTickets.meta.paginate.last_page === 1) return tickets;
     for (let i = 2; i <= milvusTickets.meta.paginate.last_page; i++) {

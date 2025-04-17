@@ -71,7 +71,6 @@ const resolvers = {
       }: { email: string; role: Role; clients: number[] },
       ctx: GraphQLContext,
     ) {
-      console.log("role", role);
       if (role === "ADMIN") {
         throw new GraphQLError("Cannot create an admin invite!");
       }

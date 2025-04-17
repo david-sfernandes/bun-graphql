@@ -46,7 +46,6 @@ test("Get status by group", async () => {
 
 test("Get security report URL", async () => {
   const url = await bitdefenderService.getReportUrl();
-  console.log("URL: ", url);
   expect(url).toBeString();
   expect(url).toMatch(/http/);
 });
