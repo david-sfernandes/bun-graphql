@@ -1,0 +1,1202 @@
+[
+  {
+    "id": 4,
+    "client_id": 90171,
+    "recomendation": "<p><strong>Servidor</strong></p><p>·&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <strong>Garantia:</strong> A garantia do servidor Dell expirou em 2016.</p><p>·&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <strong>Sistema Operacional:</strong> O sistema operacional foi descontinuado pela Microsoft em outubro de 2023.</p><p>·&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <strong>Riscos:</strong> Em caso de desastre físico ou eventos naturais, há um risco aumentado de tempo de inatividade prolongado do servidor devido à dificuldade em obter peças de reposição para equipamentos fora de linha, além de possíveis complicações na recuperação de dados.</p><p>·&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <strong>Recomendação:</strong> Recomenda-se a substituição do servidor ou a migração para uma solução em nuvem.</p><p>·&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <strong>Observações:</strong> A Terabyte já apresentou soluções para este cenário, conforme as propostas enviadas em novembro de 2023 (#117274 e #117408) e novembro de 2020 (pj9200-20).</p><p></p><p>A condição atual do servidor <strong>CINESPDC5</strong>&nbsp;tem várias implicações:&nbsp;</p><ul><li><p><strong>Desempenho Degradado:</strong>&nbsp;O mau estado do hardware pode resultar em um desempenho lento e não confiável, afetando negativamente as operações e o serviço prestado.</p></li><li><p><strong>Risco de Falhas:</strong> Componentes desgastados ou defeituosos aumentam o risco de falhas críticas, o que pode levar a paradas inesperadas e perda de dados.</p></li><li><p><strong>Segurança Comprometida:</strong>&nbsp;O superaquecimento e outros problemas podem comprometer a integridade dos dados e a segurança geral do sistema.&nbsp;</p></li></ul><p>&nbsp;</p><p><strong>Backup</strong></p><p>·&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <strong>Situação Atual:</strong> Na última visita preventiva, realizada em 19/08/24, foi constatada a ausência do segundo disco para a rotina de backup.</p><ul><li><p><strong>     Redundância de Disco</strong>: Adicionar um segundo disco de armazenamento para criar redundância e proteger contra falhas no disco atual.</p></li><li><p><strong>     Backup Online na Nuvem</strong>: Habilitar uma solução de backup online na nuvem para fornecer uma camada adicional de segurança e garantir a integridade dos dados.</p></li></ul>",
+    "create_at": "2024-08-27T13:45:30.277"
+  },
+  {
+    "id": 7,
+    "client_id": 471908,
+    "recomendation": "<p><strong>Backup</strong></p><ul><li><p>Recomendamos a contratação de backup em nuvem para o OneDrive.&nbsp;</p></li></ul><p><strong>OneDrive</strong></p><ul><li><p>Sugerimos a migração de dados do OneDrive para o SharePoint para melhor gerenciamento, colaboração e segurança da informação.&nbsp;</p></li></ul><p><strong>Rede</strong></p><ul><li><p>Reestruturar o rack, instalar um switch de 24 portas, firewall, duas antenas wireless e adicionar mais um link de internet.</p></li></ul>",
+    "create_at": "2024-09-03T00:39:32.397"
+  },
+  {
+    "id": 8,
+    "client_id": 432469,
+    "recomendation": "<p><strong>Backup</strong></p><ul><li><p>Recomendamos a utilização de backup em nuvem para o armazenamento de dados do Storage e para as principais contas de e-mail.</p></li></ul>",
+    "create_at": "2024-09-03T00:45:12.917"
+  },
+  {
+    "id": 9,
+    "client_id": 87132,
+    "recomendation": "<p><strong>Backup</strong></p><ul><li><p>Recomendamos a utilização de backup em nuvem para o armazenamento de dados do Sharepoint e para as principais contas de e-mail.</p></li></ul>",
+    "create_at": "2024-09-03T00:46:41.103"
+  },
+  {
+    "id": 10,
+    "client_id": 87135,
+    "recomendation": "<p><strong>E-mails:</strong></p><ul><li><p>Recomendar a migração de e-mails hospedados na LocalWeb para a solução Microsoft para maior segurança da informação.</p></li></ul><p><strong>Backup:</strong></p><ul><li><p>Recomendamos o backup em nuvem para algumas contas de e-mail que julgam necessárias.</p></li></ul><p><strong>Estações de Trabalho:</strong></p><ul><li><p>Três estações com Windows 7 e Office 2010 precisam ser trocadas.</p></li></ul>",
+    "create_at": "2024-09-03T00:49:26.56"
+  },
+  {
+    "id": 11,
+    "client_id": 90141,
+    "recomendation": "<p><strong>Backup</strong></p><ul><li><p>Recomendamos a utilização de backup em nuvem para o armazenamento de dados e para as principais contas de e-mail.</p></li></ul><p><strong>Estação de trabalho</strong></p><ul><li><p>As máquinas da loja D&amp;D que usam a versão do Windows já descontinuados solicitamos a troca do mesmo.</p></li></ul>",
+    "create_at": "2024-09-03T00:50:45.87"
+  },
+  {
+    "id": 12,
+    "client_id": 276873,
+    "recomendation": "<p><strong>Backup</strong></p><ul><li><p>Recomendamos a utilização de backup em nuvem para o armazenamento de dados e para as principais contas de e-mail.</p></li></ul>",
+    "create_at": "2024-09-03T00:54:02.057"
+  },
+  {
+    "id": 13,
+    "client_id": 87070,
+    "recomendation": "<p><strong>Nobreaks Piso Aspicuelta</strong></p><ul><li><p>Mesa do Everton – Sem nobreaks precisa providenciar 2 novos modelos.</p></li><li><p>Mesa do Fausto - Sem nobreaks precisa providenciar 2 novos modelos.</p></li></ul><p>&nbsp;</p><p><strong>Nobreaks Piso Batman</strong></p><ul><li><p>Mesa do João/Luciana – Precisa de mais 1 nobreak</p></li><li><p>Mesa do Fausto - Sem nobreaks precisa providenciar 2 novos modelos.</p></li></ul><p>Nota: Será apresentando os nobreaks que já estão acima de 2 anos de uso para possível troca e os novos nobreaks para os locais que precisam de nobreaks.</p><p><strong>&nbsp;</strong></p><p><strong>Estação de Trabalho:</strong></p><ul><li><p>Realizado inventário das últimas máquinas adquiridas para distribuir placas RTX para avaliação.</p></li><li><p>Os notebooks dos coordenadores foram sugerido o aumento de RAM (total de 11 unidades).</p></li><li><p>Aumentar o espaço em disco das estações de trabalho para as máquinas em alerta.</p></li></ul><p><strong>Storage:</strong></p><ul><li><p>Não recomendamos a conexão da unidade em máquinas pessoais, devido aos riscos de conexão por ser pessoal junto ao storage conectado, incluindo a falta de antivírus corporativo.</p></li><li><p>Recomendamos seja adquirido o servidor para que cada usuário passe a ter uma conta de acesso ao storage aumentando a segurança e auditoria, pois hoje é todos conectam por uma única conta.</p></li></ul><p><strong>Backup:</strong></p><ul><li><p>Implementar backup em nuvem para o SharePoint e para a conta do OneDrive (press@bernardesarq.com.br).</p></li></ul><p><strong>Exchange:</strong></p><ul><li><p>Sugerir a implementação de backup para os principais e-mails.</p></li></ul>",
+    "create_at": "2024-09-03T00:56:21.767"
+  },
+  {
+    "id": 17,
+    "client_id": 90171,
+    "recomendation": "<p><strong>Servidor</strong></p><ul><li><p>Devido a falha de travamento, recomendamos a troca do servidor.&nbsp;</p></li></ul><p><strong>Estação de Trabalho</strong></p><ul><li><p>Trocar máquinas com Windows 7, total de 3.&nbsp;</p></li></ul><p><strong>Máquina de Câmeras</strong></p><ul><li><p>Recomendamos a troca por um modelo DVR.&nbsp;</p></li></ul><p><strong>Migração</strong></p><ul><li><p>Migrar dados para o SharePoint.&nbsp;</p></li><li><p>Migrar o Oxy para o servidor em nuvem.&nbsp;</p></li></ul>",
+    "create_at": "2024-09-03T01:01:17.187"
+  },
+  {
+    "id": 19,
+    "client_id": 87785,
+    "recomendation": "<p><strong>Backup</strong></p><ul><li><p>Implementar backup para SharePoint e OneDrive.&nbsp;</p></li><li><p>Implementar backup para as principais contas de e-mails.&nbsp;</p></li><li><p>Melhorar a segurança adicionando o Azure AD.&nbsp;</p></li></ul>",
+    "create_at": "2024-09-03T01:06:57.027"
+  },
+  {
+    "id": 22,
+    "client_id": 87161,
+    "recomendation": "<p><strong>SharePoint</strong></p><ul><li><p>Implementar rotinas de backup em nuvem para SharePoint&nbsp;</p></li><li><p>Implementar rotinas de backup em nuvem para as principais contas de e-mails&nbsp;</p></li></ul><p><strong>Link de Internet</strong></p><ul><li><p>Reestruturar a rede wireless trocando a atual antena Ubiquiti acima de 4 anos, assim como unificar a gestão de links de internet ao firewall principal.&nbsp;</p></li></ul><p><strong>Antivírus</strong></p><ul><li><p>Os Macs antigos estão sem antivírus são em sua maioria, para os quais a instalação foi solicitada para não ser realizada devido ao impacto no desempenho. Nossa recomendação por segurança é que mantenham antivírus em todas as máquinas.&nbsp;</p></li></ul>",
+    "create_at": "2024-09-03T01:13:13.53"
+  },
+  {
+    "id": 23,
+    "client_id": 87164,
+    "recomendation": "<p><strong>Estação de trabalho</strong></p><ul><li><p>Estamos recomendando a troca das máquinas antigas: COREI3-8 (maq. 7), COREI3-18 (maq.1), COREI3-14 (maq.21), COREI3-23 (maq.31) por estarem apresentando alertas de temperatura devido a processamento. </p></li></ul><p><strong>Backup </strong></p><ul><li><p>Recomendamos a contratação de backup em nuvem para Sharepoint e e-mails.</p></li></ul>",
+    "create_at": "2024-09-03T01:15:54.647"
+  },
+  {
+    "id": 24,
+    "client_id": 86632,
+    "recomendation": "<p><strong>Links de Internet</strong></p><p>·&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Aumentar a velocidade dos links de internet, deixando 2 links de Ip dedicado</p><p><strong>Backup de VMs</strong></p><p>·&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Recomendar a realização de backups das VMs, avaliar junto ao pessoal do sistema</p><p><strong>E-mails</strong></p><p>·&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Estamos recomendando para os e-mails que já estão no limite de uso de armazenamento o up-grade e/ou que os usuários façam limpeza conforme o informativo enviado aos usuários.</p>",
+    "create_at": "2024-09-03T09:13:08.76"
+  },
+  {
+    "id": 26,
+    "client_id": 87132,
+    "recomendation": "<p><strong>Office</strong></p><p>·&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Recomendamos que o pacote office sejam atualizados para a nova versão do 365 justamente para manter o ambiente atual e seguro.</p><p>·&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Já executado em uma máquina para o Sr. Valter.</p>",
+    "create_at": "2024-09-03T09:31:36.983"
+  },
+  {
+    "id": 28,
+    "client_id": 87135,
+    "recomendation": "<p><strong>Office</strong></p><p>·&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Recomendamos que padronizem para todos os usuários a versão do Office 365 removendo as versões do Office 2010.</p><p>·&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Assim obtendo mais segurança para dados do outlook e padronizando o ambiente.</p>",
+    "create_at": "2024-09-03T09:35:33.113"
+  },
+  {
+    "id": 29,
+    "client_id": 87142,
+    "recomendation": "<p><strong>Backup</strong></p><p>·&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Recomendamos a contratação de backup em nuvem para e-mails e arquivos do servidor para ter uma redundância do backup.</p><p><strong>Servidor</strong></p><p>·&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Esta utilizando o sistema operacional Windows Server 2012 já descontinuado pela Microsoft, ou seja, passa a não ter mais suporte de atualização de segurança, correndo riscos de ameaças na rede. Recomendamos a Troca.&nbsp;</p><p>·&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Checar junto ao Zenit se o sistema já trabalha em nuvem para que o mesmo seja migrado.</p><p><strong>Estação de trabalho</strong></p><p>·&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Máquinas com Windows descontinuado (versão7 e 8) devem ser trocados para não correr risco a rede, pois já foram descontinuados. Hoje a rede tem 1 máquina com Windows 7</p><p>·&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Recomendamos para redundância de internet a contratação de mais um link de internet na gabriel.</p>",
+    "create_at": "2024-09-03T09:41:55.237"
+  },
+  {
+    "id": 30,
+    "client_id": 87143,
+    "recomendation": "<p><strong>Backup</strong></p><p>·&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Recomendamos a contratação de backup em nuvem para e-mails e arquivos do servidor.&nbsp;</p><p><strong>Servidor</strong></p><p>·&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Atual servidor está sem garantia de hardware do fabricante, em caso de uma parada física terá um tempo maior para manutenção, recomendamos a troca e ou migrar para nuvem.</p><p>·&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Checar junto ao Zenit se o sistema já trabalha em nuvem.&nbsp;</p><p><strong>Estação de trabalho</strong></p><p>·&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 1 máquina com Windows 10 usando 4GB de memória RAM, recomendamos o up-grade para 8GB.</p>",
+    "create_at": "2024-09-03T09:44:43.203"
+  },
+  {
+    "id": 31,
+    "client_id": 87144,
+    "recomendation": "<p><strong>&nbsp;</strong></p><p><strong>Backup</strong></p><p>Para maior segurança da informação, recomendamos um backup em nuvem para a plataforma Microsoft Sharepoint e para contas de e-mails que julgarem importantes.</p>",
+    "create_at": "2024-09-03T09:47:46.737"
+  },
+  {
+    "id": 32,
+    "client_id": 87144,
+    "recomendation": "<p><strong>Sistema Operacional</strong></p><p>Recomendamos que computadores com a versão do Windows 7 seja trocado devido a segurança. Hoje no parque de máquina tem uma máquina ativa BM04.</p>",
+    "create_at": "2024-09-03T09:50:40.437"
+  },
+  {
+    "id": 33,
+    "client_id": 87147,
+    "recomendation": "<p><strong>Servidores</strong></p><p>·&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; O Servidor CPTSPDC2 utiliza a versão do Windows Server 2012 foi descontinuado pelo fabricante Microsoft, ou seja, não tem mais suporte a atualizações de segurança, recomendação a troca.</p><p>·&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Ambos os servidores CPTSPDC2 e DC3 estão sem garantia de hardware, ou seja, em caso de falha física o tempo de reparo pode ser alto devido a falta de peças no mercado para equipamentos descontinuados</p><p><strong>Migração</strong></p><p>·&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Recomendamos um estudo para um projeto de migração de dados para a solução em nuvem Sharepoint para os arquivos levando mais segurança da informação e criando um ambiente de dados colaborativo.</p><p>·&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; O atual sistema Metro, recomendamos o estudo junto ao fabricante a migração para nuvem, caso eles não tenham, podemos apresentar um servidor em nuvem e estudar a viabilidade.</p><p><strong>Estações de Trabalho</strong></p><p>·&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Máquinas com versões antigas do Windows e Office devem ser substituídas por questões de segurança.&nbsp;</p><p>·&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Máquinas com Windows Home e descontinuado representam um risco à rede e devem ser trocadas por equipamentos corporativos.&nbsp;</p><p>·&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Usuários que utilizam máquina pessoal, recomendamos um alinhamento com a empresa para que usam máquinas da empresa para maior segurança da informação.</p>",
+    "create_at": "2024-09-03T10:02:24.717"
+  },
+  {
+    "id": 34,
+    "client_id": 87150,
+    "recomendation": "<p><strong>Backup</strong></p><p>·&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Recomendamos o backup em nuvem para os dados do servidor e para as principais contas de e-mails que julgam necessário.</p>",
+    "create_at": "2024-09-03T10:11:39.723"
+  },
+  {
+    "id": 36,
+    "client_id": 87163,
+    "recomendation": "<p><strong>Sistema Operacional</strong></p><p>·&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; A versão do Windows Server 2012 já foi descontinuado pelo fabricante Microsoft, ou seja, não tem mais suporte para atualizações de segurança;</p>",
+    "create_at": "2024-09-03T10:28:27.997"
+  },
+  {
+    "id": 37,
+    "client_id": 87167,
+    "recomendation": "<p><strong>Backup</strong></p><p>·&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Como recomendação ao uso do Sharepoint a contratação da solução de backup em nuvem para ter mais um nível de recuperação de dados.</p><p>·&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Os principais e-mails que julgarem importantes para entrarem na rotina de backup em nuvem, também é recomendado.</p>",
+    "create_at": "2024-09-03T10:31:09.913"
+  },
+  {
+    "id": 39,
+    "client_id": 87175,
+    "recomendation": "<p><strong>Backup</strong></p><p>·&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Recomendamos o backup em nuvem para o servidor e para e-mails</p><p>&nbsp;</p><p><strong>Sistema Operacional</strong></p><p>·&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Recomendamos do sistema operacional Windows 7 já descontinuado (GERSPW08)</p>",
+    "create_at": "2024-09-03T10:47:34.407"
+  },
+  {
+    "id": 40,
+    "client_id": 87176,
+    "recomendation": "<p><strong>Backup</strong></p><p>·&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Recomendamos a utilização de backup em nuvem para o armazenamento de dados e para as principais contas de e-mail.</p><p>·&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Precisam adquirir mais um disco de backup para se ter redundância, hoje tem somente um disco para backup via HD externo. Proposta já apresentada desde 06/2023</p><p><strong>Servidor</strong></p><p>·&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Recomendamos a migração de dados para a Microsoft Sharepoint online</p><p>·&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; O Servidor não tem mais garantia de hardware e por usar um sistema operacional já descontinuado também, solicitamos a troca.</p><p><strong>Rack</strong></p><p>·&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Recomendamos a reestruturar o local com um rack para organizar os ativos de rede.</p><p><strong>Migração</strong></p><p>·&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Recomendamos a migração de dados do servidor de dados para o SharePoint&nbsp; Online</p><p><strong>Estação de trabalho</strong></p><p>·&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Recomendamos a troca das máquinas que usam sistema operacional (Windows) em versões já descontinuados, sejam trocados.</p>",
+    "create_at": "2024-09-03T10:52:57.453"
+  },
+  {
+    "id": 41,
+    "client_id": 87188,
+    "recomendation": "<p><strong>Backup</strong></p><p>·&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Recomendamos a utilização de backup em nuvem para o armazenamento de dados no Sharepoint e para as principais contas de e-mail.</p>",
+    "create_at": "2024-09-03T10:57:14.963"
+  },
+  {
+    "id": 42,
+    "client_id": 87190,
+    "recomendation": "<p><strong>Backup</strong></p><p>·&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Recomendamos a utilização de backup em nuvem para o armazenamento de dados no Sharepoint e para as principais contas de e-mail.</p>",
+    "create_at": "2024-09-03T11:01:40.543"
+  },
+  {
+    "id": 43,
+    "client_id": 87194,
+    "recomendation": "<p><strong>Backup</strong></p><p>·&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Recomendamos a utilização de backup em nuvem para o armazenamento de dados no Sharepoint e para as principais contas de e-mail.</p>",
+    "create_at": "2024-09-03T11:11:22.367"
+  },
+  {
+    "id": 44,
+    "client_id": 87195,
+    "recomendation": "<p><strong>Estação de trabalho</strong></p><p>·&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Máquinas que estão utilizando a versão de Windows descontinuado e versão home, sempre recomendamos para empresas que comprem com a versão pro.</p><p><strong>Backup</strong></p><p>·&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Recomendamos realizar backups em nuvem para as principais contas de e-mail e para os dados do servidor</p><p><strong>e-mails</strong></p><p>·&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Recomendamos a migração dos e-mails para a solução Microsoft 365 para maior segurança de dados</p>",
+    "create_at": "2024-09-03T11:31:06.687"
+  },
+  {
+    "id": 45,
+    "client_id": 87201,
+    "recomendation": "<p>&nbsp;<strong>Backup</strong></p><p>·&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Recomendamos realizar backups em nuvem para as principais contas de e-mail e para os dados do sharepoint</p>",
+    "create_at": "2024-09-03T11:36:30.377"
+  },
+  {
+    "id": 46,
+    "client_id": 87206,
+    "recomendation": "<p><strong>Servidor</strong></p><p>·&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Devido o mesmo já estar apresentando falhas e por estar acima de 4 anos de uso, estamos solicitando a troca do mesmo.</p><p><strong>Backup</strong></p><p>·&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Recomendamos ao servidor um backup em nuvem dos dados para uma segurança a mais de recuperação de dados</p>",
+    "create_at": "2024-09-03T11:42:25.723"
+  },
+  {
+    "id": 47,
+    "client_id": 87208,
+    "recomendation": "<p><strong>Backup</strong></p><p>·&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Recomendamos ao servidor um backup em nuvem dos dados para uma segurança a mais de recuperação de dados junto ao Onedrive conforme apresentado na proposta #143927, para este momento não foi aceita devido a custos.</p>",
+    "create_at": "2024-09-03T11:50:07.15"
+  },
+  {
+    "id": 48,
+    "client_id": 87209,
+    "recomendation": "<p><strong>Backup</strong></p><p>·&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Recomendamos a contratação de backup em nuvem para e-mails e para o SharePoint&nbsp;.</p><p><strong>Servidor</strong></p><p>·&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Recomendamos a desativação fisicamente do mesmo devido a algumas falhas já apresentadas.&nbsp;</p><p><strong>Switch</strong></p><p>·&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Trocar switches que trabalham a 10/100 na rede e unificar por Gigabit</p>",
+    "create_at": "2024-09-03T12:42:30.327"
+  },
+  {
+    "id": 54,
+    "client_id": 87232,
+    "recomendation": "<p><strong>Backup</strong></p><p>Recomendamos o backup em nuvem para os dados no sharepoint e para as contas principais de e-mails.</p><p><strong>Estações de trabalho</strong></p><p>Recomendamos que as máquinas sejam sempre com a versão de Windows Professional para empresas e não Home. Sempre que foram fazer novas aquisição solicitar com Windows Pro</p>",
+    "create_at": "2024-09-03T14:00:02.807"
+  },
+  {
+    "id": 55,
+    "client_id": 87721,
+    "recomendation": "<p><strong>Servidor</strong></p><p>·&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; O espaço em disco do servidor está com apenas 10% livre, recomendamos o aumento em disco.&nbsp;</p><p><strong>Backup</strong></p><p>·&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Recomendamos a contração de backup em nuvem para e-mails Exchange.&nbsp;</p><p><strong>E-mails</strong></p><p>·&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Recomendamos o up-grade para as contas de e-mails que já estão no limite da sua cota de armazenamento.&nbsp;</p><p><strong>Segurança</strong></p><p>·&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Para aumentar a segurança, recomendamos a utilização de autenticação multifator (MFA) nas contas de e-mail.&nbsp;</p><p><strong>Office</strong></p><p>·&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; As chaves do Office não estão seguindo o processo de ativação de licença seguro conforme descrito pela Microsoft.</p>",
+    "create_at": "2024-09-03T14:02:24.887"
+  },
+  {
+    "id": 56,
+    "client_id": 87786,
+    "recomendation": "<p><strong>Segurança</strong></p><p>·&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Substituir os sistemas operacionais e softwares de escritório descontinuados.</p><p>·&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Substituir as máquinas antigas (estações de trabalho e servidor DC6) que não possuem antivírus devido a não aceitar mais segurança, por estar descontinuado.</p><p><strong>Backup</strong></p><p>·&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Trocar o HD externo de backup da Sra. Ana devido à falta de espaço para backups.</p><p>·&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Reestruturar o sistema de backup dos servidores.</p><p>·&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; O DC5 está sem backup e com o HD cheio, recomendamos a troca.</p><p><strong>Storage Qnap</strong></p><p>·&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Substituir o disco 2, que apresentou defeito.</p><p>·&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Aumentar a capacidade de armazenamento em disco.</p><p>·&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Passar por uma reestruturação, devido ser um equipamento acima de 3 anos.</p><p><strong>Servidores</strong></p><p>·&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Desativar o DC1, que é antigo, apresenta erro de disco e está sem espaço em disco.</p><p>·&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Reestruturar os servidores, centralizando-os em um novo hardware.</p><p>·&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; O DC6 está operando em um HD externo na pasta \"transporte\" e corre risco de parada.</p><p><strong>Rede Wireless</strong></p><p>·&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Reconfigurar a rede wireless com novos equipamentos para aumentar a segurança de acesso com antenas robustas.</p>",
+    "create_at": "2024-09-03T14:11:28.013"
+  },
+  {
+    "id": 58,
+    "client_id": 94573,
+    "recomendation": "<p><strong>Backup</strong></p><p>·&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Recomendamos o backup em nuvem para os dados no sharepoint e para as contas principais de e-mails.</p><p><strong>Estações de trabalho</strong></p><p>·&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Recomendamos que as máquinas sejam sempre com a versão de Windows Professional para empresas e não Home. Sempre que foram fazer novas aquisição solicitar com Windows Pro</p>",
+    "create_at": "2024-09-03T16:32:55.143"
+  },
+  {
+    "id": 59,
+    "client_id": 104580,
+    "recomendation": "<p><strong>Estação de trabalho</strong></p><p>·&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Máquinas que estão utilizando a versão de Windows home recomendamos para aumentar segurança trocar para a versão pro. Sempre que forem comprar novas máquinas comprar com a versão professional para empresas.</p><p><strong>Backup</strong></p><p>·&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Recomendamos realizar backups em nuvem para as principais contas de e-mail e para o sharepoint</p>",
+    "create_at": "2024-09-03T16:36:14.737"
+  },
+  {
+    "id": 60,
+    "client_id": 185191,
+    "recomendation": "<p><strong>Backup</strong></p><p>Recomendamos a contratação de backup em nuvem para e-mails e para o SharePoint.</p>",
+    "create_at": "2024-09-03T16:38:54.603"
+  },
+  {
+    "id": 61,
+    "client_id": 273861,
+    "recomendation": "<p><strong>Estações de Trabalho</strong></p><p>Recomendamos que todas as máquinas para um melhor desempenho, sejam padronizadas para 16GB de ram.</p>",
+    "create_at": "2024-09-03T16:40:30.937"
+  },
+  {
+    "id": 62,
+    "client_id": 325206,
+    "recomendation": "<p><strong>Backup</strong></p><p>·&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Recomendamos realizar backups em nuvem para as principais contas de e-mail e para o onedrive</p>",
+    "create_at": "2024-09-03T16:44:04.253"
+  },
+  {
+    "id": 63,
+    "client_id": 386986,
+    "recomendation": "<p><strong>Estação de Trabalho</strong></p><p>·&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Recomendamos adquirir máquinas com Windows na versão Professional, pois essa é a versão corporativa que oferece maior segurança.</p><p>·&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Para máquinas com mais de 5 anos, sugerimos um upgrade para garantir melhor desempenho.</p><p><strong>Firewall</strong></p><p>·&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Recomendamos a substituição do atual firewall Mikrotik, pois ele foi descontinuado, conforme informado na proposta de abril de 2023. (proposta já encaminhada desde 16/08/24)</p><p><strong>Backup</strong></p><p>·&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Recomendamos realizar backup em nuvem para o SharePoint e para as principais contas de e-mail.</p><p><strong>Segurança</strong></p><p>·&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Sugerimos reestruturar a política de acesso para revisão, conforme enviado para análise, e estamos aguardando retorno.</p><p>·&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Além disso, sempre que um usuário se desligar ou entrar de licença, recomendamos que o novo colaborador tenha um login próprio de acesso para facilitar futuras auditorias, se necessário.</p>",
+    "create_at": "2024-09-03T16:48:11.517"
+  },
+  {
+    "id": 64,
+    "client_id": 395718,
+    "recomendation": "<p><strong>SharePoint</strong></p><p>Recomendamos a reestruturar a política de acessos ao SharePoint.</p><p>Estamos aguardando um retorno da Inaiá desde 12/8</p>",
+    "create_at": "2024-09-03T16:52:15.657"
+  },
+  {
+    "id": 65,
+    "client_id": 87154,
+    "recomendation": "<p>&nbsp;<strong>Sistema Operacional</strong></p><p>·&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; BRSPDC01 este servidor utiliza a versão do Windows 2008 e não tem mais suporte a atualizações de segurança e nem peça de reposição ao mesmo.</p><p>·&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Estação de trabalho BRSPW041/ CPSPW4&nbsp; que utilizam a versão de Windows 7 que já esta descontinuado, recomendamos a troca.</p><p><strong>Recepção</strong></p><p>·&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Preparar máquina reserva.</p><p><strong>Backup</strong></p><p>·&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Recomendamos backup em nuvem para o servidor e SharePoint.&nbsp;</p><p>·&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Backup em nuvem para e-mail.&nbsp;</p><p><strong>Recepção</strong></p><p>·&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Preparar máquina reserva.</p>",
+    "create_at": "2024-09-04T11:53:30.1"
+  },
+  {
+    "id": 66,
+    "client_id": 281384,
+    "recomendation": "<p><strong>SharePoint</strong></p><ul><li><p>O SharePoint excedeu 1,52TB do limite;</p></li><li><p>Como solução, gostaríamos de propor a migração de arquivos que possam ser classificados como de consulta para migrar a uma nuvem fria e deixar somente os arquivos ativos que vamos classificar como nuvem quente.</p></li><li><p>Maiores patas em uso:</p></li></ul><p><strong>Pasta / Volume (GB)</strong></p><p>Cliente - Bayer = 903,43</p><p>Cliente - XP = 473,1</p><p>Controle Evidencias Contrapartidas = 445,86</p><p>Cliente - Elo = 193,04</p><p>Cliente - Livelo = 122,06</p><p>Cliente - Arteris = 92</p><p>Mailing e Projetos = 86,37</p><p>&nbsp;</p><p><strong>Segurança</strong></p><ul><li><p>Recomendamos sempre que forem comprar novas máquinas, que comprem com a versão do Windows Professional para empresa, para aumentar a segurança.</p></li></ul><p><strong>Backup</strong></p><ul><li><p>A Microsoft vem recomendando que empresas que usam a solução Microsoft Sharepoint, a passar a ter o backup em nuvem para esta solução também, pois a mesma guarda versões anteriores e/ou exclusão até 30 dias, após não se recupera.</p></li></ul>",
+    "create_at": "2024-09-05T12:00:34.057"
+  },
+  {
+    "id": 67,
+    "client_id": 87169,
+    "recomendation": "<p>&nbsp;</p><p><strong>Servidor de arquivo FRSPDC1</strong></p><ul><li><p>Garantia Dell: Expirou a garantia em abril/2024, a Dell encaminhou a proposta de renovação em 01/04/24;</p></li><li><p>Riscos: Em caso de uma falha física do Servidor, o mesmo terá um tempo inoperante maior para se conseguir reparo, devido ter peças especificas da Dell.</p></li></ul><p><strong>Servidor antigo FRASERVER</strong></p><ul><li><p>Garantia Dell: Expirou a garantia em out/2014, fabricado em 2012, ou seja, mais de 10 anos de uso.</p></li><li><p>Sistema Operacional Windows Server 2008 também já descontinuado</p></li><li><p>Nota: Este servidor desde 2023 já foi informado que não tem mais suporte e riscos de parada</p></li><li><p>Servidor se encontra com falhas e inoperante.</p></li></ul><p>&nbsp;</p><p><strong>E-mails</strong></p><p>·&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Recomendamos para aumentar a segurança de dados, migrar os e-mails da LocalWeb para a solução Microsoft Exchange de e-mails.</p><p><strong>Firewall</strong></p><p>·&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Firewall DrayTek descontinuado, sugerimos a troca, devido ter mais de 3 anos.</p><p><strong>Backup</strong></p><p>Recomendamos implementar o backup em nuvem ao servidor de arquivos (FRSPDC1 ) para uma redundância de backup</p><p><strong>Recomendação Terabyte</strong></p><p>·&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Migrar os e-mails e arquivos do atual servidor para nuvem utilizando o Microsoft 365 para ter acesso via internet e não depender mais da acessos externos a máquina física com Anydesk.</p><p>·&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Desta forma todo ambiente fica mais colaborativo acessando de qualquer local com segurança os dados e e-mails.</p>",
+    "create_at": "2024-09-05T15:20:55.223"
+  },
+  {
+    "id": 68,
+    "client_id": 87223,
+    "recomendation": "<p><strong>Backup</strong></p><p>·&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; A Microsoft vem orientando para quem utiliza o Microsoft Sharepoint para implementar mais um recurso de segurança através da solução de backup em nuvem.</p><p>·&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Em 28/08 apresentando a proposta (14156-24) para contratação do backup em nuvem para Sharepoint (em análise coma GH)</p><p><strong>Sharepoint</strong></p><p>·&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Após Call Julho/24 aguardando um feedback sobre a nova estrutura para ser estudada para adaptação.</p>",
+    "create_at": "2024-09-05T15:38:58.63"
+  },
+  {
+    "id": 70,
+    "client_id": 87214,
+    "recomendation": "<p><strong>Estações de Trabalho</strong></p><p>·&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Substituir máquinas com sistema operacional antigo, já descontinuados.&nbsp;</p><p>·&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Atualizar máquinas com Windows Home para a versão Pro do Windows.&nbsp;</p><p>·&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Estamos recomendando para não correr riscos na rede.</p><p><strong>Rede Wireless</strong></p><p>·&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Recomendamos uma reestrutura da rede Wireless</p><p>·&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Verificar a antena Claro, pois está fora da faixa de IP. (recomendamos abrir chamado junto a operadora para esta configuração)&nbsp;</p><p><strong>Link de Internet</strong></p><p>·&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Recomendamos que a estrutura mantenha sempre 2 links ativos como redundância, porém hoje a SBI tem somente 1 link de internet.</p><p><strong>Sharepoint</strong></p><p>·&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Encaminhando em 22/08 a proposta #144974 de migração de dados referente as pastas comerciais para estruturar ao sharepoint, aguardando aprovação</p>",
+    "create_at": "2024-09-06T09:33:00.407"
+  },
+  {
+    "id": 71,
+    "client_id": 87215,
+    "recomendation": "<p><strong>Segurança</strong></p><p>·&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Recomendamos que todos os usuários da Brasiliano ativem o Multifator para o uso da solução Microsoft 365 para login com MFA. Assim, aumentando a segurança e menos risco a rede online para cada conta de acesso.</p><p><strong>Sharepoint Online</strong></p><p>·&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; O sharepoint atingiu 94% de uso de sua capacidade de armazenamento e estamos apresentando como solução de acordo com a proposta #145163 para análise da Brasiliano.</p><p><strong>Estações de trabalho</strong></p><p>·&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Estamos recomendando aos técnicos de sistema da Brasiliano, que sempre que formatarem uma estação de trabalho, avisar a Terabyte pois as máquinas precisam ficar dentro de um padrão de nomenclatura mantendo o nome, instalar o sistema de inventário da Terabyte, assim como antivírus, assim mantendo a segurança da mesma.</p>",
+    "create_at": "2024-09-06T09:48:35.24"
+  },
+  {
+    "id": 72,
+    "client_id": 90084,
+    "recomendation": "<p><strong>Servidor</strong></p><p>·&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Devido a atual estrutura de discos internos, vamos apresentar uma melhoria interna do servidor para reestruturar os discos junto ao espaço.</p>",
+    "create_at": "2024-09-06T10:06:48.347"
+  },
+  {
+    "id": 73,
+    "client_id": 86589,
+    "recomendation": "<p><strong>Estações de trabalho</strong></p><p><strong>Up-grade de memória RAM</strong></p><p>Recomendamos as estações de trabalho abaixo, o up-grade de memória RAM devido estar utilizando mais de 90% de sua capacidade.</p><p><strong>Dispositivos &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Total&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Em uso</strong></p><p>TNKSPNB117&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 8 GB&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 98,34%</p><p>TNKSPNB69&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 8 GB&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 96,03%</p><p>TNKSPNB55&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 8 GB&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 95,71%</p><p>TNKSPNB129&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 8 GB&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 94,88%</p><p>TNKSPNB85&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 8 GB&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 94,86%</p><p>TNKSPNB123&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 8 GB&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 94,62%</p><p>TNKSPNBA04&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 8 GB&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 94,62%</p><p>TNKSPNB94&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 8 GB&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 94,5%</p><p>TNKSPNB67&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 8 GB&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 94,49%</p><p>TNKSPNB74&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 8 GB&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 94,17%</p><p>TNKSPNB45&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 8 GB&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 94,06%</p><p>&nbsp;</p><p><strong>Uso de disco</strong></p><p>Estamos recomendando o up-grade de discos para as máquinas abaixo devido estar próximo ao limite de uso do seu armazenamento</p><p><strong>Dispositivo&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Total&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;Em uso</strong></p><p>TNKSPNB96&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 454 GB&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 422 GB</p><p>TNKSPNB134&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 235,61 GB&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 223,50 GB</p><p>TNKSPNB73&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 237,23 GB&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 220,75 GB</p><p>TNKSPW3&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 222 GB&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 217 GB</p><p>TNKSPNB94&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 236,25 GB&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 215,16 GB</p><p>TNKSPNB91&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 236 GB&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 215 GB</p><p>TNKSPNB82&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 237,23 GB&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 214,57 GB</p><p></p><p>Nota: Recomendamos que as 74 máquinas que usam 8GB de memória ram, que aumente para 16GB para um melhor desempenho</p><p></p><p><strong>Backup</strong></p><p>·&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Recomendamos backup em nuvem das principais contas de e-mails.&nbsp;</p><p>·&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Recomendamos backup em nuvem para o SharePoint.&nbsp;</p><p><strong>Segurança</strong></p><p>·&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Sugerimos reativar a cópia de segurança da área de trabalho no OneDrive para aumentar a segurança dos dados.&nbsp;</p><p></p><p><strong>e-mails</strong></p><p>·&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Recomendamos orientar os usuário a fazer uma limpeza para abrir mais espaço nas suas contas de email, caso não sejam possíveis, será necessário o up-grade destascontas:</p><p>Francisco Roniel - 45,6GB</p><p>Alexander Toledo - 43,15GB</p>",
+    "create_at": "2024-09-06T10:45:15.247"
+  },
+  {
+    "id": 75,
+    "client_id": 87231,
+    "recomendation": "<p><strong>Backup</strong></p><p>·&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Recomendamos que sempre o servidor tenha 2 discos externos para backup local e 1 fonte de backup em nuvem para maior seguraça da informação.</p><p>&nbsp;</p><p><strong>Estação de Trabalho</strong></p><p>·&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Recomendamos que as estações de trabalho que usam o sistema antigo com Windows 7, sejam trocados para maior segurança da rede.</p><p>·&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Sempre que forem adquirir novas, comprar com Windows Pro, devido a segurança da rede, tem algumas máquinas que são home.</p><p><strong>Rede Wireless</strong></p><p>·&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Para melhoria da rede Wi-Fi, estamos recomendando a troca por antenas corporativas da marca Ubiquiti.</p>",
+    "create_at": "2024-09-06T14:30:12.37"
+  },
+  {
+    "id": 77,
+    "client_id": 87135,
+    "recomendation": "<p><strong>Backup</strong></p><p>·&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 7 máquinas com Windows 10 utilizando 4GB de memória RAM, recomendamos o up-grade.</p><p>·&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 3 máquinas com Windows 7, precisam ser trocadas para não correr risco na rede devido estarem descontinuadas</p><p><strong>Backup</strong></p><p>·&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 01 HD de backup USB apresenta falhas e precisa ser trocado</p>",
+    "create_at": "2024-10-01T16:52:23.157"
+  },
+  {
+    "id": 78,
+    "client_id": 87143,
+    "recomendation": "<p><strong>Estação de trabalho</strong></p><p>·&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 1 máquina com Windows 11 Home, recomendamos sempre que as empresas utilizem a versão Pro, devido a rede de dados pois é a versão apropriada para a rede corporativa.</p>",
+    "create_at": "2024-10-01T17:16:28.093"
+  },
+  {
+    "id": 79,
+    "client_id": 87144,
+    "recomendation": "<p><strong>Estação de Trabalho</strong></p><p>·&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 1 Máquina (BM35) com Windows Home, recomendamos que a empresa sempre utilize a versão Pro devido a proporcionar maior segurança;</p>",
+    "create_at": "2024-10-01T17:28:11.163"
+  },
+  {
+    "id": 80,
+    "client_id": 87147,
+    "recomendation": "<p><strong>Estação de Trabalho</strong></p><p>·&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; O suporte do Windows 7 terminou em 14 de janeiro de 2020 e recomendamos que as máquinas sejam trocadas para não ter riscos na rede por não ter mais atualização de segurança;</p><p>·&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; O suporte do Windows Server 2012 terminou em 12 de janeiro de 2023 e recomendamos que as máquinas sejam trocadas para não ter riscos na rede por não ter mais atualização de segurança;</p><p>·&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; A Versão do Windows Home é recomendado para pessoa física e para empresa é importante usar a versão Professional por trazer recursos de segurança e integração a rede, recomendamos a troca.</p>",
+    "create_at": "2024-10-01T17:47:51.083"
+  },
+  {
+    "id": 81,
+    "client_id": 87149,
+    "recomendation": "<p><strong>Estação de Trabalho</strong></p><p>·&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; O suporte do Windows 7 terminou em 14 de janeiro de 2020 e recomendamos que as máquinas sejam trocadas para não ter riscos na rede por não ter mais atualização de segurança;</p><p>·&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 2 máquinas estão utilizando a versão do Windows 7 (DRMSPNB02, CDMESPW1) recomendamos a troca para não ter riscos na rede.</p>",
+    "create_at": "2024-10-01T17:53:17.76"
+  },
+  {
+    "id": 82,
+    "client_id": 87150,
+    "recomendation": "<p>&nbsp;<strong>Estação de Trabalho</strong></p><p>·&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 4 máquinas utilizando Windows 7 e recomendamos a troca ((DERSPNB02, ADM02, DRMBRSPW22, DERMACENTRO-PC), por estar descontinuado passa a não ter mais atualização de segurança.</p><p>·&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 1 máquina com Windows 10 home, recomendamos a troca, devido ser um sistema operacional recomendo para uso domestico. Co,m a versão Professional é possível colocar mais recursos de segurança</p><p><strong>Switch</strong></p><p>·&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; O atual switch da rede apresentou defeito físico e solicitamos a troca, recomendamos a troca.</p><p>·&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; O Julio providenciou outro e trocou o mesmo.</p>",
+    "create_at": "2024-10-01T18:02:20.1"
+  },
+  {
+    "id": 83,
+    "client_id": 87167,
+    "recomendation": "<p>&nbsp;<strong>Estações de Trabalho</strong></p><p>Recomendamos para as máquinas abaixo o up-grade de memória ram para 16GB devido estarem acima de 80% de uso</p><p>DISPOSITIVO&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; TIPO&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;USUÁRIOS &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; MEMÓRIA EM USO</p><p>·&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; BRSPW031&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Desktop &nbsp;&nbsp;&nbsp;&nbsp;ProteçãoFamiliarFara&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 8 GB&nbsp;&nbsp;&nbsp;&nbsp; 87,75%</p><p>·&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; FRHSPNB07&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Notebook&nbsp; &nbsp;SabrinaGaldinoFarahS&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 8 GB&nbsp;&nbsp;&nbsp;&nbsp; 96,62%</p><p><strong>E-mails</strong></p><p> E-mails abaixo precisam de atenção, devido ao uso de armazenamento da caixa postal, precisam liberar espaço ou fazer up-grade.. Cada e-mail tem a cota de 50GB de armazenamento:</p><p>·&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Sabrina.galdino = 50GB de uso</p><p>·&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Limajr = 46GB de uso</p><p>·&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Simone = 45GB de uso</p><p><strong>Sharepoint</strong></p><p>·&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Atingiu 40% de uso do limite de armazenamento de 1TB</p><p></p>",
+    "create_at": "2024-10-07T17:27:12.78"
+  },
+  {
+    "id": 85,
+    "client_id": 86589,
+    "recomendation": "<p><strong>Up-grade de memória ou disco</strong></p><p>·&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; TNKSPNBA05 – Luiza – apresentando lentidão, necessário aumentar memória ram, aumentar memória para 16GB</p><p>·&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; TNKSPNB79 – Augusto – apresentando lentidão, necessário aumentar memória ram, aumentar memória para 16GB</p><p>·&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; TNKSPNB55 – Eduardo – apresentando falta de espaço em disco, aumentar o disco para 512GB</p><p></p><p><strong>Recomendações</strong></p><p>·&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Aguardamos um retorno se precisa de adquirir as melhorias</p><p></p><p></p>",
+    "create_at": "2024-10-07T19:01:34.2"
+  },
+  {
+    "id": 86,
+    "client_id": 86632,
+    "recomendation": "<p>Aguardamos um retorno sobre os pontos recomendas em setembro</p>",
+    "create_at": "2024-10-09T18:24:15.913"
+  },
+  {
+    "id": 87,
+    "client_id": 86632,
+    "recomendation": "<p><strong>Estações de trabalho</strong></p><p>·&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; A partir de&nbsp;<strong>outubro de 2025</strong>, a&nbsp;<strong>Microsoft</strong>&nbsp;não oferecerá mais suporte para esta versão, incluindo atualizações de segurança, o que significa que o sistema será descontinuado.</p><p>·&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Como solução, é recomendável&nbsp;<strong>avaliar a migração para o Windows 11</strong>. Caso os equipamentos não atendam aos requisitos necessários para essa atualização, será necessário&nbsp;<strong>substituí-los</strong>&nbsp;para evitar&nbsp;<strong>vulnerabilidades na rede e possíveis riscos de segurança.</strong></p>",
+    "create_at": "2024-10-09T18:33:56.52"
+  },
+  {
+    "id": 88,
+    "client_id": 87070,
+    "recomendation": "<p><strong>Estação de Trabalho</strong></p><p>·&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Recomendamos que as máquinas com Windows Home, seria ideal trocar por versões Pro, para aumentar a segurança e padronizar junto ao ambiente Bernardes (BERPTW10, BERPTW165, BERPTW010, BERPTW009, BERPTW11, BERAZW167,BERPTW006)</p><p>&nbsp;</p><p><strong>E-mails</strong></p><p>·&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; A caixa de e-mail da Ana Barbosa atingiu 94% de uso, precisa fazer uma limpeza ou up-grade de sua caixa postal</p><p>·&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; A caixa de e-mail da Seleção atingiu 94% de uso, precisa fazer uma limpeza ou up-grade de sua caixa postal</p>",
+    "create_at": "2024-10-14T12:22:10.767"
+  },
+  {
+    "id": 89,
+    "client_id": 325206,
+    "recomendation": "<p><strong>Estação de trabalho</strong></p><p>·&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; A estação de trabalho “Administrativo” está somente com 70GB livre de seu disco de 240GB” é ideal fazer uma limpeza e/ou trocar por um de maior capacidade.</p><p>&nbsp;</p><p></p>",
+    "create_at": "2024-10-18T16:52:30.05"
+  },
+  {
+    "id": 90,
+    "client_id": 281384,
+    "recomendation": "<p>&nbsp;</p><p><strong>Estações de trabalho</strong></p><p>·&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; As máquinas abaixo estão apresentando a necessidade de up-grade de memória ram para uma melhor desempenho</p><p></p><p></p><p><strong>NOME DO &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;DISPOSITIVO&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; APELIDO&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; MEMÓRIA RAM&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; EM USO</strong></p><p>CHRISDUNCAN&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;  Notebook&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Christiane Duncan&nbsp;&nbsp;&nbsp;&nbsp; &nbsp; &nbsp;&nbsp; 8 GB&nbsp;&nbsp;&nbsp;                &nbsp; 94,62%</p><p>DESKTOP-5A70J7S&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Notebook&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Priscila Maura&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; 8 GB&nbsp;&nbsp;&nbsp;&nbsp;                 94,25%</p><p>ANITA&nbsp;&nbsp; Notebook&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Anita Santos&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;16 GB&nbsp;&nbsp;                 93,81%</p><p>CXSPNB1&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Notebook&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Andrea Vasconcelos&nbsp;&nbsp;&nbsp;  8 GB&nbsp;&nbsp;&nbsp;&nbsp;                  89,12%</p><p>LAPTOP-CPDVHOSG&nbsp;    Notebook&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Tatiana Monteiro&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 8 GB&nbsp;&nbsp;&nbsp;                &nbsp; 88%</p><p>ALEJANDRA-CX&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Notebook&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Lúcia Alejandra&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 8 GB&nbsp;&nbsp;                &nbsp;&nbsp; 87,25%</p><p>LAPTOP-8JREJ000&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Notebook&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Andreia de Freta&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp; 8 GB&nbsp;&nbsp;&nbsp;               &nbsp; 86,88%</p><p>LAPTOP-RVMJNH8N&nbsp;&nbsp;&nbsp; Notebook&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Ana Meirelles&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 8 GB&nbsp;&nbsp;               &nbsp;&nbsp; 86,25%</p><p>PATRICIACX&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Notebook&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Patrícia Russo &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;  8 GB&nbsp;&nbsp;&nbsp;              &nbsp; 84%</p>",
+    "create_at": "2024-10-18T17:39:09.687"
+  },
+  {
+    "id": 91,
+    "client_id": 87164,
+    "recomendation": "<p>Estações de trabalho</p><p>·&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Estas máquinas utilizam processadores i3 da segunda Geração, utilizando 4GB de memória ram e ambas estão acima de 85% de uso de sua capacidade.</p><p>·&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; O ideal seria adicionar mais memória ram para melhorar o desempenho, porém por serem máquinas com mais de 5 anos de uso e hardware com frequencia baixa ideial seria trocar o equipamento. DISPOSITIVO&nbsp;&nbsp; TIPO DO DISPOSITIVO MEMÓRIA RAM TOTAL EM USO</p><p>·&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; COREI3&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Desktop&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 4 GB&nbsp;&nbsp;&nbsp;&nbsp; 87%</p><p>·&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; COREI3-10&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Desktop&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 4 GB&nbsp;&nbsp;&nbsp;&nbsp; 87,25%</p><p>·&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; COREI3-17&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Desktop&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 4 GB&nbsp;&nbsp;&nbsp;&nbsp; 92,5%</p><p>·&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; COREI3-2&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Desktop&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 4 GB&nbsp;&nbsp;&nbsp;&nbsp; 87,5%</p><p>·&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; COREI3-5&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Desktop&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 4 GB&nbsp;&nbsp;&nbsp;&nbsp; 93,5%</p><p>·&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; COREI3-7&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Desktop&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 4 GB&nbsp;&nbsp;&nbsp;&nbsp; 92,5%</p><p>·&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; COREI3-8&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Desktop&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 4 GB&nbsp;&nbsp;&nbsp;&nbsp; 91,75%</p><p>·&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Para a estação de trabalho CORI5-2 que utiliza 8GB e por ter um processador mais moderno, recomendamos o up-grade para 16GB, pois esta utilizando 85% de sua capacidade.</p><p>·&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; COREI5-2&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Notebook&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 8 GB&nbsp;&nbsp;&nbsp;&nbsp; 85,64%</p><p>&nbsp;</p><p>Máquinas com o Windows Home recomendamos a troca pela versão Professional para que ambas as estações tenham o ingresso no domínio de forma segura.</p><p>A versão home é indicada para pessoa física.</p><p>COREI3-13, COREI3-16,,COREI3-17,COREI3-19,COREI3-20, COREI3-21, COREI3-24, COREI3-25, COREI3-6, COREI3-9, COREI5-2, COREI7-7, HOME1, Maquina 31</p>",
+    "create_at": "2024-10-23T19:25:15.647"
+  },
+  {
+    "id": 92,
+    "client_id": 276873,
+    "recomendation": "<p><strong>Estação de trabalho</strong></p><p>·&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Estamos sugerindo o aumento de memória para uma melhor desempenho das maquinas.</p>",
+    "create_at": "2024-10-28T20:09:42.257"
+  },
+  {
+    "id": 93,
+    "client_id": 90141,
+    "recomendation": "<p><strong>Estação de trabalho</strong></p><p>·&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Estamos sugerindo o aumento de memória para uma melhor desempenho das maquinas.</p>",
+    "create_at": "2024-10-28T20:12:15.92"
+  },
+  {
+    "id": 94,
+    "client_id": 87222,
+    "recomendation": "<p><strong>Estação de trabalho</strong></p><p>·&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; MLTSPW12 – Esta consumindo mais de 80% do uso de sua capacidade de memória ram. Será necessário avaliar para verificar se a máquina suporta mais de 8GB.</p><p>·&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; STOMTLADM - Esta consumindo mais de 80% do uso de sua capacidade de memória ram. Será necessário avaliar para verificar se a máquina suporta mais de 8GB.</p>",
+    "create_at": "2024-10-30T14:28:38.07"
+  },
+  {
+    "id": 96,
+    "client_id": 87231,
+    "recomendation": "<p><strong>Após a reunião realizada em 29.10.24 com o Sr. Vicente, segue abaixo as melhorias a ser apresentado:</strong></p><p><strong>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Estação de trabalho</strong></p><p>·&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Devido em outubro de 2025, as máquinas serão avaliadas para entender quais irão aceitar o novo Windows 11 e quais precisam ser trocadas. Será agendado uma avaliação.</p><p>·&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Computador com Windows 7 já não respondem mais ao sistema de monitoramento por estar descontinuado, precisam ser trocadas.</p><p>·&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Orientamos também que sempre que comprar novos equipamentos que comprem com Windows pro.</p><p><strong>&nbsp;&nbsp;&nbsp; Servidor</strong></p><p>·&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Devido o Windows estar descontinuado, será gerado uma proposta para migração a nuvem;</p><p>·&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Está sem redundância de backup, somente com 1 disco externo</p><p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <strong>Rede Wireless</strong></p><p>·&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Será apresentado a proposta para melhorias na rede Wireless</p>",
+    "create_at": "2024-10-30T14:53:46.54"
+  },
+  {
+    "id": 98,
+    "client_id": 87208,
+    "recomendation": "<p>Para garantir a segurança e a continuidade do funcionamento adequado das máquinas PROSPW03, PROSPW02, PROSPW01 e PROSPW04, recomendo o seguinte plano de ação:</p><ol><li><p><strong>Atualização de Sistema Operacional</strong>: Com o fim do suporte ao Windows 10 em outubro de 2025, esses computadores estarão vulneráveis a ameaças cibernéticas. Para evitar esses riscos, é necessário migrar para um sistema operacional atualizado.</p></li><li><p><strong>Incompatibilidade com Windows 11</strong>: Verificamos que o hardware atual não é compatível com o Windows 11 devido às restrições do processador. Isso significa que, mesmo com uma atualização de sistema, as máquinas não poderão operar com a versão mais recente e segura da Microsoft.</p></li><li><p><strong>Recomendação de Upgrade de Hardware</strong>: Sugiro que se inicie um planejamento para a substituição ou atualização desses equipamentos, garantindo compatibilidade com o Windows 11. Isso é essencial para manter os dispositivos protegidos contra vulnerabilidades futuras e prolongar sua vida útil.</p></li></ol><p>Com esse planejamento, a organização pode evitar interrupções e aumentar a resiliência da infraestrutura, reduzindo o risco de invasões e mantendo a conformidade com os requisitos de segurança e suporte da Microsoft.</p>",
+    "create_at": "2024-10-30T17:19:04.01"
+  },
+  {
+    "id": 99,
+    "client_id": 87195,
+    "recomendation": "<p><strong>Estação de Trabalho</strong></p><p>·&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; O desktop NCASPW4 utiliza a versão de Windows já descontinuado, sendo assim, recomendamos o desligamento do mesmo da rede para não correr riscos ou a troca deste desktop.</p><p>·&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Recomendamos que sempre que precisar adquirir novos equipamentos comprar com Windows na versão Professional, a versão home não é recomendada para empresa.</p><p><strong>Backup</strong></p><p>·&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Recomendamos o backup em nuvem como redundância do servidor.</p><p>&nbsp;</p><p><strong>E-mails em nuvem</strong></p><p>·&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Estamos recomendando a solução da Microsoft Exchange para migrar os e-mails para nuvem e ter mais segurança da informação.</p>",
+    "create_at": "2024-10-30T20:40:43.353"
+  },
+  {
+    "id": 100,
+    "client_id": 90171,
+    "recomendation": "<p><strong>Estação de trabalho</strong></p><p>·&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; BRSPW028, BRSPW008 equipamentos com a versão do Windows 7 que precisam ser trocadas, devido a segurança.</p><p>·&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; BRSPW037, BRSPW035, BRSPW030 estão com pouco espaço em disco e precisam de atenção para uma limpeza.</p><p>·&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; BRSPW031, BRSPNB01 estão utilizando o Windows home, sempre recomendamos para empresa que comprem a versão do Windows pro, para maior seguraça na rede, pois a versão pro possibilita colocar no domínio do servidor com segurança.</p><p>·&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; BRSPW030, BRSPW32, BRSPNB01 estão usando o Windows 10 e em outubro de 2025 passam a não ter mais atualização de segurança da Microsoft, sugerimos avaliar para um upgrade para a versão do Windows 11.</p><p><strong>Servidor</strong></p><p>·&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; O servidor conforme já diagnosticado, precisa de atenção, pois o Windows server 2012 não tem mais atualização de segurança, apresenta lentidão e travamento.</p><p><strong>Backup</strong></p><p>·&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Backup também está crítico pois tanto o disco 1 o disco 2 de backup estão com menos de 10GB para backup e acaba não rodando devido a falha.</p>",
+    "create_at": "2024-10-31T13:07:25.243"
+  },
+  {
+    "id": 101,
+    "client_id": 87194,
+    "recomendation": "<p><strong>Backup</strong></p><p>·&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Estamos recomendado a contratação de backup em nuvem para a solução sharepoin em uso. Em caso de interesse, estou a disposição para explicar.</p>",
+    "create_at": "2024-10-31T14:12:35.307"
+  },
+  {
+    "id": 102,
+    "client_id": 87176,
+    "recomendation": "<p><strong>Estação de trabalho</strong></p><p>·&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; BROSPNB01, BROSPW04, precisam de atenção devido utilizar Windows 7 que já está descontinuado e precisam efetuar a troca, como recomendação para não correr risco de invasão na rede.</p><p><strong>Servidor</strong></p><p>·&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Esta utilizando o Windows Server 2012 que também está descontinuado e corre riscos de invasão devido não ter atualização mais de segurança.</p><p>·&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Recomendação trocar.</p><p><strong>Backup</strong></p><p>·&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Devido a ter somente 1 disco de backup, recomendamos a contratação de backup em nuvem e/ou comprar um segundo disco para backup como redundância.</p><p><strong>Recomendação para migração de servidor</strong></p><p>·&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Estamos recomendando a troca do servidor de arquivos para migrar para a solução em nuvem da Microsoft chamada SharePoint e assim desativar o servidor.</p>",
+    "create_at": "2024-10-31T14:34:56.97"
+  },
+  {
+    "id": 103,
+    "client_id": 87175,
+    "recomendation": "<p><strong>Estações de trabalho</strong></p><p>·&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; GERSPW08 – Máquna com Windows 7 já descontinuado, recomendamos a troca para não correr risco de invasão.</p><p>·&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; GERSPNB5, GERSPNB6, GERSPNB9, GERSPNB8, GERSPNB7 máquinas utilizando Windows 11 home, recomendamos para empresas sempre comprarem a versão de Windows Pro, pois a versão home são vendidos para pessoa física e não tem recursos para integrar no domínio de segurança da servidor de dados 365.</p><p>·&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; GERSPNB10, GERSPNB2, GERSPNB3 estas máquinas estão utilizando o Windows 10 e em outubro de 2025 passam a não ter mais atualizações de segurança, recomendamos atualização</p>",
+    "create_at": "2024-10-31T16:48:30.25"
+  },
+  {
+    "id": 104,
+    "client_id": 87190,
+    "recomendation": "<p><strong>Estações de trabalho</strong></p><p>·&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; MB-DESK-002, MBCSPNB1, MBCSPNB2, MB-DESK-001 sugerimos o aumento de memória ram para 16GB devido estarem usando mais 80% de uso da sua capacidade</p>",
+    "create_at": "2024-10-31T17:03:13.89"
+  },
+  {
+    "id": 105,
+    "client_id": 87188,
+    "recomendation": "<p><strong>Estações de trabalho</strong></p><p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</p><p>·&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; MONSPNB4, MONSPW01utilizando o Windows Home, sempre recomendamos para empresas a versão Pro e em outubro de 2025 a versão do Windows 10 passa a não vai ter mais atualização de segurança, recomendação atualizar para a nova versão, antes avaliar se suporta o novo Windows.</p>",
+    "create_at": "2024-10-31T17:20:26.373"
+  },
+  {
+    "id": 106,
+    "client_id": 87150,
+    "recomendation": "<p><strong>Backup</strong></p><p>·&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; O hd de backup apresentou falha e precisa ser trocado. Favor fazer a aquisição de um novo (já trocado)</p><p><strong>Estações de trabalho</strong></p><p>·&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; DERSPNB02, ADM02, DRMBRSPW22 – Máquinas utilizando o Windows 7 já descontinuado, precisa trocar para não correr risco com invasão.</p>",
+    "create_at": "2024-10-31T17:48:56.25"
+  },
+  {
+    "id": 107,
+    "client_id": 434830,
+    "recomendation": "<p><strong>Estações de trabalho</strong></p><p>·&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; ROMILDA-PC, equipamento utilizando mais de 80% de sua capacidade, precisa fazer up-grade de memória ram para 16gb como recomendação</p>",
+    "create_at": "2024-10-31T19:01:21.647"
+  },
+  {
+    "id": 108,
+    "client_id": 87132,
+    "recomendation": "<p><strong>Estação de trabalho</strong></p><p>·&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; APISPW17 máquina utilizando a versão Home, sempre recomendamos para empresas a versão pro.</p><p>·&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; APISPW16 esta máquina esta utilizando mais de 90% de uso da sua memória ram, recomendamos o up-grade para 16GB, caso tenham o interesse, podemos encaminhar valores .</p><p>·&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Em outubro de 2025, a versão do Windows 10 para de ter suporte e atualizações de segurança, será necessário fazer o up-grade para a versão de Windows 11.</p>",
+    "create_at": "2024-11-01T17:30:11.673"
+  },
+  {
+    "id": 109,
+    "client_id": 432469,
+    "recomendation": "<p><strong>Estação de trabalho</strong></p><p>·&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; AMASPW1, AMASPW3, AMASPW6 recomendamos sempre para empresa a versão Pro e não a home que é voltada para pessoa física, devido a versão Pro ter recursos corporativos.</p><p>·&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; AMASPW3 máquina utilizando a versão do Windows 10 e a partir de outubro 2025 esta versão passa a não ter mais suporte para atualização de segurança, recomendamos uma avaliação para up-grade a versão Windows 11.</p><p><strong>Link de internet</strong></p><p>·&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Como redundância do link de internet, recomendamos a contratação de um segundo link, por exemplo o da Vivo, desta forma em caso de falha do link Claro o segundo link irá manter ativo a internet.</p>",
+    "create_at": "2024-11-01T18:42:31.133"
+  },
+  {
+    "id": 110,
+    "client_id": 386986,
+    "recomendation": "<p><strong>Estação de trabalho</strong></p><p>·&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; NORSPNB02, NORSPNB03, NORSPNB1 é sempre importante ao comprar equipamentos para empresa, comprar com a versão pro e não home, a versão home é voltada a pessoa física.</p><p>·&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; NORSPW5, NORSPW2, NORSPW4, NORSPW3 máquinas utilizando Windows 10, em outubro de 2025 será descontinuado e passa a não ter mais atualizações de segurança. Recomendação, avaliar para ver se as máquinas suportam a nova versão do Windows 11</p><p><strong>Backup</strong></p><p>·&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Estamos recomendando o backup em&nbsp; nuvem para a solução Microsoft Sharepoint e assim passar a ter mais um nível de segurança de dados, em caso de interesse, podemos gerar uma proposta.</p>",
+    "create_at": "2024-11-01T18:53:48.517"
+  },
+  {
+    "id": 111,
+    "client_id": 325206,
+    "recomendation": "<p><strong>Estação de Trabalho</strong></p><p>·&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; ADMINISTRATIVO – esta máquina utiliza o Windows 10 e em outubro de 2025, a Microsoft não irá mais dar suporte em atualizações de segurança e a mesmo precisa ser programada para atualização, antes será necessário avaliar se a mesma suporta o novo Windows 11.</p><p>·&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; PROJETOCADISTAS – é sempre recomendado em ter a versão do Windows Pro que é voltada para empresas, a versão Home é voltada para pessoa física. Somente como recomendação sempre ao fazer novas aquisições, buscar equipamentos na versão pro.</p>",
+    "create_at": "2024-11-04T13:14:50.833"
+  },
+  {
+    "id": 113,
+    "client_id": 281384,
+    "recomendation": "<p><strong>SharePoint</strong></p><p>·&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Em 06/10 estava ocupando 2.830GB, executamos uma preventiva para limpeza e baixou para 2.294GB, porém precisamos agendar uma Call para alinhamento, pois ainda está muito acima do limite,</p><p><strong>&nbsp;</strong></p><p><strong>Estação de Trabalho</strong></p><p>·&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Máquinas da Thais, Jeisa, Prisicla &nbsp;estão utilizando o Windows 10 e em outubro de 2025 a Microsoft não irá dar mais suporte ao Windows 10 e assim será necessário verificar se a máquina suporta o novo Windows 11 ou se será precisa fazer a troca.</p>",
+    "create_at": "2024-11-04T13:39:55.52"
+  },
+  {
+    "id": 114,
+    "client_id": 276873,
+    "recomendation": "<p><strong>Estação de Trabalho</strong></p><p>BDGSPNB08, BDGSPNB03, BDGSPW03, BDGSPNB04, BDGSPW01, BDGSPW8, total de 6 máquina utilizando o Windows 10 e em Outubro de 2025, a Microsoft&nbsp; não irá dar mais suporte a atualizações deste sistema, que será descontinuado, recomendamos a avaliação para ver quais suportam o novo Windows 11 e quais precisam ser trocadas</p>",
+    "create_at": "2024-11-04T13:57:16.04"
+  },
+  {
+    "id": 115,
+    "client_id": 90141,
+    "recomendation": "<p><strong>Estação de Trabalho</strong></p><p>BDGSPNB01, DESKTOP-2E68PE6, total de 2 máquina utilizando o Windows 10 e em Outubro de 2025, a Microsoft&nbsp; não irá dar mais suporte a atualizações deste sistema, que será descontinuado, recomendamos a avaliação para ver quais suportam o novo Windows 11 e quais precisam ser trocadas</p>",
+    "create_at": "2024-11-04T13:58:38.73"
+  },
+  {
+    "id": 116,
+    "client_id": 87223,
+    "recomendation": "<p><strong>Estação de Trabalho</strong></p><p>As 12 máquina utilizam o Windows 10 e a Microsoft em Outubro de 2025 não irá mais dar suporte de atualizações de segurança, devido a descontinuação do mesmo.</p><p>Será necessário avaliar quais&nbsp; máquina irão suporte o novo Windows.</p>",
+    "create_at": "2024-11-04T14:06:42.823"
+  },
+  {
+    "id": 117,
+    "client_id": 87222,
+    "recomendation": "<p><strong>Estação de Trabalho</strong></p><p>·&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; As 3 máquinas utilizam o Windows 10 e em Outubro de 2025 a Microsoft irá descontinuar este Windows, sendo assim será necessário avaliar se os equipamento suportam o Windows 11 ou precisam da troca.</p>",
+    "create_at": "2024-11-04T14:30:59.547"
+  },
+  {
+    "id": 118,
+    "client_id": 87232,
+    "recomendation": "<p><strong>Estação de Trabalho</strong></p><p>·&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; AVPSPW3 – Máquina utilizando o Windows 8, esta versão de Windows foi desativada e para não correr riscos, recomendamos a troca.</p><p>·&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Total de 5 máquinas utilizando o Windows 10 e em outubro de 2025 a Microsoft irá descontinuar esta versão de Windows, sendo necessário avaliar quais máquinas irão suportar o novo Windows 11, não sendo possível será recomendado a troca.</p><p>(AVPSPNB6, AVPSPNB7, AVPRONB3, AVPSPW2, AVPRONB9)</p>",
+    "create_at": "2024-11-04T16:05:29.427"
+  },
+  {
+    "id": 119,
+    "client_id": 87195,
+    "recomendation": "<p><strong>Estações de trabalho</strong></p><p>·&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; NCASPW2, NCASPW1, NCASPNB01, NCASPS1 estas máquinas utilizam o Windows 10 e a partir de Outubro de 2025, a Microsoft irá descontinuar esta versão de Windows, será necessário avaliar as máquinas para saber quais irão suportar ou não a nova&nbsp; versão de Windows.</p>",
+    "create_at": "2024-11-05T16:29:38.067"
+  },
+  {
+    "id": 120,
+    "client_id": 87176,
+    "recomendation": "<p><strong>Estações de trabalho</strong></p><p>·&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; BROSPW023, BROSPW025, BROSPW22, BROSPW24 estas máquinas utilizam o Windows 10 e em outubro de 2025, a Microsoft irá descontinuar esta versão, será necessário avaliar as máquinas que irão ou não suportar o novo Windows 11</p>",
+    "create_at": "2024-11-05T16:46:29.657"
+  },
+  {
+    "id": 121,
+    "client_id": 87190,
+    "recomendation": "<p><strong>Estações de trabalho</strong></p><p>·&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; MB-DESK-002, MBCSPNB2, MBCSPW01, MB-DESK-001 – Estas máquinas estão com o Windows 10 e em outubro de 2025 a Microsoft vai descontinuar esta versão. Será necessário avaliar quais máquinas são compatíveis com o novo Windows 11.</p>",
+    "create_at": "2024-11-05T17:09:46.867"
+  },
+  {
+    "id": 122,
+    "client_id": 94573,
+    "recomendation": "<p><strong>Estações de trabalho</strong></p><p>·&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 2 máquina que utilizam o Windows 10, em outubro de 2025 a Microsoft não irá mais dar suporte a esta versão, será necessário avaliar se as máquinas aceitam o upgrade ou se será necessário a troca.</p>",
+    "create_at": "2024-11-05T18:46:27.997"
+  },
+  {
+    "id": 123,
+    "client_id": 87164,
+    "recomendation": "<p><strong>Estações de trabalho</strong></p><p>·&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Em outubro de 2025, a Microsoft vai descontinuar a versão do Windows 10, ou seja, passa a não ter mais atualização de segurança, sendo necessário a troca. Caso as máquinas não venham a suportar a nova versão recomendamos a troca para não ficar vulnerável.</p>",
+    "create_at": "2024-11-07T13:22:47.933"
+  },
+  {
+    "id": 124,
+    "client_id": 657278,
+    "recomendation": "<p><strong>Backup</strong></p><p>·&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Estamos recomendando a solução de backup em nuvem para a solução Sharepoint.</p>",
+    "create_at": "2024-11-07T17:26:28.41"
+  },
+  {
+    "id": 126,
+    "client_id": 655245,
+    "recomendation": "<p><strong>Estações de trabalho</strong></p><p>·&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; A Microsoft em outubro de 2025 ir descontinuar a versão do Windows 10, ou seja, passa a não ter mais atualizações de segurança e é recomendado verificar se as máquinas aceitam a nova versão do Windows 11. As máquina que&nbsp; não aceitar a versão do Windows 11, a recomendação é entrar na programação para troca.</p><p>·&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Para empresa sempre recomendamos a versão do Windows por, pois a versão Home é voltada para pessoa física e a versão vem recursos para maior controle e segurança junto domínio.</p><p><strong>Dados</strong></p><p>·&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Como sugestão estamos sugerindo a troca da solução Dropbox pela solução Sharepoint da Microsoft conforme apresentado na proposta em junho/24 CM1010052-24v3 e assim unificar através de um único login o acesso a emails e dados.</p><p><strong>Backup</strong></p><p>·&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Como recomendação, estamos sugerindo para a solução Dropbox a contratação de uma solução em nuvem para backup como redundância.</p>",
+    "create_at": "2024-11-07T18:17:38.01"
+  },
+  {
+    "id": 127,
+    "client_id": 609752,
+    "recomendation": "<p><strong>Servidor</strong></p><p>·&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; O Servidor utiliza a versão do Windows Server 2008 que foi descontinuado pela Microsoft em 2020, sendo assim não recebe mais atualizações de segurança, ou seja, o mesmo deve ser programado para a sua desativação para não correr riscos na rede.</p><p><strong>Estação de trabalho</strong></p><p>·&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; A versão do Windows 10 será descontinuado pela Microsoft em outubro de 2025, será necessário avaliar o parque de máquinas com Windows 10 para entender quais irão suportar a nova versão do Windows 11.</p><p><strong>Firewall da rede</strong></p><p>·&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; O atual firewall da Rede está sendo substituído pela solução Gerenciada da Terabyte.</p>",
+    "create_at": "2024-11-13T16:55:56.41"
+  },
+  {
+    "id": 128,
+    "client_id": 87721,
+    "recomendation": "<p><strong>Estações de trabalho</strong></p><p>·&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; As máquinas&nbsp;<strong>VDR-52, VDR-09, VDR-51, VDR-50 e VDR-70</strong>&nbsp;estão atualmente utilizando o sistema operacional&nbsp;<strong>Windows 10</strong>. A partir de&nbsp;<strong>outubro de 2025</strong>, a&nbsp;<strong>Microsoft</strong>&nbsp;não oferecerá mais suporte para esta versão, incluindo atualizações de segurança, o que significa que o sistema será descontinuado.</p><p>·&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Como solução, é recomendável&nbsp;<strong>avaliar a migração para o Windows 11</strong>. Caso os equipamentos não atendam aos requisitos necessários para essa atualização, será necessário&nbsp;<strong>substituí-los</strong>&nbsp;para evitar&nbsp;<strong>vulnerabilidades na rede e possíveis riscos de segurança.</strong></p><p><strong>Up-grade de memória RAM</strong></p><ul><li><p>As máquinas VDR-09 (92%), VDR-64 (81,5%), VDR-65 (90,2%) e VDR-70 (81%), todas equipadas com 8GB de memória RAM, estão utilizando mais de 80% de sua capacidade. Como solução, sugerimos realizar um upgrade de memória RAM para 16GB, garantindo melhor desempenho e maior eficiência operacional.</p></li></ul><p><strong>Link de internet</strong></p><p>·&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Como redundância de link, estamos recomendando um segundo link de internet, a Telium está em promoção do link de 500MB dedicado, em caso de interesse, é possível solicitar uma proposta.</p><p><strong>Servidor</strong></p><p>·&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Esta agendado dia 23/12 a limpeza física do servidor.</p><p>·&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; O Disco D: está utilizando 71% de sua capacidade de 4TB (usb)</p>",
+    "create_at": "2024-11-29T13:36:40.107"
+  },
+  {
+    "id": 129,
+    "client_id": 273861,
+    "recomendation": "<p><strong>Estações de trabalho</strong></p><p>·&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 7 máquinas &nbsp;estão atualmente utilizando o sistema operacional&nbsp;<strong>Windows 10</strong>. A partir de&nbsp;<strong>outubro de 2025</strong>, a&nbsp;<strong>Microsoft</strong>&nbsp;não oferecerá mais suporte para esta versão, incluindo atualizações de segurança, o que significa que o sistema será descontinuado.</p><p>·&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Como solução, é recomendável&nbsp;<strong>avaliar a migração para o Windows 11</strong>. Caso os equipamentos não atendam aos requisitos necessários para essa atualização, será necessário&nbsp;<strong>substituí-los</strong>&nbsp;para evitar&nbsp;<strong>vulnerabilidades na rede e possíveis riscos de segurança.</strong></p>",
+    "create_at": "2024-11-29T18:37:32.897"
+  },
+  {
+    "id": 130,
+    "client_id": 98321,
+    "recomendation": "<p><strong>Estações de trabalho</strong></p><p>·&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; As máquinas que atualmente utilizando o sistema operacional&nbsp;<strong>Windows 10</strong>. A partir de&nbsp;<strong>outubro de 2025</strong>, a&nbsp;<strong>Microsoft</strong>&nbsp;não oferecerá mais suporte para esta versão, incluindo atualizações de segurança, o que significa que o sistema será descontinuado.</p><p>·&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Como solução, é recomendável&nbsp;<strong>avaliar a migração para o Windows 11</strong>. Caso os equipamentos não atendam aos requisitos necessários para essa atualização, será necessário&nbsp;<strong>substituí-los</strong>&nbsp;para evitar&nbsp;<strong>vulnerabilidades na rede e possíveis riscos de segurança.</strong></p>",
+    "create_at": "2024-11-29T18:40:50.537"
+  },
+  {
+    "id": 131,
+    "client_id": 86589,
+    "recomendation": "<p><strong>Estações de trabalho</strong></p><p>·&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; As máquinas que atualmente utilizando o sistema operacional&nbsp;<strong>Windows 10</strong>. A partir de&nbsp;<strong>outubro de 2025</strong>, a&nbsp;<strong>Microsoft</strong>&nbsp;não oferecerá mais suporte para esta versão, incluindo atualizações de segurança, o que significa que o sistema será descontinuado.</p><p>·&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Como solução, é recomendável&nbsp;<strong>avaliar a migração para o Windows 11</strong>. Caso os equipamentos não atendam aos requisitos necessários para essa atualização, será necessário&nbsp;<strong>substituí-los</strong>&nbsp;para evitar&nbsp;<strong>vulnerabilidades na rede e possíveis riscos de segurança.</strong></p>",
+    "create_at": "2024-11-29T18:45:23.637"
+  },
+  {
+    "id": 132,
+    "client_id": 87070,
+    "recomendation": "<p><strong>Estações de trabalho</strong></p><p>·&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; As máquinas que atualmente utilizando o sistema operacional&nbsp;<strong>Windows 10</strong>. A partir de&nbsp;<strong>outubro de 2025</strong>, a&nbsp;<strong>Microsoft</strong>&nbsp;não oferecerá mais suporte para esta versão, incluindo atualizações de segurança, o que significa que o sistema será descontinuado.</p><p>·&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Como solução, é recomendável&nbsp;<strong>avaliar a migração para o Windows 11</strong>. Caso os equipamentos não atendam aos requisitos necessários para essa atualização, será necessário&nbsp;<strong>substituí-los</strong>&nbsp;para evitar&nbsp;<strong>vulnerabilidades na rede e possíveis riscos de segurança.</strong></p>",
+    "create_at": "2024-11-29T18:51:14.657"
+  },
+  {
+    "id": 133,
+    "client_id": 86589,
+    "recomendation": "<p><strong>Estação de Trabalho</strong></p><p>·&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; TNKSPNB58 &nbsp;(Lays) – Utilizando mais de 90% de memória RAM. Utilizando 81% da capacidade do disco SSD, nossa sugestão trocar o disco e aumentar a memória ram.</p><p>·&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; TNKSPNB126 (Felipe Ferreira) - Utilizando mais de 90% de memória RAM. Utilizando 73% da capacidade do disco SSD, nossa sugestão trocar o disco e aumentar a memória ram.</p><p>·&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; TNKSPNB95 (Jessica Azevedo) - Utilizando mais de 90% de memória RAM, fazer up-grade de memória RAM.</p><p>·&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; TNKSPNB49 (Vanessa Santana) - Utilizando mais de 90% de memória RAM. Utilizando 91% da capacidade do disco SSD, nossa sugestão trocar o disco e aumentar a memória ram.</p><p>·&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; TNKSPNB48 (Sandra Aquino) - Utilizando mais de 90% de memória RAM. Utilizando 97% da capacidade do disco SSD, nossa sugestão trocar o disco e aumentar a memória ram.</p><p>·&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; TNKSPNB55 (Eduardo Santos) - Utilizando mais de 90% de memória RAM. Fazer o up-grade de memória ram.</p><p>·&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; TNKSPNB93 - Utilizando mais de 90% de memória RAM. Utilizando 84% da capacidade do disco SSD, nossa sugestão trocar o disco e aumentar a memória ram.</p><p>&nbsp;</p>",
+    "create_at": "2024-12-02T17:03:16.13"
+  },
+  {
+    "id": 134,
+    "client_id": 86632,
+    "recomendation": "<p><strong>Estação de Trabalho</strong></p><p>·&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; VDMSPNB19 (Juliana Bernardes ) – Utilizando 77% da capacidade do disco, sugestão trocar o SSD por um de maior capacidade.</p><p>·&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; VDMSPNB14 (Barbara Hilario) - Utilizando 87% da capacidade do disco, sugestão trocar o SSD por um de maior capacidade.</p><p>·&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; VDMSPNB63 (Marcelo Dos Santos Barros...) - - Utilizando 90% da capacidade do disco, sugestão trocar o SSD por um de maior capacidade.</p>",
+    "create_at": "2024-12-02T18:31:47.293"
+  },
+  {
+    "id": 135,
+    "client_id": 104580,
+    "recomendation": "<p><strong>Switch e Antena Wireless</strong></p><p>No mês de novembro, foi executado a mudança de sala e estamos sugerindo para que futuramente troquem o atual switch por novo modelo Gigabit, assim como colocar uma antena Gigabit.</p>",
+    "create_at": "2024-12-04T18:49:34.983"
+  },
+  {
+    "id": 136,
+    "client_id": 87164,
+    "recomendation": "<p><strong>Sharepoint</strong></p><blockquote><blockquote><p>O armazenamento ultrapassou 1,02 TB. É necessário reavaliar a situação para liberar espaço e evitar o risco de perda de dados.</p></blockquote></blockquote>",
+    "create_at": "2024-12-05T12:58:20.273"
+  },
+  {
+    "id": 137,
+    "client_id": 273861,
+    "recomendation": "<p><strong>Estação de trabalho</strong></p><p>. Total de 14 máquinas utilizando 8GB de memória ram, nossa recomendação está em passar todas para 16GB e assim aproveitar um melhor desempenho da mesma.</p>",
+    "create_at": "2024-12-05T13:39:02.69"
+  },
+  {
+    "id": 138,
+    "client_id": 87785,
+    "recomendation": "<p><strong>Estação de trabalho</strong></p><ul><li><p>Total de 18 máquinas com o Windows 10. A Microsoft em outubro de 2025, vai descontinuar esta versão e recomendamos a avaliação para ver quais máquinas irão suportar a nova versão do Windows 11.</p></li><li><p>Importante ressaltar para aumentar a integração com a segurança é recomendado a usar o Windows na versão Professional e não a home. Para os novos equipamentos futuros contratar com a versão pro.</p></li><li><p>Servidor físico desligado a mais de 4 meses. ( Precisamos entender se o mesmo pode ser desativado do sistema)</p></li></ul><p></p>",
+    "create_at": "2024-12-05T18:25:45.543"
+  },
+  {
+    "id": 139,
+    "client_id": 87161,
+    "recomendation": "<p><strong>Estação de trabalho</strong></p><ul><li><p>Total de 11 máquinas com o Windows 10. A Microsoft em outubro de 2025, vai descontinuar esta versão e recomendamos a avaliação para ver quais máquinas irão suportar a nova versão do Windows 11.</p></li><li><p>Total de 01 máquina com Windows 10 home. Importante ressaltar para aumentar a integração com a segurança é recomendado a usar o Windows na versão Professional e não a home. Para os novos equipamentos futuros contratar com a versão pro.</p></li><li><p>Máquinas com 8G de memória ram , recomendamos para um melhor desempenho, &nbsp;que realizem o up-grade para 16GB.</p></li></ul>",
+    "create_at": "2024-12-05T18:33:50.597"
+  },
+  {
+    "id": 140,
+    "client_id": 87721,
+    "recomendation": "<p><strong>Link de internet</strong></p><ul><li><p>Solicitamos a Telium uma estimativa de valor para se ter como redundância de internet. ( esta sendo encaminhada por e-mail)</p></li></ul><p><strong>Firewall</strong></p><ul><li><p>O atual firewall da rede entrou na fase de 5 anos de uso e recomendamos a troca do mesmo para se ter um modelo atualizado, pois o fabricante já descontinuou o mesmo.</p></li></ul>",
+    "create_at": "2024-12-05T18:56:41.513"
+  },
+  {
+    "id": 141,
+    "client_id": 87214,
+    "recomendation": "<p><strong>Estação de trabalho</strong></p><ol><li><p><strong>Máquinas com Windows Home</strong>: 2</p><ul><li><p><strong>Risco</strong>: Windows Home não suporta integração ao domínio, limitando as políticas de segurança e controle.</p></li><li><p><strong>Máquinas</strong>:</p><ul><li><p>SBISPNBE - Windows 10 Home</p></li><li><p>SBSPNB01 - Windows 11 Home</p></li></ul></li></ul></li><li><p><strong>Máquinas com Windows descontinuado</strong>: 2</p><ul><li><p><strong>Risco</strong>: Sistemas sem suporte não recebem atualizações de segurança, expondo a rede a vulnerabilidades.</p></li><li><p><strong>Máquinas</strong>:</p><ul><li><p>SBSPNB002 - Windows 8 Pro</p></li><li><p>SERRA-D60940011 - Windows XP</p></li></ul></li></ul></li><li><p><strong>Máquinas com Windows 10</strong>: 10</p><ul><li><p><strong>Risco Futuro</strong>: Após outubro de 2025, o suporte ao Windows 10 será descontinuado. As máquinas precisarão ser atualizadas ou substituídas se não suportarem o Windows 11.</p></li></ul></li></ol>",
+    "create_at": "2024-12-06T17:41:37.487"
+  },
+  {
+    "id": 142,
+    "client_id": 281384,
+    "recomendation": "<p><strong>SharePoint</strong></p><p>·&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;As ações geradas no Sharepoint para diminuir a volumetria baixo 800GB com as ações geradas. ( em andamento)</p>",
+    "create_at": "2024-12-06T18:30:10.697"
+  },
+  {
+    "id": 143,
+    "client_id": 87135,
+    "recomendation": "<p><strong>Estações de trabalho</strong></p><p>·&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Total de 08 máquinas com o Windows 10. Em outubro de 2025, a Microsoft vai estar descontinuando o suporte ao Windows 10, sendo assim, será importante se programar para trocar as máquinas que não aceitarem o novo Windows 11.</p><p>·&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Total de 03 máquinas com Windows 7, necessário fazer a troca devido estar descontinuado para não correr riscos.</p>",
+    "create_at": "2024-12-06T19:54:15.93"
+  },
+  {
+    "id": 144,
+    "client_id": 609752,
+    "recomendation": "<p><strong>Estações de trabalho</strong></p><p>·&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Recomendamos que as máquinas com 4GB seja feito o up-grade para 8GB e as máquinas com 8GB façam o up-grade para 16GB, para um melhor desempenho.</p>",
+    "create_at": "2024-12-06T20:17:00.397"
+  },
+  {
+    "id": 145,
+    "client_id": 87144,
+    "recomendation": "<p><strong>Estações de trabalho</strong></p><p>·&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Total de 8 máquinas que utilizam o Windows 10 e em outubro de 2025 a Microsoft irá descontinuar a versão do Windows 10 e será necessário avaliar se as máquinas aceitam a nova versão do Windows 11, caso contrário recomendamos a troca para não correr risco na rede.</p>",
+    "create_at": "2024-12-06T20:34:37.4"
+  },
+  {
+    "id": 146,
+    "client_id": 87147,
+    "recomendation": "<p><strong>Estação de trabalho - Segurança</strong></p><p>·&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; A partir de outubro de 2025, a Microsoft esta descontinuando o Windows 2010, sendo assim é recomendado a troca do sistema operacional Windows 10 para o mais recente do Windows 11, para não correr riscos na rede de invasão por exemplo.</p>",
+    "create_at": "2024-12-09T13:10:49.27"
+  },
+  {
+    "id": 147,
+    "client_id": 87154,
+    "recomendation": "<p><strong>Estação de trabalho - Segurança</strong></p><p>·&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; A partir de outubro de 2025, a Microsoft esta descontinuando o Windows 2010, sendo assim é recomendado a troca do sistema operacional Windows 10 para o mais recente do Windows 11, para não correr riscos na rede de invasão por exemplo.</p><p><strong>Servidor</strong></p><p>·&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Esta com falha para realização do Backup, será necessário agendar uma data para reiniciar o servidor.</p>",
+    "create_at": "2024-12-09T13:24:52.157"
+  },
+  {
+    "id": 148,
+    "client_id": 87163,
+    "recomendation": "<p><strong>Estação de trabalho - Segurança</strong></p><p>·&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; A partir de outubro de 2025, a Microsoft esta descontinuando o Windows 2010, sendo assim é recomendado a troca do sistema operacional Windows 10 para o mais recente do Windows 11, para não correr riscos na rede de invasão por exemplo.</p><p>·&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Versão do Windows 8 já foi descontinuado pela Microsoft, necessário a troca (&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</p><p>·&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; BRSPW49)</p><p>·&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; É recomendado que as máquinas utilizem sempre a versão do Windows Pro. (EQMSPNB01)</p>",
+    "create_at": "2024-12-09T14:35:32.663"
+  },
+  {
+    "id": 149,
+    "client_id": 87167,
+    "recomendation": "<p><strong>E-mails</strong></p><p>Os e-mails abaixo estão próximos a cota de armazenamento de 50GB, nossa recomendação que façam uma limpeza ou up-grade da conta.</p><p>·&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Sabrina.galdino = 49.7GB</p><p>·&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Lima Jr = 46.3GB</p><p><strong>Sharepoint</strong></p><p>·&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; O armazenamento no sharepoint está utilizando 40% da cota de 1TB.</p><p>&nbsp;</p><p><strong>Estações de trabalho</strong></p><p>·&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; As estações com a versão do Windows 10, estamos sugerindo que faça a atualização para a versão do Windows 11, devido a Microsoft em outubro de 2025 irá descontinuar a versão do Windows 10.</p>",
+    "create_at": "2024-12-12T12:08:27.997"
+  },
+  {
+    "id": 150,
+    "client_id": 87201,
+    "recomendation": "<p><strong>Estação de trabalho</strong></p><p>·&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 13 máquinas estão com utilizando o Windows 10, ou sejam, será necessário avaliar para ver se suporta o Windows 11, pois a Microsoft irá descontinuar a versão do Windows 10 em outubro de 2025, assim passam a não ter mais atualização de segurança.</p>",
+    "create_at": "2024-12-18T17:17:03.65"
+  },
+  {
+    "id": 151,
+    "client_id": 87215,
+    "recomendation": "<p><strong>Estação de trabalho</strong></p><p>·&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Máquinas estão com utilizando o Windows 10, ou sejam, será necessário avaliar para ver se suporta o Windows 11, pois a Microsoft irá descontinuar a versão do Windows 10 em outubro de 2025, assim passam a não ter mais atualização de segurança.</p><p><strong>Sharepoint</strong></p><p>·&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Para evitar problemas o sharepoint precisa de atenção devido a falta de espaço. Encaminhamos a proposta em Setembro e estamos aguardando um retorno sobre a solução que encaminhamos na proposta #145163.</p><p><strong>Antivírus</strong></p><p>·&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Tínhamos instalado antivírus nos equipamentos e no momento percebemos que foram removidos, é importante que toda e qualquer ação vocês devem alertar a Terabyte em caso de formação de máquinas por exemplo.</p><p><strong>Windows Server 2012</strong></p><p>·&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Esta versão do Windows server 2012 foi descontinuado pela Microsoft em 2023 e precisa ser desativado da rede para não correr riscos.</p>",
+    "create_at": "2024-12-18T17:38:22.257"
+  },
+  {
+    "id": 152,
+    "client_id": 87142,
+    "recomendation": "<p><strong>Estação de trabalho</strong></p><p>·&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Máquinas estão com utilizando o Windows 10, ou sejam, será necessário avaliar para ver se suporta o Windows 11, pois a Microsoft irá descontinuar a versão do Windows 10 em outubro de 2025, assim passam a não ter mais atualização de segurança.</p>",
+    "create_at": "2024-12-18T19:12:09.267"
+  },
+  {
+    "id": 153,
+    "client_id": 87143,
+    "recomendation": "<p><strong>Estação de trabalho</strong></p><p>·&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Máquinas estão com utilizando o Windows 10, ou sejam, será necessário avaliar para ver se suporta o Windows 11, pois a Microsoft irá descontinuar a versão do Windows 10 em outubro de 2025, assim passam a não ter mais atualização de segurança.</p>",
+    "create_at": "2024-12-18T19:13:51.857"
+  },
+  {
+    "id": 154,
+    "client_id": 87721,
+    "recomendation": "<p><strong>Estação de Trabalho</strong></p><p>·&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; VDR-67 – Máquina utilizando 85% do uso de disco, importante verificar com o usuário uma limpeza e/ou trocar para aumento de espaço.</p><p>·&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Máquinas com Windows 10, devem ser atualizadas para a versão 11 até outubro de 2025.</p><p><strong>Firewall</strong></p><p>·&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Favor atenção ao Equipamento informado em dezembro de que chegou &nbsp;anos de vida, nossa sugestão a troca.</p><p><strong>E-mails</strong></p><p>·&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; O e-mail da Jessika, atingiu 99% precisa solicitar uma limpeza ou up-grade para ter mais espaço.</p><p>·&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; O e-mail da Alzerinda, atingiu 85% precisa solicitar uma limpeza ou up-grade para ter mais espaço.</p>",
+    "create_at": "2025-01-07T14:47:36.863"
+  },
+  {
+    "id": 155,
+    "client_id": 432469,
+    "recomendation": "<p><strong>Estação de Trabalho</strong></p><p>·&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Importante este ano avaliar se as máquinas com Windows 10 suportam o Windows 11, pois em outubro a Microsoft não irá mais dar suporte a versão do Windows 10.</p>",
+    "create_at": "2025-01-07T18:53:31.077"
+  },
+  {
+    "id": 156,
+    "client_id": 273861,
+    "recomendation": "<p><strong>Estação de trabalho</strong></p><p>. Os computadores com Windows 10 deve ser avaliado para atualização ao windows 11, pois em outubro deste ano a Microsoft vai descontinuar o Windows 10</p>",
+    "create_at": "2025-01-08T14:37:21.243"
+  },
+  {
+    "id": 157,
+    "client_id": 86632,
+    "recomendation": "<p><strong>Intranet</strong></p><p>·&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Recomendamos a troca da atual intranet pela a solução da Terabyte conforme a proposta 152922-24, aguardando retorno.</p><p></p>",
+    "create_at": "2025-01-08T14:49:14.82"
+  },
+  {
+    "id": 158,
+    "client_id": 86589,
+    "recomendation": "<p><strong>Estações de trabalho</strong></p><p>·&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Importante este ano colocar no planejamento o up-grade das máquinas com 8GB para 16GB pois em outubro a versão do Windows 10 será descontinuado e não tera mais suporte, assim será necessário atualizar para Windows 11</p>",
+    "create_at": "2025-01-08T17:42:57.967"
+  },
+  {
+    "id": 159,
+    "client_id": 87208,
+    "recomendation": "<p><strong>Estação de trabalho</strong></p><p>·&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Conforme informado em outubro/24, é importante que as máquinas com Windows 10 sejam trocados pela nova versão de Windows, pois o mesmo será descontinuado em outubro de 2025.</p>",
+    "create_at": "2025-01-09T20:15:58.22"
+  },
+  {
+    "id": 160,
+    "client_id": 657278,
+    "recomendation": "<p><strong>Servidores</strong></p><p>·&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; A Microsoft descontinuará o suporte ao Windows Server 2016 em outubro de 2025. Após essa data, não haverá mais atualizações de segurança, o que pode expor o sistema a riscos. Recomendamos a substituição ou desativação da versão para garantir a segurança e o bom funcionamento da infraestrutura.\"</p>",
+    "create_at": "2025-01-10T12:10:43.587"
+  },
+  {
+    "id": 161,
+    "client_id": 87231,
+    "recomendation": "<p><strong>Sistema Operacional</strong></p><p>·&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Agora em 2025 a Microsoft está descontinuando a versão de Windows 10, Windows Server 2016, Office 2016 e Office 2019 a partir de outubro, ou seja, ambos não terão mais atualizações de segurança e a recomendação é trocar ou atualizar, caso a máquina aceite.</p><p><strong>Melhorias apresentadas</strong></p><p>·&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Importante rever as propostas encaminhadas para melhorias ao ambiente de Ti principalmente em relação ao servidor e backup que apresentamos para não terem problemas futuro.</p>",
+    "create_at": "2025-01-10T12:20:20.51"
+  },
+  {
+    "id": 162,
+    "client_id": 94573,
+    "recomendation": "<p>&nbsp;<strong>Sharepoint (armazenamento de dados)</strong></p><p>·&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; O sharepoint online atingiu 42% de uso da cota de 1TB, corresponde 476GB, recomendamos a contratação de uma solução de backup em online para manter cópia de segurança.</p>",
+    "create_at": "2025-01-10T12:49:00.107"
+  },
+  {
+    "id": 163,
+    "client_id": 87209,
+    "recomendation": "<p><strong>Sistema Operacional</strong></p><p>·&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Agora em 2025 a Microsoft está descontinuando a versão de Windows 10, Windows Server 2016, Office 2016 e Office 2019 a partir de outubro, ou seja, ambos não terão mais atualizações de segurança e a recomendação é trocar ou atualizar, caso a máquina aceite.</p><p>·&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; No caso de vocês, máquinas com Windows 10 devem ser atualizadas ou trocadas.</p><p>·&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; A versão do Servidor que utiliza o Windows 2016 também recomendamos a desativação.</p><p><strong>Sharepoint (armazenamento de dados)</strong></p><p>·&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; O sharepoint online atingiu 53% de uso da cota de 1TB, corresponde 550GB, recomendamos a contratação de uma solução de backup em online para manter cópia de segurança.</p><p><strong>Backup</strong></p><p>·&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Recomendamos a contratação de backup online para o Sharepoint que armazena os dados.</p>",
+    "create_at": "2025-01-10T13:24:19.443"
+  },
+  {
+    "id": 164,
+    "client_id": 434830,
+    "recomendation": "<p><strong>Estação de trabalho</strong></p><p>·&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Para um melhor desempenho com o Windows 11, recomendamos o up-grade de memória ram para 16GB</p>",
+    "create_at": "2025-01-10T14:38:05.04"
+  },
+  {
+    "id": 165,
+    "client_id": 386986,
+    "recomendation": "<p><strong>Sharepoint</strong></p><p>·&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Esta acima do limite em 885GB a mais, será necessário contratar espaço ou liberar espaço, pois o permitido é de 1TB</p><p>·&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Importante voltar as tratativas de backup, recomendamos para o Sharepoint</p>",
+    "create_at": "2025-01-10T16:59:35.483"
+  },
+  {
+    "id": 166,
+    "client_id": 87167,
+    "recomendation": "<p>&nbsp;</p><p><strong>Sistema Operacional</strong></p><p>Importante este ano antes de outubro atualizar as máquinas para o Windows 11, devido a versão 10 que será descontinuado.</p>",
+    "create_at": "2025-01-10T18:06:32.71"
+  },
+  {
+    "id": 167,
+    "client_id": 87070,
+    "recomendation": "<p><strong>Sistema Operacional</strong></p><p>Importante este ano antes de outubro atualizar as máquinas para o Windows 11, devido a versão 10 que será descontinuado</p>",
+    "create_at": "2025-01-13T18:37:14.893"
+  },
+  {
+    "id": 168,
+    "client_id": 609752,
+    "recomendation": "<p><strong>Backup</strong></p><p>·&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Estamos recomendando o backup online &nbsp;para o Google Drive para manter a segurança de recuperação em caso de desatre.</p>",
+    "create_at": "2025-01-14T11:44:48.633"
+  },
+  {
+    "id": 169,
+    "client_id": 87135,
+    "recomendation": "<p><strong>Estações de Trabalho</strong></p><p>Em outubro deste ano a Microsoft irá descontinuar o Windows 10, sendo assim, as máquinas passam a não ter mais atualização de segurança.</p><p>Listamos abaixo as máquinas que não vão suportar o Windows 11 pro.</p><p>·&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 9 máquina que estão com processadores abaixo da 8ª Geração não suportam o Windows 11. Necessário colocar no planejamento para troca.</p>",
+    "create_at": "2025-01-14T12:05:39.357"
+  },
+  {
+    "id": 170,
+    "client_id": 87144,
+    "recomendation": "<p><strong>Estações de Trabalho</strong></p><p>Em outubro deste ano a Microsoft irá descontinuar o Windows 10, sendo assim, as máquinas passam a não ter mais atualização de segurança.</p><p>Listamos abaixo as máquinas que não vão suportar o Windows 11 pro.</p><p>·&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; BM25 , BM32, BM18, BM31, BM34, BM04</p>",
+    "create_at": "2025-01-14T12:24:39.36"
+  },
+  {
+    "id": 171,
+    "client_id": 87164,
+    "recomendation": "<p><strong>Estações de Trabalho</strong></p><p>Em outubro deste ano a Microsoft irá descontinuar o Windows 10, sendo assim, as máquinas passam a não ter mais atualização de segurança.</p><p>·&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Total de 32 máquinas com Windows 10</p><p>·&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; As versões de processadores destas máquinas não irão suportar o novo Windows 11, não constam na lista de processadores compatíveis da Microsoft.</p><p>·&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Recomendamos colocar no planejamento para substituição.<br></p><p><strong>Backup de Dados</strong></p><p>·&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Conforme informando no relatório em setembro, importante a contratação de uma backup online para o sharepoint e contas de e-mails que julgam importantes.</p><p>&nbsp;</p><p><strong>Sharepoint</strong></p><p>·&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; O Limite de Armazenamento está excedido com 1.2TB a mais da cota contratada.(conforme informado desde fev/2024)</p><p>·&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Opção 1: Como solução o recomendado é comprar mais espaço de armazenamento para não correr riscos.</p><p>·&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Opção 2: Contratar um novo espaço de armazenamento para migrar os arquivos considerados frios (arquivos classificados como consulta) e deixar somente os arquivos mais quentes (em uso) para liberar espaço ao Sharepoint. Para isto, será necessário contratar uma ferramenta de migração online para realização do processo em massa.</p>",
+    "create_at": "2025-01-14T14:13:45.813"
+  },
+  {
+    "id": 172,
+    "client_id": 87188,
+    "recomendation": "<p><strong>Estações de Trabalho</strong></p><p>·&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <strong>MONSPNB5 (Elias)</strong>: A máquina está equipada com o sistema operacional&nbsp;<strong>Microsoft Windows 8.1 Single Language</strong>, e devido ao processador&nbsp;<strong>Intel(R) Celeron(R) CPU 847 @ 1.10GHz</strong>&nbsp;(junto com 2 GB de RAM e 120 GB de armazenamento), não é possível realizar a atualização para o&nbsp;<strong>Windows 11</strong>. Recomendo a substituição desta máquina por uma que já venha com o Windows 11, para garantir a compatibilidade com futuras atualizações e melhorar o desempenho geral.</p><p>·&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <strong>MONSPW01 (Letícia)</strong>&nbsp;e&nbsp;<strong>MONSPNB4 (Máquina Reserva)</strong>: Ambas as máquinas possuem&nbsp;<strong>Windows 10</strong>&nbsp;e, devido aos processadores antigos e à quantidade limitada de memória RAM,&nbsp;<strong>não é recomendada a atualização para o Windows 11</strong>. Sugiro que essas estações de trabalho sejam mantidas com o Windows 10, ou que seja considerado um plano de substituição.</p><p>·&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <strong>MONSPW02 (Cristiane) e MONSPNB2 (Lidiane)</strong>: Ambas as máquinas estão operando com&nbsp;<strong>Windows 11</strong>&nbsp;e não apresentaram problemas ou complicações durante a verificação.</p>",
+    "create_at": "2025-01-14T20:35:28.897"
+  },
+  {
+    "id": 173,
+    "client_id": 87154,
+    "recomendation": "<p><strong>Windows 10 – Chegando ao Fim</strong></p><p>Em outubro deste ano, a Microsoft vai estar descontinuando a versão do Windows 10, ou seja, passa a não ter mais atualização de segurança.</p><p>Recomendação: Para as máquinas que suportar o novo Windows 11 fazer a atualização, para as máquinas que não suportar o Windows 11, trocar o equipamento.</p><p>·&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Total de 9 máquinas com Windows 10.</p><p>Estas máquinas não aceitam o novo Windows, colocar no planejamento de troca.</p><p>·&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; As máquinas: CPSPW3 (Michael), CPSPW1 (William), CPSPW2 (Felipe), CPSPW11, CPSPW12, CPSPW13, CPSPW5, CPSPW14.</p><p>·&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; De acordo com a lista de processadores compatíveis com o novo Windows da tabela Microsoft, precisam serem trocadas.</p><p>Esta máquina aceita a atualização</p><p>·&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; CPSPW18 (frigobar) – aceita o Windows 11,</p><p>&nbsp;</p><p><strong>Windows Server 2016 – Chegando ao Fim</strong></p><p>O sistema operacional do atual servidor que utiliza o Windows Server 2016, será descontinuado pela Microsoft em outubro deste ano.</p><p>·&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; CPSPDC2 (Servidor), será necessário fazer a desativação para não correr risco na rede.</p>",
+    "create_at": "2025-01-15T14:53:18.78"
+  },
+  {
+    "id": 174,
+    "client_id": 87147,
+    "recomendation": "<p><strong>Sistema operacional (Windows)</strong></p><p>·&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Em outubro deste ano a Microsoft está descontinuando o Windows 10 e também o Windows Server 2016.</p><p>·&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Desta forma, os riscos aumentam por não ter mais atualização de segurança.</p>",
+    "create_at": "2025-01-16T14:29:48.85"
+  },
+  {
+    "id": 175,
+    "client_id": 87163,
+    "recomendation": "<p><strong>Sistema operacional (Windows)</strong></p><p>·&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Em outubro de 2025, a Microsoft irá descontinuar o Windows 10, ou seja, passa a não ter mais atualização de segurança. Necessário atualizar ou trocar.</p><p>·&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; BRSPW060 e BRSPW29-PC não suportam o novo Windows 11.</p>",
+    "create_at": "2025-01-16T16:30:01.707"
+  },
+  {
+    "id": 176,
+    "client_id": 87215,
+    "recomendation": "<p><strong>SharePoint Online</strong></p><p>·&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; O armazenamento de dados online atingiu 97% de sua capacidade com 1.94TB de dados.</p><p>·&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Será necessário comprar mais espaço ou fazer a liberação de espação conforme a proposta apresentada em Setembro/2024.</p><p>·&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Riscos: Devido o armazenamento de dados estar acima do limite desta forma corre o risco da perda de dados..</p><p>·&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Outro ponto apresentado está na contratação de backup online aos arquivos.</p><p>&nbsp;</p>",
+    "create_at": "2025-01-17T19:13:27.52"
+  },
+  {
+    "id": 177,
+    "client_id": 90084,
+    "recomendation": "<p><strong>Estação de trabalho</strong></p><p>·&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Em outubro deste ano, a Microsoft vai descontinuar o Windows 10, ou seja, passa a não ter mais suporte para atualizações de segurança.</p><p>·&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Para não correr risco, recomendamos a troca do sistema pelo Windows 11 Pro, caso a estação de trabalho não aceite, será necessário a troca.</p><p>·&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Pacote Office 2016 e 2019 serão descontinuados em outubro de 2025 pela Microsoft, ou seja, passa a não ter mais atualização de segurança. As versões anteriores 2010 já não tem mais suporte.</p><p>&nbsp;<strong>Servidor</strong></p><p>·&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; O atual sistema operacional (Windows) já está descontinuado desde 2023. Será necessário fazer um projeto para troca do atual servidor que também já esta sem garantia de hardware, ou seja, qualquer erro físico, a manutenção será mais demorada devido a falta de peça.</p>",
+    "create_at": "2025-01-20T17:45:37.357"
+  },
+  {
+    "id": 178,
+    "client_id": 658465,
+    "recomendation": "<p><strong>Sistema Operacional ( Windows)</strong></p><p>·&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Em outubro de 2025, a Microsoft descontinuará o suporte ao Windows 10, o que significa que, a partir dessa data, não serão mais disponibilizadas atualizações de segurança para o sistema operacional.</p><p>·&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; A Microsoft recomenda a atualização para o Windows 11. Caso as estações de trabalho não sejam compatíveis com o novo sistema, será necessário realizar a substituição dos equipamentos.</p><p>·&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; A versão do Windows Home é recomendada para uso doméstico, hoje no ambiente tem 9 máquinas utilizando esta versão, sendo 6 da versão Windows 10 e 3 da versão Windows 11. Para empresa, recomenda-se a versão do Windows Professional por ser uma versão habilitada para parte corporativa com recursos avançados de segurança.</p><p>·&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <strong>Recomendação Terabyte:</strong> Trocar as versões de Windows 10 para Windows 11 Pro e as máquinas com a versão de Windows Home trocar pela versão Professional</p>",
+    "create_at": "2025-01-20T19:51:03.553"
+  },
+  {
+    "id": 179,
+    "client_id": 658465,
+    "recomendation": "<p><strong>Estações de trabalho</strong></p><p>·&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 7 máquinas com Windows 10, precisam ser avaliadas para atualização ao Windows 11. Conforme o documento técnico da Microsoft, as máquinas: 4CASPNB1, 4CASPNB4, 4CASPNB3, 4CASPW1, 4CORP-NBK-03ADM , estão fora dos requisitos de processador suportado devido a sua geração.</p><p>·&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; As máquinas 4CASPW2 e 4CASPW3 precisam ser avaliadas em relação ao Windows 11.</p><p>·&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <strong>Recomendação Terabyte:</strong> Para não correr riscos após, recomenda-se colocar no planejamento para as atualizações e/ou troca.</p><p><strong>&nbsp;</strong>·&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 4CASPW1 (Leonardo Custódio) – Apresentando alerta de disco com 81% de espaço utilizado, necessário que o usuário verifique os dados em uso para uma liberação de espaço.</p>",
+    "create_at": "2025-01-20T19:56:55.63"
+  },
+  {
+    "id": 180,
+    "client_id": 658465,
+    "recomendation": "<p><strong>Servidor e Backup</strong></p><p>·&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; O computador classificado como servidor (4CASPW5) que utiliza o Windows 11 Pro está operando com os dados da rede através do HD externo sem backup de dados, com mensagem da versão de ativação do Windows devido.</p><p>·&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <strong>Recomendação Terabyte:</strong> Recomendados a necessidade de voltar as tratativas para troca desta estação de trabalho que esta como servidor por um equipamento com hardware próprio para servidor de dados com a contratação de redundância de backup local através de 2 discos &nbsp;Externo usb e com a contratação de backup em nuvem para sua recuperação de dados em caso de desastre.</p><p>·&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Em julho/2024 de acordo com a proposta foram apresentadas as soluções não aceitas para o momento.</p>",
+    "create_at": "2025-01-20T20:04:05.413"
+  },
+  {
+    "id": 181,
+    "client_id": 658465,
+    "recomendation": "<p><strong>Link de internet</strong></p><p>·&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Nossa recomendação é aumentar o link de 10MB da Vivo para 100MB. Favor entrarem em contato com a Vivo para solicitar uma cotação de up-grade. Devido ser um link que quando necessário ser acionado é muito lento para suportar a rede.</p>",
+    "create_at": "2025-01-21T12:28:45.137"
+  },
+  {
+    "id": 182,
+    "client_id": 90084,
+    "recomendation": "<p><strong>Ata da Reunião:</strong></p><p><strong>Terabyte</strong></p><ul><li><p>Enviar orçamento de um novo HD interno para servidor.</p></li><li><p>Enviar o relatório de volumetria</p></li><li><p>Levantamento de acesso entre usuários x rede</p></li><li><p>Futuramente trocar o servidor por um storage</p></li></ul><p><strong>The Ideias</strong></p><ul><li><p>Fazer um filtro dos dados que serão arquivos quentes</p></li><li><p>Revisar acessos entre usuários x rede com o envio do relatório</p></li></ul>",
+    "create_at": "2025-01-21T16:41:19.527"
+  },
+  {
+    "id": 184,
+    "client_id": 90171,
+    "recomendation": "<p>Estamos recomendando uma nova reunião para alinhar uma nova estratégia para o ambiente de TI</p>",
+    "create_at": "2025-01-21T17:45:16.35"
+  },
+  {
+    "id": 185,
+    "client_id": 87164,
+    "recomendation": "<p><strong>Reunião</strong></p><p>·&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Em resumo, conforme explicado na última reunião, foi explicado sobre a necessidade das trocas das máquinas com Win10, assim como a aquisição de uma nova máquina para virtualização das vms e também sobre a importância de backup e limpeza de espaço no sharepoint.</p>",
+    "create_at": "2025-02-05T12:30:35.697"
+  },
+  {
+    "id": 186,
+    "client_id": 87231,
+    "recomendation": "<p><strong>&nbsp;</strong></p><p><strong>Rede Wireless</strong></p><p>·&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Aguardando receberem a segunda antena Ubiquiti para instalação</p><p>·&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Aguardando instalarem elétrica e rede no ponto indicado para instalar a antena</p><p>·&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Uma antena Ubiquiti ficou configurada para uso, falta fixar</p><p><strong>Rack</strong></p><p>·&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Foi reorganizado o cabeamento do rack</p><p><strong>Projeto 365</strong></p><p>·&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Assim que o Sr. Vicente retornar será alinhado o projeto para andamento.</p>",
+    "create_at": "2025-02-05T16:16:21.057"
+  },
+  {
+    "id": 187,
+    "client_id": 87222,
+    "recomendation": "<p><strong>Estação de trabalho</strong></p><p>·&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; As 3 máquina não aceitam atualização para Windows 11, recomendação trocar.</p>",
+    "create_at": "2025-02-05T16:38:06.757"
+  },
+  {
+    "id": 188,
+    "client_id": 87209,
+    "recomendation": "<p><strong>Estação de trabalho</strong></p><p>·&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; As máquinas: RODSPW5, RODSPW9, RODSPW11 que não aceito o Windows 11, colocar no plano para troca</p><p>·&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; As máquinas que aceitam o Windows 11 RODSPW3, RODSPW4</p><p>·&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; As máquinas que deve avaliar antes para atualizar: RODSPW12, RODSPW13</p>",
+    "create_at": "2025-02-05T16:56:54.27"
+  },
+  {
+    "id": 189,
+    "client_id": 329072,
+    "recomendation": "<p><strong>Estação de trabalho</strong></p><p>·&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; YAPO-PATRICIA – Máquina utilizando o Windows 7, já descontinuado. Para não correr risco no ambiente, recomendamos a desativação.</p><p>·&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; OSNSPW03, OSNSPW04 – Utilizando o Windows 10 e não suporta a nova de Windows</p><p>·&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; OSNSPW07, OSNBHW01 máquinas utilizando o Windows 10 e aceita atualização para a versão Windows 11</p><p><strong>Nota:</strong></p><p>·&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; A Microsoft está descontinuando a versão do Windows 10 em outubro/2025</p>",
+    "create_at": "2025-02-05T17:39:08.953"
+  },
+  {
+    "id": 190,
+    "client_id": 90141,
+    "recomendation": "<p><strong>Estação de trabalho</strong></p><p>·&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; As máquinasBDGSPNB01 e DESKTOP-2E68PE6, não suportam o Windows 11, precisam ser trocadas.</p>",
+    "create_at": "2025-02-10T18:28:29.563"
+  },
+  {
+    "id": 191,
+    "client_id": 276873,
+    "recomendation": "<p><strong>Estação de trabalho</strong></p><p>·&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; As estações de trabalho com o Windows 10 não suportam o Windows 11, precisam ser trocadas.</p>",
+    "create_at": "2025-02-10T18:30:23.833"
+  },
+  {
+    "id": 192,
+    "client_id": 87167,
+    "recomendation": "<p><strong>Estações de Trabalho</strong></p><p>·&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Aprovado a proposta #157303 para up-grade das memórias.</p>",
+    "create_at": "2025-02-12T12:58:45.213"
+  },
+  {
+    "id": 194,
+    "client_id": 86589,
+    "recomendation": "<p><strong>Firewall</strong></p><p>·&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Em jan/25 foi apresentando a proposta para a troca do firewall (CM1010600-25) não aprovada</p>",
+    "create_at": "2025-02-19T12:54:59.313"
+  },
+  {
+    "id": 195,
+    "client_id": 355861,
+    "recomendation": "<p><strong>Estações de trabalho</strong></p><p>·&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Em outubro de 2025, a Microsoft irá descontinuar o Windows 10, recomendamos a atualização para a nova versão de Windows 11 e as máquinas que não suportar o novo Windows devem ser trocadas.</p>",
+    "create_at": "2025-02-19T13:47:55.957"
+  },
+  {
+    "id": 196,
+    "client_id": 87721,
+    "recomendation": "<p><strong>Sistema Operacional para estação de trabalho</strong></p><p>·&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Em outubro de 2025, a Microsoft irá descontinuar o Windows 10 e será necessário atualizar a nova versão do Windows 11, caso a máquina não aceite o novo Windows Trocar.</p><p><strong>Pacote Office</strong></p><p>·&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Em outubro de 2025, a Microsoft irá descontinuar o suporte para o Office 2016 e Office 2019, será necessário a troca do pacote Office.</p><p><strong>Nota:</strong></p><p>·&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Com o fim do suporte Microsoft, os equipamentos ficam vulneráveis a vírus, sendo necessário a troca para manter a segurança</p>",
+    "create_at": "2025-02-19T14:01:29.873"
+  },
+  {
+    "id": 197,
+    "client_id": 87786,
+    "recomendation": "<p><strong>Melhoria na infraestrutura</strong></p><p>·&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Conforme as propostas apresentadas em dez/2024 para melhorias do ambiente servidor, backup e rede wireless não foram aprovadas.</p><p>·&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; A renovação do Servidor DC8 Dell também não foi aprovada</p><p>·&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Ambiente com cenário crítico a riscos e perdas de informação</p>",
+    "create_at": "2025-02-19T14:16:41.413"
+  },
+  {
+    "id": 198,
+    "client_id": 87195,
+    "recomendation": "<p><strong>Backup</strong></p><p>·&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Em 27/02 - Foi encaminhado a proposta para backup com redundância ao &nbsp;servidor conforme a proposta: Projeto Backup - 160173-25</p><p>·&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; No momento estão sem backup devido ao disco atual com defeito</p>",
+    "create_at": "2025-03-07T18:01:40.537"
+  },
+  {
+    "id": 199,
+    "client_id": 87169,
+    "recomendation": "<p>&nbsp;<strong>Roteador Wireless</strong></p><p>·&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Conforme o ticket #160881 – da avaliação técnica sobre o roteador da sala do Dr. Pérsio, por ser um roteador já descontinuado, após a atualização de firmware, caso o erro venha a persistir, trocar.</p>",
+    "create_at": "2025-03-11T12:12:14.77"
+  },
+  {
+    "id": 200,
+    "client_id": 87150,
+    "recomendation": "<p><strong>Estações de trabalho</strong></p><p>·&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; O fim do suporte ao Windows 7, em 14 de janeiro de 2020, significou a <strong>término das atualizações de segurança</strong> e do <strong>suporte técnico</strong>. Isso deixou os usuários vulneráveis a ataques cibernéticos e dificultou a compatibilidade com novos programas.</p><p>·&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; A Microsoft recomenda a <strong>atualização para o Windows 11</strong> para garantir maior segurança e funcionalidade.</p><p>·&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; A Versão do Windows 10 irá expirar da mesma forma em outubro de 2025, assim como o pacote office 2019 e versões anteriores</p><p>·&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; O uso de Office pirata envolve riscos de segurança, falta de atualizações, problemas de compatibilidade, questões legais, baixo desempenho e danos à reputação. É melhor usar versões legítimas ou alternativas gratuitas.</p><p>·&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <strong>Nossa recomendação está sempre em manter todo o parque de maquinas atualizadas com sistema Windows versão 11 Pro e Office acima da versão 2019.</strong></p>",
+    "create_at": "2025-04-01T20:47:48.097"
+  },
+  {
+    "id": 201,
+    "client_id": 87149,
+    "recomendation": "<p><strong>Estações de trabalho</strong></p><p>·&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; O fim do suporte ao Windows 7, em 14 de janeiro de 2020, significou a <strong>término das atualizações de segurança</strong> e do <strong>suporte técnico</strong>. Isso deixou os usuários vulneráveis a ataques cibernéticos e dificultou a compatibilidade com novos programas.</p><p>·&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; A Microsoft recomenda a <strong>atualização para o Windows 11</strong> para garantir maior segurança e funcionalidade.</p><p>·&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; A Versão do Windows 10 irá expirar da mesma forma em outubro de 2025, assim como o pacote office 2019 e versões anteriores</p><p>·&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; O uso de Office pirata envolve riscos de segurança, falta de atualizações, problemas de compatibilidade, questões legais, baixo desempenho e danos à reputação. É melhor usar versões legítimas ou alternativas gratuitas.</p><p>·&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <strong>Nossa recomendação está sempre em manter todo o parque de maquinas atualizadas com sistema Windows versão 11 Pro e Office acima da versão 2019.</strong></p><p>As máquinas com  Windows 10 devem ser atualizadas, a CDMESPW3 não suporta a nova versão e precisa ser trocada</p><p></p>",
+    "create_at": "2025-04-01T20:48:46.86"
+  },
+  {
+    "id": 202,
+    "client_id": 87167,
+    "recomendation": "<p><strong>Estações de trabalho</strong></p><p>·&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 7 Máquinas precisam fazer a atualização para o Windows 11</p><p>·&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 2 Máquinas faltam fazer o up-grade para 16GB</p><p><strong>E-mails</strong></p><p>E-mails abaixo precisam de atenção, devido ao uso de armazenamento da caixa postal, precisam liberar espaço ou fazer up-grade.. Cada e-mail tem a cota de 50GB de armazenamento:</p><p>·&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Sabrina está com 48,87GB</p><p>·&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Carlos está com 44,57GB</p><p><strong>Sharepoint</strong></p><p>·&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Atingiu 43% de uso do limite de armazenamento de 1TB</p><p><strong>Backup</strong></p><p>·&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; A Farah não tem backup do Sharepoint para recuperação de desastre.</p><p>·&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Temos solução de backup em nuvem para o Sharepoint, podemos apresentar uma proposta?</p><p><strong>Licenças 365</strong></p><p>·&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; O distribuidor nos informou que as 2 licenças sobrando só podem ser removidas entre os dias 9 e 10/ abril.</p>",
+    "create_at": "2025-04-02T17:03:39.51"
+  },
+  {
+    "id": 203,
+    "client_id": 609752,
+    "recomendation": "<p><strong>Estações de trabalho</strong></p><p>As máquinas abaixo precisam passar por um processo de atualização antes de <strong>outubro/2025 </strong>devido o Windows 10 que será descontinuado.</p><p>·&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 6 máquinas com Windows 10</p><p><strong>Backup</strong></p><p>·&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; O armazenamento dados atual pelo Google Drive<strong> NÃO</strong> tem Backup para Recuperação de desastre, assim como os e-mails.</p><p>·&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Podemos encaminhar uma proposta para apresentar a solução?</p>",
+    "create_at": "2025-04-02T17:37:32.44"
+  },
+  {
+    "id": 204,
+    "client_id": 87215,
+    "recomendation": "<p>·&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Em outubro de 2025 as estações de trabalho com Windows 10 devem ser atualizadas ou trocadas caso não aceite o novo Windows 11 pro para não correr riscos na rede.</p><p>·&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Em Setembro/2024 encaminhamos uma proposta com a solução para espaço no sharepoint, porém não obtive retorno, gostariam de rever a mesma?</p><p>·&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; O atual armazenamento de dados (sharepoint) não tem backup em caso de desastre. Podemos apresentar a proposta para backup em&nbsp; nuvem?</p>",
+    "create_at": "2025-04-02T17:57:04.697"
+  },
+  {
+    "id": 205,
+    "client_id": 87144,
+    "recomendation": "<p><strong>Sistema operacional</strong></p><p>·&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Em outubro de 2025 as estações de trabalho com Windows 10 devem ser atualizadas ou trocadas caso não aceite o novo Windows 11 pro para não correr riscos na rede.</p><p><strong>Backup</strong></p><p>·&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; O atual armazenamento de dados não tem uma solução de backup para em caso de desastre, podemos apresentar uma proposta?</p>",
+    "create_at": "2025-04-02T18:07:46.043"
+  },
+  {
+    "id": 206,
+    "client_id": 86632,
+    "recomendation": "<p><strong>Estações de trabalho</strong></p><p>17 máquina estão entrando para a atualização de Windows, devido a versão do Windows 10 que será descontinuado em outubro/2025</p>",
+    "create_at": "2025-04-02T18:37:38.483"
+  },
+  {
+    "id": 207,
+    "client_id": 87164,
+    "recomendation": "<p><strong>Estação de trabalho</strong></p><p>Estamos informando novamente que as máquinas que estão com Windows 10 precisam entrar no planejamento de trocar as que não aceitam o Windows conforme informado.</p><p>Para não correr riscos de invasão</p><p><strong>Backup</strong></p><p>A espaço sistema não tem um sistema de backup do sharepoint, podemos apresentar uma proposta para implantar a solução?</p>",
+    "create_at": "2025-04-03T14:01:17.697"
+  },
+  {
+    "id": 208,
+    "client_id": 87161,
+    "recomendation": "<p><strong>&nbsp;Backup</strong></p><p>·&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Recomendamos a contratação de backup em nuvem para a solução Sharepoint, para que em caso de desastre tenha uma solução de recuperação.</p><p>·&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Podemos encaminhar uma proposta?</p><p><strong>&nbsp;</strong></p><p><strong>Sistema Operacional</strong></p><p>·&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; O Windows 10 será descontinuado em outubro, as 7 máquinas com esta versão precisam ser atualizadas ou trocadas.</p>",
+    "create_at": "2025-04-03T16:57:31.653"
+  },
+  {
+    "id": 209,
+    "client_id": 87135,
+    "recomendation": "<p><strong>Sistema Operacional</strong></p><p>A Microsoft vai descontinuar o Windows 10 em outubro 2025 e as máquinas abaixo não suporta novo Windows, solução trocar.</p><p>·&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; AUDSPW3 (Sidneia), AUDSPW5 (Claudete),&nbsp; AUDSPW6 (rafael), AUDSPW7 (sergio), AUDSPW9 (Leoner), AUDSPW8 (Denise),&nbsp; AUDSPW12 (Carlos), AUDSPW13 (Laerte)</p><p><strong>A máquina abaixo precia atualizar para o Windows 11</strong></p><p>·&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; AUDISPNB01( Alessandro)</p>",
+    "create_at": "2025-04-03T17:50:31.34"
+  },
+  {
+    "id": 210,
+    "client_id": 87154,
+    "recomendation": "<p>A&nbsp; proposta de backup em nuvem confome o nr.147251-24 não foi aceita.</p><p>A proposta da Dell foi encaminhada para a troca dos equipamentos, porém no momento foi informado que por falta de verba não irá dar andamento.</p>",
+    "create_at": "2025-04-03T19:45:51.233"
+  },
+  {
+    "id": 211,
+    "client_id": 90171,
+    "recomendation": "<p>Estamos recomendando uma nova reunião para alinhar uma nova estratégia para o ambiente de TI</p>",
+    "create_at": "2025-04-03T19:54:57.57"
+  },
+  {
+    "id": 212,
+    "client_id": 87157,
+    "recomendation": "<p><strong>Sistema operacional</strong></p><p>Em outubro de 2025 a Microsoft não vai dar mais suporte e atualizações de segurança &nbsp;a versão do Windows 10, desta forma para não risco na deve ser trocada.</p><p>A máquina: CSHSPW05, CSHSPW14 e CSHSPW06 são máquinas que precisam ser trocadas por não aceitar o novo Windows. Colocar na programação de troca.</p><p>A máquina CSHSPW15 precisa avaliar através do programa da Microsoft se aceita o Windows 11</p>",
+    "create_at": "2025-04-03T20:03:56.7"
+  },
+  {
+    "id": 213,
+    "client_id": 87201,
+    "recomendation": "<p><strong>Sistema operacional (Windows)</strong></p><p>·&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Em Outubro de 2025 a Microsoft vai desativar o Windows 10 e para não correr riscos na rede, será necessário atualizar ou trocar as máquinas</p><p><strong>Backup</strong></p><p>·&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; O Sharepoint que armazena dos dados não tem backup de recuperação.</p><p>·&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Podemos enviar uma proposta de backup em nuvem?</p>",
+    "create_at": "2025-04-03T20:30:27.95"
+  },
+  {
+    "id": 214,
+    "client_id": 104580,
+    "recomendation": "<p><strong>Backup em nuvem</strong></p><p>Devido o atual armazenamento de dados não ter um sistema de backup em nuvem, estamos recomendando.</p><p>Podemos apresentar uma proposta para a aquisição desta solução?</p>",
+    "create_at": "2025-04-04T12:05:03.397"
+  },
+  {
+    "id": 215,
+    "client_id": 87142,
+    "recomendation": "<p><strong>Servidor</strong></p><p>Agendamos segunda-feira (07/04/2025) uma call com a Paula para explicar sobre a desativação do servidor e redesenhar uma nova solução para substituir.</p>",
+    "create_at": "2025-04-04T13:14:46.61"
+  },
+  {
+    "id": 216,
+    "client_id": 87143,
+    "recomendation": "<p><strong>&nbsp;Backup</strong></p><p>Agendamos segunda-feira (07/04/2025) uma call com a Paula para explicar sobre a importância de backup</p>",
+    "create_at": "2025-04-04T13:17:16.523"
+  },
+  {
+    "id": 217,
+    "client_id": 783256,
+    "recomendation": "<p><strong>Estações de Trabalho</strong></p><ul><li><p><strong>Ticket 161351</strong>: A máquina <strong>PNTSPNB14</strong> necessita ser instalada, mas o usuário está de licença.</p></li><li><p>Recomendamos a atualização da máquina <strong>PNTSPNB9</strong> de <strong>Windows 10</strong> para <strong>Windows 11</strong>.</p></li><li><p>É necessário incluir no planejamento a migração das estações de trabalho da empresa para a versão <strong>Windows 11 Pro</strong>, pois ela oferece mais recursos e facilita a implementação de medidas de segurança corporativa.</p></li></ul>",
+    "create_at": "2025-04-04T17:10:25.557"
+  },
+  {
+    "id": 218,
+    "client_id": 90084,
+    "recomendation": "<p>Conforme já conversamos em call sobre os projetos, nos informaram que até o momento devido a parte financeira não é possível realizar.</p>",
+    "create_at": "2025-04-11T14:31:31.653"
+  },
+  {
+    "id": 219,
+    "client_id": 658465,
+    "recomendation": "<p><strong>Status</strong></p><p>·&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Em 26/03 foi encaminhado o inventário atualizado informando sobre as trocas necessárias das máquinas com a avaliação.</p><p>·&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; O Ambiente servidor continua no mesmo status já informado sobre a necessidade de melhorias conforme a proposta encaminhada em 10/02 (157768-25 servidor e backup e a proposta 158577-25 referente a estações de trabalho.</p><p>·&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <strong>Estamos aqui recomendando com o máximo de urgência uma definição sobre o servidor e backup pois estão em risco e em caso de falha não há recuperação</strong></p>",
+    "create_at": "2025-04-11T17:17:27.467"
+  },
+  {
+    "id": 220,
+    "client_id": 657278,
+    "recomendation": "<p><strong>Backup</strong></p><p>·&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Proposta do backup em nuvem para o servidor encaminhada em 07/04 conforma a proposta #163629.</p>",
+    "create_at": "2025-04-11T19:00:59.157"
+  },
+  {
+    "id": 221,
+    "client_id": 87132,
+    "recomendation": "<p><strong>Backup</strong></p><p>·&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Proposta do backup em nuvem para o servidor encaminhada em 11/04 conforma a proposta #164676.</p>",
+    "create_at": "2025-04-11T19:28:16.66"
+  },
+  {
+    "id": 222,
+    "client_id": 87169,
+    "recomendation": "<p><strong>Backup em nuvem</strong></p><p>·&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Em 14/04 – encaminhamos a proposta para backup em nuvem para o servidor FRSPDC1 ao Dr. Pérsio, aguardando aprovação.</p><p><strong>Solução de Arquivos e e-mails</strong></p><p>·&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Estamos recomendando a migração dos atuais e-mails na Locaweb para a solução Microsoft Exchange e migrar os dados do servidor atual para a solução Microsoft Sharepoint Online, para maior segurança de dados.</p><p><strong>Estações de trabalho</strong></p><p>·&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; As estações de trabalho FROSPW15, FROSSPW8, FROSPW7, FROSPW11, FROSPW12, FROSPW10, FROSPW9, FROSPW3, FROSPW14 e FROSPW1, que atualmente utilizam o Windows 10, precisam de atenção especial. Esses equipamentos não são compatíveis com a atualização para o Windows 11 Pro.</p><p>Recomendamos a substituição dessas máquinas, uma vez que a Microsoft encerrará o suporte ao Windows 10 em outubro de 2025. Para evitar riscos de segurança e garantir a continuidade dos serviços, é fundamental realizar a atualização antes desse prazo.</p>",
+    "create_at": "2025-04-15T13:50:56.11"
+  },
+  {
+    "id": 223,
+    "client_id": 87223,
+    "recomendation": "<p>&nbsp;Já executaram a compra de 2 máquinas novas para substituir</p><ol type=\"1\"><li><p>&nbsp;Lenovo I7 - Será configurado para o Financeiro (usuário Rose)</p></li><li><p>&nbsp;Lenovo I5 - Será configurado para o Comercial (usuário Elton)</p></li></ol>",
+    "create_at": "2025-04-16T19:43:33.063"
+  },
+  {
+    "id": 224,
+    "client_id": 325206,
+    "recomendation": "<p><strong>Backup de Dados</strong></p><p>Estamos recomendando a contratação de um serviço de <strong>backup em nuvem</strong> para os arquivos hospedados na plataforma da Microsoft. Essa medida visa garantir a segurança e a integridade das informações, protegendo contra perdas acidentais, exclusões indevidas ou falhas técnicas.</p><p>Caso haja interesse, por favor, sinalize para que possamos encaminhar uma proposta personalizada.</p>",
+    "create_at": "2025-04-17T12:02:34.233"
+  },
+  {
+    "id": 225,
+    "client_id": 87190,
+    "recomendation": "<p><strong>Estações de trabalho</strong></p><p>·&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; A Microsoft encerrará o suporte ao Windows 10 em outubro deste ano. Por isso, recomendamos uma avaliação dos equipamentos que ainda utilizam essa versão. Nos casos em que não for possível atualizar para o Windows 11, será necessária a substituição dos dispositivos.</p>",
+    "create_at": "2025-04-17T12:17:44.523"
+  },
+  {
+    "id": 226,
+    "client_id": 87194,
+    "recomendation": "<p><strong>&nbsp;Backup de Dados</strong></p><p>Para garantir uma maior segurança, recomendamos a realização de backup em nuvem dos dados armazenados no SharePoint Online. Caso tenha interesse, por favor, entre em contato para que possamos enviar uma proposta detalhada.</p>",
+    "create_at": "2025-04-17T13:02:04.737"
+  },
+  {
+    "id": 227,
+    "client_id": 87195,
+    "recomendation": "<p><strong>Backup de Dados</strong></p><p>Estamos aguardando eles receberam o novo disco externo para backup</p>",
+    "create_at": "2025-04-17T13:15:35.94"
+  },
+  {
+    "id": 228,
+    "client_id": 386986,
+    "recomendation": "<p><strong>&nbsp;Melhorias executada</strong></p><p>·&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Novo Firewall com Draytek</p><p>·&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Nova antena wireless com ubitquiti</p><p>·&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Novo computador Dell já com Windows 11</p><p>·&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Novo nobreak para o rack</p>",
+    "create_at": "2025-04-17T13:56:57.407"
+  },
+  {
+    "id": 229,
+    "client_id": 185191,
+    "recomendation": "<p><strong>Backup em Nuvem</strong></p><p>Recomendamos a utilização de backup em nuvem como solução complementar ao armazenamento no Microsoft 365, garantindo maior segurança, proteção contra perda de dados e recuperação eficiente em caso de incidentes</p>",
+    "create_at": "2025-04-17T19:47:42.757"
+  },
+  {
+    "id": 230,
+    "client_id": 87154,
+    "recomendation": "<p>A máquina CPSPW20, precisa ser trocada pois não aceita a instalação do antivírus.</p>",
+    "create_at": "2025-04-24T14:45:28.5"
+  },
+  {
+    "id": 231,
+    "client_id": 87209,
+    "recomendation": "<p><strong>Backup</strong></p><p>·&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Foi encaminhada a proposta 164625-25 em 11/4 para backup em nuvem para a solução sharepoint online.</p><p>·&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Devido o atual servidor esta descontinuado, no qual o mesmo já apresentou falhas, e não rodando o backup, devido a atual plataforma 365 esta sempre atualizada com seus aplicativos exigindo que os equipamentos também estejam para rodar sincronismo exigido</p>",
+    "create_at": "2025-04-28T17:38:13.937"
+  }
+]

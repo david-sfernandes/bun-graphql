@@ -4,11 +4,15 @@ services:
     container_name: tera-mssql
     environment:
       - ACCEPT_EULA=Y
-      - MSSQL_SA_PASSWORD=pass
+      - MSSQL_SA_PASSWORD=YourStrong@Passw0rd
     ports:
       - "1433:1433"
     volumes:
-      - ./data/mssql:/var/opt/mssql
+      # Mapeia apenas a pasta de arquivos de dados
+      - ./data/mssql/data:/var/opt/mssql/data
+      # Opcional: log em host
+      - ./data/mssql/log:/var/opt/mssql/log
+
 
   postgres:
     image: postgres:latest

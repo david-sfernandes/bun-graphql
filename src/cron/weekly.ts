@@ -3,7 +3,7 @@ import SourceFacade from "../sources/source.facade";
 
 async function syncDeviceDetails() {
   const terabyteSource = new SourceFacade();
-  const countDevices = await terabyteSource.syncDevices();
+  const countDevices = await terabyteSource.syncDeviceDetails();
   console.log(`< Updated ${countDevices} devices details`);
 }
 

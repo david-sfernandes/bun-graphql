@@ -30,5 +30,7 @@ COPY --from=prerelease /usr/src/app/package.json .
 # run the app
 USER bun
 EXPOSE 8081/tcp
-ENTRYPOINT [ "bunx", "prisma", "generate" ]
+
+RUN bunx prisma generate
+
 ENTRYPOINT [ "bun", "start"]
