@@ -26,7 +26,7 @@ const permissions = shield({
     updateDisclaimer: or(isAdmin, isManager),
     deleteRecomendation: or(isAdmin, isManager),
     deleteDisclaimer: or(isAdmin, isManager),
-    updateMSAccounts: or(isBot, isAdmin),
+    updateMSAccounts: isBot,
     updateMSSubscribedSkus: or(isBot, isAdmin),
     updateClient: or(isAdmin, isManager),
   },

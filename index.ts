@@ -12,6 +12,8 @@ import { dailyTask1, dailyTask2 } from "./src/cron/daily";
 import { monthlyTask } from "./src/cron/monthly";
 import { weeklyTask } from "./src/cron/weekly";
 import schema from "./src/graphql/schema";
+import { OpenAPI } from "sofa-api";
+import { writeFileSync } from "node:fs";
 
 const yoga = createYoga({
   schema,
@@ -28,10 +30,6 @@ const yoga = createYoga({
     useSofa({
       basePath: "/",
       depthLimit: 7,
-      swaggerUI: {
-        endpoint: "/swagger",
-        defaultModelExpandDepth: 3,
-      },
     }),
   ],
 });

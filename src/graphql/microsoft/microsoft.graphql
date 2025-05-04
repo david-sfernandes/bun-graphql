@@ -23,8 +23,8 @@ type MicrosoftSubscribedSku {
 }
 
 type PostResp {
-  success: Int
-  failed: Int
+  error: String
+  message: String
 }
 
 # Inputs

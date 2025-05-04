@@ -48,43 +48,25 @@ const resolvers = {
       { value }: { value: ReqMSAccount[] },
       ctx: GraphQLContext,
     ) {
-      let failed = 0;
       const clientId = ctx.request.headers.get("clients") || 0;
-
-      for (const account of value) {
-        try {
-          await microsoftService.upsertAccount(ctx.prisma, account, +clientId);
-        } catch (error) {
-          failed++;
-          console.error(error);
-        }
+      if (clientId === 0) {
+        return { error: "Client ID not found in headers", message: null };
       }
-      if (failed > 0) console.error(`Failed to update ${failed} accounts`);
-      return { success: value.length - failed, failed };
+      microsoftService.upsertAccounts(value, +clientId);
+      return { error: null, message: `Accounts received from ${clientId} successfully!` };
     },
     async updateMSSubscribedSkus(
       _: unknown,
       { value }: { value: ReqMSSubscribedSku[] },
       ctx: GraphQLContext,
     ) {
-      let failed = 0;
       const clientId = ctx.request.headers.get("clients") || 0;
-
-      for (const sku of value) {
-        try {
-          await microsoftService.upsertSubscribedSku(
-            ctx.prisma,
-            sku,
-            +clientId,
-          );
-        } catch (error) {
-          failed++;
-          console.error(error);
-        }
+      if (clientId === 0) {
+        return { error: "Client ID not found in headers", message: null };
       }
 
-      if (failed > 0) console.error(`Failed to update ${failed} skus`);
-      return { success: value.length - failed, failed };
+      microsoftService.upsertSubscribedSkus(value, +clientId);
+      return { error: null, message: `Subscribed Skus received from ${clientId} successfully!` };
     },
   },
 };

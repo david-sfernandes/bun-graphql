@@ -1,7 +1,8 @@
+import prisma from "@/db/prisma";
 import type { PrismaClient } from "@prisma/client";
 
 class MicrosoftService {
-  async upsertAccount(
+  private async upsertAccount(
     prisma: PrismaClient,
     account: ReqMSAccount,
     clientId: number,
@@ -31,7 +32,22 @@ class MicrosoftService {
     });
   }
 
-  async upsertSubscribedSku(
+  async upsertAccounts(value: ReqMSAccount[], clientId: number) {
+    let failed = 0;
+    for (const account of value) {
+      try {
+        await this.upsertAccount(prisma, account, +clientId);
+      } catch (error) {
+        failed++;
+        console.error(`Error updating account ${account.id}:`, error);
+      }
+    }
+    console.log(
+      `Finished upserting accounts for client ${clientId}. ${failed} accounts failed to update.`,
+    );
+  }
+
+  private async upsertSubscribedSku(
     prisma: PrismaClient,
     subscribedSku: ReqMSSubscribedSku,
     clientId: number,
@@ -54,6 +70,28 @@ class MicrosoftService {
         used: subscribedSku.consumedUnits,
       },
     });
+  }
+
+  async upsertSubscribedSkus(
+    value: ReqMSSubscribedSku[],
+    clientId: number,
+  ) {
+    let failed = 0;
+    for (const sku of value) {
+      try {
+        await this.upsertSubscribedSku(
+          prisma,
+          sku,
+          +clientId,
+        );
+      } catch (error) {
+        failed++;
+        console.error(error);
+      }
+    }
+    console.log(
+      `Finished upserting subscribed SKUs for client ${clientId}. ${failed} SKUs failed to update.`,
+    );
   }
 }
 
