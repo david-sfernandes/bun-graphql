@@ -91,7 +91,7 @@ model SecurityStatus {
 }
 
 model DeviceDetail {
-  id             Int       @id
+  id             Int           @id
   groupId        Int?
   ramal          String
   imei1          String
@@ -104,8 +104,9 @@ model DeviceDetail {
   warrantyDate   DateTime?
   clientVersion  String
   businessUnitId Int?
-  updatedAt      DateTime  @updatedAt
-  device         Device?   @relation(fields: [deviceId], references: [id])
+  businessUnit   BusinessUnit? @relation(fields: [businessUnitId], references: [id])
+  updatedAt      DateTime      @updatedAt
+  device         Device?       @relation(fields: [deviceId], references: [id])
   deviceId       Int?
 }
 
@@ -142,11 +143,12 @@ model Disclaimer {
 }
 
 model BusinessUnit {
-  id          Int    @id
-  description String
-  street      String
-  clientId    Int
-  client      Client @relation(fields: [clientId], references: [id], onDelete: NoAction, onUpdate: NoAction)
+  id           Int            @id
+  description  String
+  street       String
+  clientId     Int
+  client       Client         @relation(fields: [clientId], references: [id], onDelete: NoAction, onUpdate: NoAction)
+  deviceDetails DeviceDetail[]
 }
 
 model MicrosoftSku {
