@@ -5,7 +5,7 @@ import SECRET from "@/constant/secret";
 import type { GraphQLContext } from "@/types/context";
 import { GraphQLError } from "graphql";
 import jwt from "jsonwebtoken";
-import { v1 as uuidv1 } from "uuid";
+import { randomUUIDv7 } from "bun";
 
 const resolvers = {
   Query: {
@@ -74,7 +74,7 @@ const resolvers = {
       if (role === "ADMIN") {
         throw new GraphQLError("Cannot create an admin invite!");
       }
-      const token = uuidv1().replace(/-/g, "");
+      const token = randomUUIDv7().replace(/-/g, "");
       return await ctx.prisma.invite.create({
         data: {
           email,

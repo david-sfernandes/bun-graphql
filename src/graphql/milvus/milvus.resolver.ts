@@ -41,6 +41,7 @@ const resolvers = {
     ) => {
       return await ctx.prisma.recomendation.findMany({
         where: { clientId: parent.id },
+        orderBy: { createdAt: "asc" },
       });
     },
     disclaimers: async (
@@ -50,6 +51,7 @@ const resolvers = {
     ) => {
       return await ctx.prisma.disclaimer.findMany({
         where: { clientId: parent.id },
+        orderBy: { createdAt: "asc" },
       });
     },
   },
