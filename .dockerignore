@@ -13,3 +13,7 @@ helm-charts
 .editorconfig
 .idea
 coverage*
+seed
+test
+.env.example
+biome.json

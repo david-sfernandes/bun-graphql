@@ -1,0 +1,332 @@
+[
+    {
+        "username": "bot@abrandao",
+        "password": "$2a$10$IiMfMOgizBJeUHLDYrYX5unokS3vGk\/6qKHbqxN1DzyLMEAA7zJym",
+        "role": "BOT"
+    },
+    {
+        "username": "bot@afrinvest",
+        "password": "$2a$10$dTwzQhas7K90EssvcDC0Nuu97D2XPO1OFQ\/TC.9vnbpp1cPBnSstG",
+        "role": "BOT"
+    },
+    {
+        "username": "bot@agile",
+        "password": "$2a$10$kCCsl9a6RoS2GGo74T1QNu7Hzj4.lo.jKmYQ\/akb.3BRe1ut8nT7u",
+        "role": "BOT"
+    },
+    {
+        "username": "bot@amplu",
+        "password": "$2a$10$itHDnIl.lhC6hUUehsrjxeMApcaWDe86pcf0K1XXmS6nMnxSm7jSy",
+        "role": "BOT"
+    },
+    {
+        "username": "bot@apice",
+        "password": "$2a$10$t\/Q6pTx4wzj7bQ5hqaaNE.Fv1JFc6a037YtArocfcSdhM.sxZ\/Fx2",
+        "role": "BOT"
+    },
+    {
+        "username": "bot@bed",
+        "password": "$2a$10$Vi47a\/drlav9xVnZqv2rpuMhxC9hSLjCW1.EdmYR8.fwdUFUl\/l6u",
+        "role": "BOT"
+    },
+    {
+        "username": "bot@bernardes",
+        "password": "$2a$10$zG84kf\/iXkJSHKPaANnFle\/91Fmkk2cBJXS1Ikqz6mXDnAGOZ7xu.",
+        "role": "BOT"
+    },
+    {
+        "username": "bot@brazilianhost",
+        "password": "$2a$10$cCxhcNoSiK9v9\/RDDJa52uf.1QFyJF81XPAFycUtPHGmZKCsLk7Q.",
+        "role": "BOT"
+    },
+    {
+        "username": "bot@bronzecontabil",
+        "password": "$2a$10$S3dQ6W6BZCHVBuX6K93JBuDDHFaTdxUsg3elBuezHyoZe80E\/G5JS",
+        "role": "BOT"
+    },
+    {
+        "username": "bot@bronzemetal",
+        "password": "$2a$10$OwyBGctuNy8lycNdgNKYleinb19yYA7eyXbsLAKkdRRpMUncWudhi",
+        "role": "BOT"
+    },
+    {
+        "username": "bot@carpet",
+        "password": "$2a$10$\/JBmCVUAVUFD6Jw47UR0GuL8JbdoyvofLQ9O7Qn5hZrrzTquO0yTG",
+        "role": "BOT"
+    },
+    {
+        "username": "bot@chd",
+        "password": "$2a$10$VDUsCsd.bqvg0WKps8nhOOU7Plz4Lzs.U2VO2wENKA1WFQUzljITC",
+        "role": "BOT"
+    },
+    {
+        "username": "bot@cidlatam",
+        "password": "$2a$10$LYAoDN88C9G6OaxiQ\/DzP.65BWi5A2dr6dmIrJblzbSwA.Fyybb6q",
+        "role": "BOT"
+    },
+    {
+        "username": "bot@cidnovohamb",
+        "password": "$2a$10$NoeBJt\/ifG037okyRWhMMOgMBi1xiJ15bdwE4QlRJSKDW4Bqko8BC",
+        "role": "BOT"
+    },
+    {
+        "username": "bot@clinefrancl",
+        "password": "$2a$10$XSGLqmX1OVkWdwvJ5NR7keSwyN859Ys9VYzq80d43NvEVS1c.OLeK",
+        "role": "BOT"
+    },
+    {
+        "username": "bot@clinefrancr",
+        "password": "$2a$10$Tky9NLLwAP7U8VQSd2IPl.3E9gOcLt4m2UW4Jsw2PEGUQKazdXbNm",
+        "role": "BOT"
+    },
+    {
+        "username": "bot@clinefranfr",
+        "password": "$2a$10$AZ2na25z41smuHLQFfTG\/OTxWzzg4fJLpF9xGkfreMJs0p1igIO92",
+        "role": "BOT"
+    },
+    {
+        "username": "bot@clinefranmo",
+        "password": "$2a$10$5g5IfMeIFykGZljCG9Sz\/e4usihttW2mCx.siHJmf9.YYBrcx5n3u",
+        "role": "BOT"
+    },
+    {
+        "username": "bot@clinefranos",
+        "password": "$2a$10$PIlPZ\/sD3ai32adVU2IHx.lRsl4GnEODuDc\/sv\/dWLCa3ZJhbaz6q",
+        "role": "BOT"
+    },
+    {
+        "username": "bot@cnlfn",
+        "password": "$2a$10$ZUWeUMBnlgSMSiD3mKGHWuWYqGTFAlIud6EPPr67PvnCHe2nCSJP.",
+        "role": "BOT"
+    },
+    {
+        "username": "bot@covac",
+        "password": "$2a$10$Wq6vsknewXHtitMoo2Yoau9zk7eKnxB55DUQcgvRBgjbhJV2xzB7W",
+        "role": "BOT"
+    },
+    {
+        "username": "bot@cx",
+        "password": "$2a$10$i1od6Z3xMBoIvsjSe34qHukNYbRKQYGbBHh\/JtMMcf\/sBWIGDC4he",
+        "role": "BOT"
+    },
+    {
+        "username": "bot@denatale",
+        "password": "$2a$10$0fuxdmRxkZlLNtq.OrXwgezLfAagolMMg\/GWtQbyL3SXay0FtOJka",
+        "role": "BOT"
+    },
+    {
+        "username": "bot@dmattos",
+        "password": "$2a$10$03RcbmBveOAiGVbOfGtb6OTfv.n7g2LoPwdrZCL3TdhFtWa2TL2DW",
+        "role": "BOT"
+    },
+    {
+        "username": "bot@eqmax",
+        "password": "$2a$10$eckTkMN9RtM8QbQTnmgx0.Wdc\/PwckcTH7I6Q0XB6UNIlfDDAvYGe",
+        "role": "BOT"
+    },
+    {
+        "username": "bot@espacosistemas",
+        "password": "$2a$10$4Girw1sWUshZS4B52W4ba.LGzfalIVFXQGl4QqMLdXMseZuXD1fy6",
+        "role": "BOT"
+    },
+    {
+        "username": "bot@farah",
+        "password": "$2a$10$eIug2m9DD68B\/YmnMOxZteRJVI1lvgpm36l9EaZxcZrPT4QqOLOBO",
+        "role": "BOT"
+    },
+    {
+        "username": "bot@fca",
+        "password": "$2a$10$M0Juuf7ISoQTwkMv\/MilCe3so8DkIdnFhYoC3dCFUg5F5jiQMwZ7a",
+        "role": "BOT"
+    },
+    {
+        "username": "bot@ferreirarosa",
+        "password": "$2a$10$N0ZhgnvzlEDbE.A93UHNWOLwXDmPQVn5cnWdqXfhAXhW2S9FnPOdC",
+        "role": "BOT"
+    },
+    {
+        "username": "bot@finemp",
+        "password": "$2a$10$TFcMb5bXkhHCkgO6AF84EewXhAHuQmiRI05sZZOqd\/hOQbnU9rUoG",
+        "role": "BOT"
+    },
+    {
+        "username": "bot@general",
+        "password": "$2a$10$NTQgvgonJW01buConOFZ4uVLKNP21uJqfaFZkuX4nDXS73BXmynAy",
+        "role": "BOT"
+    },
+    {
+        "username": "bot@gerencial",
+        "password": "$2a$10$FkDLb3jGGhFJGmustDDq0OREnE54qyw95rUMPY4LCyNF54QRqeD6q",
+        "role": "BOT"
+    },
+    {
+        "username": "bot@interart",
+        "password": "$2a$10$I3OkYd1yVBCn9JFTLSq91u.tCDJT64WSRwCPBAY62T\/290iOwzF5u",
+        "role": "BOT"
+    },
+    {
+        "username": "bot@jgp",
+        "password": "$2a$10$l7zTMjXQCEAuz0wZBsleNu4cxQRy84PfgIgtmROsrVywLQU\/qOw4m",
+        "role": "BOT"
+    },
+    {
+        "username": "bot@mbernardes",
+        "password": "$2a$10$4WZaNvq347eY1aHZSljh8ekimoB5T0pyqdgC4gGMcY8t3lHQ0Qt22",
+        "role": "BOT"
+    },
+    {
+        "username": "bot@montep",
+        "password": "$2a$10$akTng7mC\/dF7MhUZAfZOGu8NEm7UaJP724nIhk6p5eBSb1AaNCP0O",
+        "role": "BOT"
+    },
+    {
+        "username": "bot@multilink",
+        "password": "$2a$10$B.89gnXIM41rsO4rIi.SvunwKfspPeZR3rPiri1UcuYOMLmCvYNKK",
+        "role": "BOT"
+    },
+    {
+        "username": "bot@norah",
+        "password": "$2a$10$LfxqYB8fTOYRHcDVeEjgg.K\/fTC7NU11KoHZsLNzLsjDNGizYeqP6",
+        "role": "BOT"
+    },
+    {
+        "username": "bot@orsini",
+        "password": "$2a$10$AgpHYwmyWapDF6X48MFzeuF22e83dhnKJtwo4YVEqhl9XqRKtnJMq",
+        "role": "BOT"
+    },
+    {
+        "username": "bot@palmadenatale",
+        "password": "$2a$10$0oijcqiBTcW95vYwA.PJgugnGj2JFu.28uu\/ws8jQ74CtnTbWb31u",
+        "role": "BOT"
+    },
+    {
+        "username": "bot@petrosino",
+        "password": "$2a$10$vgWaAtCCG\/N1EPyZeozc2OrGdomDj5KFxt8zdobKeWROG5Fpxm0am",
+        "role": "BOT"
+    },
+    {
+        "username": "bot@prime",
+        "password": "$2a$10$fYzKXmVnHazHtxNrw3JgyOwyQcgsbIGlvuSG46q13sQRm0RW55tAa",
+        "role": "BOT"
+    },
+    {
+        "username": "bot@protermica",
+        "password": "$2a$10$N.yoEOoa5zFQlydhez4vIOCo3JwJ9lmFCwm7enkA2PnoPlJaTrfeq",
+        "role": "BOT"
+    },
+    {
+        "username": "bot@quartz",
+        "password": "$2a$10$02bLdLipuLwJevZdUJuawON7ulBZw0P5bYkwXTXr\/RgPsGw9cTeI.",
+        "role": "BOT"
+    },
+    {
+        "username": "bot@renalth",
+        "password": "$2a$10$eiYjG9sMMDQ9ctg0vzsg1.2QJvi\/9kOt4MAJAwZFtav0xRtvBBaLW",
+        "role": "BOT"
+    },
+    {
+        "username": "bot@rodrigoelian",
+        "password": "$2a$10$LETw812m1V.B3GDR1czl2eEAjpe7.1pz.012AUsKm6mWYYcNpTJmO",
+        "role": "BOT"
+    },
+    {
+        "username": "bot@runtalent",
+        "password": "$2a$10$NpfQlQgCXcpA\/1Y.ELbpP.RbHbKWhzr6ddcCQeMBN26n9hPrdalg6",
+        "role": "BOT"
+    },
+    {
+        "username": "bot@saccarogabriel",
+        "password": "$2a$10$Ocdb8iybXJvlwebFN14jc.6gdbVWCNeGwSicrx5uOtCFELbRrdCgO",
+        "role": "BOT"
+    },
+    {
+        "username": "bot@sbi",
+        "password": "$2a$10$v\/qKQ8nD98GJ\/oMLaP8pkuq0Lw7AxwTw\/qlNkCvLUkG5zQFPgdNia",
+        "role": "BOT"
+    },
+    {
+        "username": "bot@schiavoni",
+        "password": "$2a$10$MoiLFj21hE5WgZTkDExcEORJpa4IFBnrARPliOpo\/0Mf5YbQ1JoZC",
+        "role": "BOT"
+    },
+    {
+        "username": "bot@sicurezza",
+        "password": "$2a$10$732BoDC96\/UrRsFfRg1Pu.KlZ.nNWNKZyvTWKTpt.q8GLjCfYHe22",
+        "role": "BOT"
+    },
+    {
+        "username": "bot@storage",
+        "password": "$2a$10$65Q9.FSkmMrCQjWTEq2y5.bRHchHKRWiTg95qHY9FVjLit47QVtky",
+        "role": "BOT"
+    },
+    {
+        "username": "bot@think",
+        "password": "$2a$10$MxNnHpAmNF8Z.xUQGpmnaOMsSBBcVB.tH\/rEw6VcEcxIRxcoWUG3O",
+        "role": "BOT"
+    },
+    {
+        "username": "bot@utn",
+        "password": "$2a$10$j2cfJyKV31EQ0vGIH.BWJ.o6Fk8efotJi8N\/lDLL\/VajFN5EZVQvu",
+        "role": "BOT"
+    },
+    {
+        "username": "bot@vendemmia",
+        "password": "$2a$10$eibVeOvS\/8N3d81fGuotluEA9iB.lXbVpOtGhHzpxYUZdWh.RC3Mu",
+        "role": "BOT"
+    },
+    {
+        "username": "bot@vendramini",
+        "password": "$2a$10$7Sio8QEHbjTvqjRDiZr3du4az8ypOiKxbPHZgxxHLp5PCH.182o7m",
+        "role": "BOT"
+    },
+    {
+        "username": "bot@wta",
+        "password": "$2a$10$ejdTSPF68adA6IF1t88cVuruez98YBf8PYnJyyCwkgr78gUzdUPlC",
+        "role": "BOT"
+    },
+    {
+        "username": "carol@terabyte.com.br",
+        "password": "$2a$10$C6P3orUAhuEPN.xybufycerQraJYU5Es3Oq\/cHlN5GQ3sSaTJjc6W",
+        "role": "ADMIN"
+    },
+    {
+        "username": "david.fernandes@terabyte.com.br",
+        "password": "$2a$10$2UNmiNwcxMOYED8SVei4l.BY7Xbmjqo.PNi7\/9AyCfhzOBIIh1iyG",
+        "role": "ADMIN"
+    },
+    {
+        "username": "jean@terabyte.com.br",
+        "password": "$2a$10$IN.7Mf3CD7Lp6DjbzzzNNO6aKBbMkfQh10xdrt\/zQNoSfJlarQCja",
+        "role": "USER"
+    },
+    {
+        "username": "kaue.rocha@terabyte.com.br",
+        "password": "$2a$10$VzCQg\/vCWpAYF9e5\/nWMPeBzlOgSbCWbuX3gSUwai.D6Xu5PLIWR.",
+        "role": "USER"
+    },
+    {
+        "username": "luma",
+        "password": "$2a$10$rEpdEmIXqYZ95njAb4Rr9Oy9roQOxj5TfDnT4gdrhrgxxjPWL3dDK",
+        "role": "ADMIN"
+    },
+    {
+        "username": "luma.oliveira@terabyte.com.br",
+        "password": "$2a$10$ZpUMJ.pBtg4rcnXdYdj3tOhPLAaSOlI.Tlb1OTK3Xz7VyVULd2gQS",
+        "role": "ADMIN"
+    },
+    {
+        "username": "pedro.moraes@terabyte.com.br",
+        "password": "$2a$10$C7S1srDwfToMsvfCtc9EoODPQDbyVH0F9zg8NiWJlkeBhLfMBSsqS",
+        "role": "USER"
+    },
+    {
+        "username": "vagner@terabyte.com.br",
+        "password": "$2a$10$jUUmSkN5PLxlEjVnrSmXRuXbd561UgehOHUiArNfXKaK3mccg4NTW",
+        "role": "USER"
+    },
+    {
+        "username": "vinicius.almeida@terabyte.com.br",
+        "password": "$2a$10$antq1xeto6DVG4EuOcOF7e1WZuxkGhRr0DxyQNVU\/lONWiJ.AUZ56",
+        "role": "ADMIN"
+    }
+]
