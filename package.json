@@ -15,7 +15,7 @@
   },
   "scripts": {
     "dev": "bun run index.ts",
-    "output": "bun build ./index.ts --outdir ./out --target bun",
+    "output": "bun build ./index.ts --outdir ./out --target bun --sourcemap",
     "start": "bun ./out/index.js",
     "deploy": "bun output && bun start",
     "token": "bun run ./src/token.ts",

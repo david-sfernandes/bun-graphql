@@ -1,9 +1,7 @@
 # use the official Bun image
 # see all versions at https://hub.docker.com/r/oven/bun/tags
-FROM oven/bun:1.2 AS base
+FROM oven/bun:latest AS base
 WORKDIR /usr/src/app
-
-RUN apt-get update -y && apt-get install -y openssl
 
 # install dependencies into temp directory
 # this will cache them and speed up future builds
@@ -23,18 +21,19 @@ FROM base AS prerelease
 COPY --from=install /temp/dev/node_modules node_modules
 COPY . .
 
+RUN bun prisma generate
+RUN bun build ./index.ts --outdir ./out --target bun --sourcemap
+
 # copy production dependencies and source code into final image
 FROM base AS release
+
+RUN apt-get update -y && apt-get install -y openssl
+
 COPY --from=install /temp/prod/node_modules node_modules
-COPY --from=prerelease /usr/src/app/index.ts .
-COPY --from=prerelease /usr/src/app/package.json .
+COPY --from=prerelease /usr/src/app .
 
 # run the app
 USER bun
 EXPOSE 8081/tcp
-RUN echo ls
 
-RUN bunx prisma generate
-RUN bun output
-
-ENTRYPOINT [ "bun", "start"]
+ENTRYPOINT ["bun", "start"]
