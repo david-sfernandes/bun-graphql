@@ -22,6 +22,12 @@ async function syncCompanySecurityStatus() {
   );
 }
 
+async function dailyCleanup() {
+  const terabyteSource = new SourceFacade();
+  const countDevices = await terabyteSource.();
+  console.log(chalk.red(`< Deleted ${countDevices} old devices`));
+}
+
 
 const dailyTask1 = cron.schedule(
   "0 0 * * *",
@@ -35,4 +41,10 @@ const dailyTask2 = cron.schedule(
   { timezone: "America/Sao_Paulo" },
 );
 
-export { dailyTask1, dailyTask2, syncClientDeviceStatus, syncCompanySecurityStatus };
+const dailyCleanupTask = cron.schedule(
+  "0 1 * * *",
+  async () => dailyCleanup(),
+  { timezone: "America/Sao_Paulo" },
+);
+
+export { dailyTask1, dailyTask2, dailyCleanup, syncClientDeviceStatus, syncCompanySecurityStatus, dailyCleanupTask };

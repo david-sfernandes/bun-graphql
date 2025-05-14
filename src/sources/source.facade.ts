@@ -10,7 +10,7 @@ class SourceFacade {
   private readonly securityReportId: string;
   private milvusService;
   private bitdefenderService;
-  private readonly ONE_HOUR_IN_MS = 60 * 60 * 1000;
+  private readonly THREE_HOURS_IN_MS = 60 * 60 * 1000 * 3;
 
   constructor() {
     this.milvusKey = Bun.env.MILVUS_KEY_TERABYTE || "";
@@ -143,7 +143,7 @@ class SourceFacade {
     const devices = await prisma.device.findMany({
       where: {
         updatedAt: {
-          lt: new Date(Date.now() - this.ONE_HOUR_IN_MS),
+          lt: new Date(Date.now() - this.THREE_HOURS_IN_MS),
         },
       },
     });
@@ -261,6 +261,23 @@ class SourceFacade {
       data: mountedEvents,
     });
     return insertedRows.count;
+  }
+
+  async cleanupDevices() {
+    const devices = await prisma.device.findMany({
+      where: {
+        updatedAt: {
+          lt: new Date(Date.now() - this.THREE_HOURS_IN_MS),
+        },
+      },
+    });
+    console.log(`Found ${devices.length} devices to delete`);
+    const deletedDevices = await prisma.device.deleteMany({
+      where: {
+        id: { in: devices.map((device) => device.id) },
+      },
+    });
+    return deletedDevices.count;
   }
 }
 
