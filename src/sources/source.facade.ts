@@ -1,8 +1,11 @@
+import pool from "@/db/pool";
 import prisma from "@/db/prisma";
 import BitdefenderService from "@/services/bitdefender.service";
 import MilvusService from "@/services/milvus.service";
 import cleanNumericString from "@/utils/cleanNumericString";
+import devicesToTVP from "@/utils/sql/DevicesToTVP";
 import chalk from "chalk";
+import sql from 'mssql';
 
 class SourceFacade {
   private readonly milvusKey: string;
@@ -47,61 +50,11 @@ class SourceFacade {
 
   async syncDevices() {
     const devices = await this.milvusService.getAllDevices();
-    let errQty = 0;
 
-    for (const device of devices) {
-      try {
-        await prisma.device.upsert({
-          where: { id: device.id },
-          update: {
-            name: device.hostname || "",
-            nickname: device.apelido || "",
-            mac: device.macaddres || "",
-            brand: device.marca || "",
-            os: device.sistema_operacional || "",
-            processor: device.processador || "",
-            username: device.usuario_logado || "",
-            serial: device.numero_serial || "",
-            model: device.modelo_notebook || "",
-            type: device.tipo_dispositivo_text,
-            isActive: device.is_ativo,
-          },
-          create: {
-            id: device.id,
-            name: device.hostname || "",
-            nickname: device.apelido || "",
-            mac: device.macaddres || "",
-            brand: device.marca || "",
-            os: device.sistema_operacional || "",
-            processor: device.processador || "",
-            username: device.usuario_logado || "",
-            serial: device.numero_serial || "",
-            model: device.modelo_notebook || "",
-            type: device.tipo_dispositivo_text,
-            isActive: device.is_ativo,
-            client: {
-              connect: {
-                id: (
-                  await prisma.client.findFirstOrThrow({
-                    where: {
-                      name: {
-                        contains: device.nome_fantasia,
-                      },
-                    },
-                  })
-                ).id,
-              },
-            },
-          },
-        });
-      } catch (error) {
-        errQty++;
-      }
-    }
+    const tvp = devicesToTVP(devices);
 
-    if (errQty > 0) console.error(`Error on sync ${errQty} devices`);
-
-    return devices.length - errQty;
+    const result = (await pool.request().input('Devices', tvp).execute('UpsertDevices'));
+    console.log(chalk.blue(`< Updated ${result.rowsAffected} devices`));
   }
 
   async syncDeviceDetails() {
