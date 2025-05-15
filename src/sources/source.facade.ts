@@ -3,6 +3,7 @@ import prisma from "@/db/prisma";
 import BitdefenderService from "@/services/bitdefender.service";
 import MilvusService from "@/services/milvus.service";
 import cleanNumericString from "@/utils/cleanNumericString";
+import detailsToTVP from "@/utils/sql/DetailsTOTVP";
 import devicesToTVP from "@/utils/sql/DevicesToTVP";
 import eventsToTVP from "@/utils/sql/EventsToTVP";
 import statusToTVP from "@/utils/sql/StatusToTVP";
@@ -60,36 +61,11 @@ class SourceFacade {
 
   async syncDeviceDetails() {
     const deviceDetails = await this.milvusService.getDeviceDetails();
-    for (const detail of deviceDetails) {
-      const data = {
-        clientVersion: detail.versao_client || "",
-        domain: detail.dominio || "",
-        imei1: detail.mobile_sim1_imei || "",
-        imei2: detail.mobile_sim2_imei || "",
-        ramal: detail.ramal || "",
-        totalRam: detail.ram_total || "",
-        totalStorage: detail.mobile_storage_interno_total || "",
-        usedStorage: detail.mobile_storage_interno_utilizado || "",
-        groupId: detail.grupo_dispositivo_id || null,
-        businessUnitId: detail.unidade_negocio_id || null,
-        purchaseDate: detail.data_compra ? new Date(detail.data_compra) : null,
-        warrantyDate: detail.data_garantia ? new Date(detail.data_garantia) : null,
-        deviceId: detail.id
-      }
-      try {
-        await prisma.deviceDetail.upsert({
-          where: { id: detail.id },
-          update: data,
-          create: { ...data, id: detail.id },
-        });
-      } catch (error) {
-        console.error(
-          chalk.bgRed(
-            `Error on sync device detail: ${detail.id} Unit: ${detail.unidade_negocio_id} \n ${error}`,
-          ),
-        );
-      }
-    }
+    const tvp = detailsToTVP(deviceDetails);
+    await pool
+      .request()
+      .input("DetailsList", tvp)
+      .execute("UpsertDetails");
     return deviceDetails.length;
   }
 
