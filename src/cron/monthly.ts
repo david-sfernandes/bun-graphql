@@ -3,8 +3,7 @@ import SourceFacade from "../sources/source.facade";
 
 async function syncSecurityEvents() {
   const terabyteSource = new SourceFacade();
-  const countEvents = await terabyteSource.syncSecurityEvents();
-  console.log(`< Updated ${countEvents} security events`);
+  await terabyteSource.syncSecurityEvents();
 }
 
 const monthlyTask = cron.schedule(

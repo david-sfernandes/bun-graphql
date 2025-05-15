@@ -4,9 +4,9 @@ import BitdefenderService from "@/services/bitdefender.service";
 import MilvusService from "@/services/milvus.service";
 import cleanNumericString from "@/utils/cleanNumericString";
 import devicesToTVP from "@/utils/sql/DevicesToTVP";
+import eventsToTVP from "@/utils/sql/EventsToTVP";
 import statusToTVP from "@/utils/sql/StatusToTVP";
 import chalk from "chalk";
-import sql from 'mssql';
 
 class SourceFacade {
   private readonly milvusKey: string;
@@ -152,39 +152,24 @@ class SourceFacade {
   async syncSecurityEvents() {
     prisma.securityEvent.deleteMany({});
     const events = (await this.bitdefenderService.getSecurityEvents()) || [];
-    await this.saveSecurityEvents(events);
-    console.log(chalk.magenta(`< Updated ${events.length} security events`));
-    return events.length;
+    const res = await this.saveSecurityEvents(events);
+    console.log(chalk.magenta(`< Updated ${res} security events`));
+    return res;
   }
 
   private async saveSecurityEvents(CSVEvents: Record<string, string>[]) {
-    const mountedEvents = [];
     const filteredEvents = CSVEvents.filter((event) =>
       this.bitdefenderService.isEventValid(event),
     );
 
-    for (const event of filteredEvents) {
-      const device = await prisma.device.findFirst({
-        where: {
-          OR: [{ mac: event.MAC }, { name: event["Nome do Endpoint"] }],
-        },
-      });
-      mountedEvents.push({
-        deviceName: event["Nome do Endpoint"],
-        module: event.Módulo,
-        companyName: event["Nome da Empresa"],
-        endpoint: event["FQDN do Endpoint"],
-        occurrences: Number.parseInt(event["Ocorrências"]),
-        type: event["Tipo de Evento"],
-        username: event.Usuário,
-        lastOccurrence: new Date(event["Ultima ocorrência"]),
-        deviceId: device?.id || null,
-      });
-    }
-    const insertedRows = await prisma.securityEvent.createMany({
-      data: mountedEvents,
-    });
-    return insertedRows.count;
+    const tvp = eventsToTVP(filteredEvents);
+    await pool
+      .request()
+      .input("Events", tvp)
+      .execute("UpsertEvents");
+
+    console.log(chalk.blue(`< Updated ${filteredEvents.length} events`));
+    return filteredEvents.length;
   }
 
   async cleanupDevices() {
