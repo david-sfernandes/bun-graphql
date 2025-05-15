@@ -4,6 +4,7 @@ import BitdefenderService from "@/services/bitdefender.service";
 import MilvusService from "@/services/milvus.service";
 import cleanNumericString from "@/utils/cleanNumericString";
 import devicesToTVP from "@/utils/sql/DevicesToTVP";
+import statusToTVP from "@/utils/sql/StatusToTVP";
 import chalk from "chalk";
 import sql from 'mssql';
 
@@ -140,42 +141,12 @@ class SourceFacade {
     statusList: SecurityStatus[],
     groupName: string,
   ) {
-    for (const status of statusList) {
-      const device = await prisma.device.findFirst({
-        where: {
-          OR: [{ mac: status.macs[0] }, { name: status.name }],
-        },
-      });
-      await prisma.securityStatus.upsert({
-        where: { id: status.id },
-        update: {
-          group: groupName,
-          id: status.id,
-          isManaged: status.isManaged,
-          isManagedWithBest: status.managedWithBest || status.managedRelay,
-          mac: status.macs[0],
-          name: status.name,
-          syncedAt: new Date(),
-        },
-        create: {
-          group: groupName,
-          id: status.id,
-          isManaged: status.isManaged,
-          isManagedWithBest:
-            status?.managedWithBest || status?.managedRelay || false,
-          mac: status.macs[0],
-          name: status.name,
-          syncedAt: new Date(),
-          ...(device && {
-            device: {
-              connect: {
-                id: device.id,
-              },
-            },
-          }),
-        },
-      });
-    }
+    const tvp = statusToTVP(statusList, groupName);
+    const result = await pool
+      .request()
+      .input("StatusList", tvp)
+      .execute("UpsertStatus");
+    console.log(chalk.blue(`< Updated ${result.rowsAffected} status`));
   }
 
   async syncSecurityEvents() {
