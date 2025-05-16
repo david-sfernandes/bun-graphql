@@ -1,10 +1,5 @@
 import { parseArgs } from "node:util";
-import hashPassword from "./utils/auth/hashPassword";
-import prisma from "./db/prisma";
-import validatePassword from "./utils/auth/validatePassword";
-import SECRET from "./constant/secret";
-import { createInlineSigningKeyProvider, useJWT } from "@graphql-yoga/plugin-jwt";
-import jwt from 'jsonwebtoken';
+import generateToken from "./utils/auth/generateToken";
 
 const { values } = parseArgs({
   args: Bun.argv,
@@ -20,45 +15,13 @@ const { values } = parseArgs({
   allowPositionals: true,
 });
 
-async function generateToken(email?: string, pass?: string) {
-  if (!email || !pass) {
+async function run(user?: string, pass?: string) {
+  if (!user || !pass) {
     console.error("Missing parameters to generate token. Insert a valid user and password.");
     return;
-  };
-
-  const user = await prisma.user.findUnique({
-    where: { email },
-    include: { clients: true },
-  });
-  const isPasswordValid = await validatePassword(user, pass);
-
-  if (!isPasswordValid || !user?.isActive) {
-    console.error("Invalid credentials.");
-    return;
   }
-  if (user.role !== "BOT") {
-    console.error("User is not a bot.");
-    return;
-  }
-
-  const token = jwt.sign(
-    {
-      sub: user?.id,
-      name: user?.name,
-      scope: user?.role,
-      clients: user?.clients.map((client) => client.id),
-    },
-    SECRET,
-    { expiresIn: "365d" },
-  );
-
-  const resp = {
-    token,
-    user: email,
-    expireAt: new Date(Date.now() + 365 * 24 * 60 * 60 * 1000).toISOString(),
-  };
-
-  console.log(resp);
+  const token = await generateToken(user, pass, 365);
+  console.log(token);
 }
 
-generateToken(values.user, values.pass)
+run(values.user, values.pass)
