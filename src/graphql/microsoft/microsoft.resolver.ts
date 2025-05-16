@@ -1,3 +1,4 @@
+import FREE_SKU_TO_IGNORE from "@/constant/freeSkuToIgnore";
 import MicrosoftService from "@/services/microsoft.service";
 import type { GraphQLContext } from "@/types/context";
 
@@ -29,6 +30,7 @@ const resolvers = {
       ctx: GraphQLContext,
     ) {
       return await ctx.prisma.microsoftAccount.findMany({
+        // dont return free sku accounts
         where: { clientId },
       });
     },

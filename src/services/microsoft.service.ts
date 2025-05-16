@@ -1,3 +1,4 @@
+import FREE_SKU_TO_IGNORE from "@/constant/freeSkuToIgnore";
 import prisma from "@/db/prisma";
 import type { PrismaClient } from "@prisma/client";
 
@@ -36,6 +37,8 @@ class MicrosoftService {
     let failed = 0;
     for (const account of value) {
       try {
+        const filteredLicenses = account.assignedLicenses.filter((a) => !FREE_SKU_TO_IGNORE.has(a.skuId));
+        account.assignedLicenses = filteredLicenses;
         await this.upsertAccount(prisma, account, +clientId);
       } catch (error) {
         failed++;
@@ -78,6 +81,9 @@ class MicrosoftService {
   ) {
     let failed = 0;
     for (const sku of value) {
+      if (FREE_SKU_TO_IGNORE.has(sku.skuId)) {
+        continue;
+      }
       try {
         await this.upsertSubscribedSku(
           prisma,
