@@ -3,7 +3,7 @@ import prisma from "@/db/prisma";
 import BitdefenderService from "@/services/bitdefender.service";
 import MilvusService from "@/services/milvus.service";
 import cleanNumericString from "@/utils/cleanNumericString";
-import detailsToTVP from "@/utils/sql/DetailsTOTVP";
+import detailsToTVP from "@/utils/sql/DetailsToTVP";
 import devicesToTVP from "@/utils/sql/DevicesToTVP";
 import eventsToTVP from "@/utils/sql/EventsToTVP";
 import statusToTVP from "@/utils/sql/StatusToTVP";
