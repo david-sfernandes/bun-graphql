@@ -7,13 +7,14 @@ class BitdefenderService {
     "https://cloud.gravityzone.bitdefender.com/api/v1.0/jsonrpc/network";
   private readonly urlReport =
     "https://cloud.gravityzone.bitdefender.com/api/v1.0/jsonrpc/reports";
-  private readonly rootParentId = "55faa46e3a621503728b457c";
-  private readonly rootCompanyId = "55faa46e3a621503728b457a";
+  private rootParentId = "55faa46e3a621503728b457c";
+  private rootCompanyId = "55faa46e3a621503728b457a";
   private securityReportId: string | null = null;
   private headers;
 
-  constructor(key: string, securityReportId?: string) {
+  constructor(key: string, securityReportId?: string, bitdefenderCompanyId?: string) {
     this.securityReportId = securityReportId || null;
+    if (bitdefenderCompanyId) this.rootCompanyId = this.rootParentId = bitdefenderCompanyId;
     const auth = Buffer.from(`${key}:`).toString("base64");
     this.headers = {
       "Content-Type": "application/json",

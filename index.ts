@@ -8,12 +8,10 @@ import chalk from "chalk";
 import figlet from "figlet";
 import { createYoga } from "graphql-yoga";
 import SECRET from "./src/constant/secret";
-import { dailyTask1, dailyTask2 } from "./src/cron/daily";
+import { dailyTask1, dailyTask2, dailyTask3 } from "./src/cron/daily";
 import { monthlyTask } from "./src/cron/monthly";
 import { weeklyTask } from "./src/cron/weekly";
 import schema from "./src/graphql/schema";
-import { OpenAPI } from "sofa-api";
-import { writeFileSync } from "node:fs";
 
 const yoga = createYoga({
   schema,
@@ -43,6 +41,7 @@ Bun.serve({
 
 dailyTask1.start();
 dailyTask2.start();
+dailyTask3.start();
 monthlyTask.start();
 weeklyTask.start();
 

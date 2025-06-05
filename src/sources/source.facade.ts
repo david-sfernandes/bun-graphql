@@ -16,37 +16,41 @@ class SourceFacade {
   private milvusService;
   private bitdefenderService;
   private readonly THREE_HOURS_IN_MS = 60 * 60 * 1000 * 3;
+  private bitdefenderCompanyId: string | undefined;
 
-  constructor() {
+  constructor(bitdefenderKey?: string, bitdefenderCompanyId?: string) {
     this.milvusKey = Bun.env.MILVUS_KEY_TERABYTE || "";
     this.bitdefenderKey = Bun.env.BITDEFENDER_KEY_TERABYTE || "";
+    if (bitdefenderKey) this.bitdefenderKey = bitdefenderKey;
     this.securityReportId = Bun.env.BITDEFENDER_SEC_REPORT_ID || "";
+    this.bitdefenderCompanyId = bitdefenderCompanyId || undefined
 
     this.bitdefenderService = new BitdefenderService(
       this.bitdefenderKey,
       this.securityReportId,
+      this.bitdefenderCompanyId
     );
     this.milvusService = new MilvusService(this.milvusKey);
   }
 
   async syncClients() {
     const clients = await this.milvusService.getClients();
-    for (const client of clients) {
-      await prisma.client.upsert({
-        where: { id: client.id },
-        update: {
-          name: client.nome_fantasia || "",
-          companyName: client.razao_social,
-          cnpj: cleanNumericString(client.cnpj_cpf || ""),
-        },
-        create: {
-          id: client.id,
-          name: client.nome_fantasia || "",
-          companyName: client.razao_social,
-          cnpj: cleanNumericString(client.cnpj_cpf || ""),
-        },
-      });
-    }
+    const upserts = clients.map(client => prisma.client.upsert({
+      where: { id: client.id },
+      update: {
+        name: client.nome_fantasia || "",
+        companyName: client.razao_social,
+        cnpj: cleanNumericString(client.cnpj_cpf || ""),
+      },
+      create: {
+        id: client.id,
+        name: client.nome_fantasia || "",
+        companyName: client.razao_social,
+        cnpj: cleanNumericString(client.cnpj_cpf || ""),
+      },
+    }))
+
+    await prisma.$transaction(upserts)
     return clients.length;
   }
 
