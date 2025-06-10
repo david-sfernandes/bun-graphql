@@ -122,11 +122,17 @@ class SourceFacade {
     groupName: string,
   ) {
     const tvp = statusToTVP(statusList, groupName);
-    const result = await pool
+    await pool
       .request()
       .input("StatusList", tvp)
       .execute("UpsertStatus");
-    console.log(chalk.blue(`< Updated ${result.rowsAffected} status`));
+  }
+
+  async cleanOldSecurityStatus() {
+    const deleteDate = new Date();
+    deleteDate.setHours(deleteDate.getHours() - 1);
+    const { count } = await prisma.securityStatus.deleteMany({ where: { syncedAt: deleteDate } })
+    console.log(`< Removed ${count} old Security Status`)
   }
 
   async syncSecurityEvents() {

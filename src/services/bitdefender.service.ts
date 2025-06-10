@@ -56,6 +56,7 @@ class BitdefenderService {
       if (!firstLevel) continue;
       for (const folder of firstLevel) {
         if (ignoreGroups.has(folder.name)) continue;
+        subFolders.push(folder)
         const secondLevel = await this.getNetworkGroups(folder.id);
         subFolders.push(...secondLevel);
       }

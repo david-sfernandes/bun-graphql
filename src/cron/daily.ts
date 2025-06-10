@@ -15,6 +15,7 @@ async function syncClientDeviceStatus() {
   console.log(
     chalk.green(`< Updated ${countStatus} network security status`),
   );
+  await terabyteSource.cleanOldSecurityStatus();
 }
 
 async function syncCompanySecurityStatus() {
