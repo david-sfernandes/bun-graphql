@@ -1,6 +1,8 @@
 import MilvusService from "@/services/milvus.service";
 import type { GraphQLContext } from "@/types/context";
 import type { Client } from "@prisma/client";
+import { GraphQLError } from "graphql";
+import { PrismaClientKnownRequestError } from "prisma/generated/client/runtime/edge";
 
 const milvusKey = Bun.env.MILVUS_KEY_TERABYTE || "";
 const milvusService = new MilvusService(milvusKey);
@@ -12,9 +14,19 @@ const resolvers = {
       _: unknown,
       ctx: GraphQLContext,
     ) => {
-      return await ctx.prisma.device.findMany({
-        where: { clientId: parent.id },
-      });
+      try {
+        const devices = await ctx.prisma.device.findMany({ where: { clientId: parent.id } });
+        return devices
+      } catch (e) {
+        if (e instanceof PrismaClientKnownRequestError) {
+          const msg = `Timeout on get devices from client with id ${parent.id}`
+          console.error(msg)
+          return new GraphQLError(msg)
+        }
+        const msg = `Unknow error on get devices for client with ID ${parent.id}`
+        console.error(msg)
+        return new GraphQLError(msg)
+      }
     },
     microsoftAccounts: async (
       parent: { id: number },
@@ -136,6 +148,7 @@ const resolvers = {
     },
     async tickets(_: unknown, { clientId }: { clientId: number }) {
       const tickets: Ticket[] = await milvusService.getTickets(clientId);
+      console.log("TICKETS: ", tickets.length)
       return tickets;
     },
   },
