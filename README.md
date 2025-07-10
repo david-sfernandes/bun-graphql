@@ -113,3 +113,11 @@ bunx prisma generate
 # To build a single file app and start it
 bun run deploy
 ```
+
+## Gerador de Token
+
+Token com tempo de expiração de **1 ano**
+
+```bash
+bun token --user user@email.com --pass strong_password
+```
