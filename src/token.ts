@@ -5,10 +5,10 @@ const { values } = parseArgs({
   args: Bun.argv,
   options: {
     user: {
-      type: 'string',
+      type: "string",
     },
     pass: {
-      type: 'string',
+      type: "string",
     },
   },
   strict: true,
@@ -17,11 +17,13 @@ const { values } = parseArgs({
 
 async function run(user?: string, pass?: string) {
   if (!user || !pass) {
-    console.error("Missing parameters to generate token. Insert a valid user and password.");
+    console.error(
+      "Missing parameters to generate token. Insert a valid user and password.",
+    );
     return;
   }
   const token = await generateToken(user, pass, 365);
   console.log(token);
 }
 
-run(values.user, values.pass)
+run(values.user, values.pass);

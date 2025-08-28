@@ -1,14 +1,17 @@
-import sql from 'mssql';
+import sql from "mssql";
 
-export default function statusToTVP(statusList: SecurityStatus[], groupName: string) {
-  const tvp = new sql.Table('StatusInputTable');
+export default function statusToTVP(
+  statusList: SecurityStatus[],
+  groupName: string,
+) {
+  const tvp = new sql.Table("StatusInputTable");
 
-  tvp.columns.add('id', sql.NVarChar(255))
-  tvp.columns.add('group', sql.NVarChar(255))
-  tvp.columns.add('isManaged', sql.Bit)
-  tvp.columns.add('isManagedWithBest', sql.Bit)
-  tvp.columns.add('mac', sql.NVarChar(255))
-  tvp.columns.add('name', sql.NVarChar(255))
+  tvp.columns.add("id", sql.NVarChar(255));
+  tvp.columns.add("group", sql.NVarChar(255));
+  tvp.columns.add("isManaged", sql.Bit);
+  tvp.columns.add("isManagedWithBest", sql.Bit);
+  tvp.columns.add("mac", sql.NVarChar(255));
+  tvp.columns.add("name", sql.NVarChar(255));
 
   for (const status of statusList) {
     tvp.rows.add(
@@ -17,7 +20,7 @@ export default function statusToTVP(statusList: SecurityStatus[], groupName: str
       status.isManaged,
       status.managedWithBest || status.managedRelay || false,
       status.macs[0],
-      status.name
+      status.name,
     );
   }
 

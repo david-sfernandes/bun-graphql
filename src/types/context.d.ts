@@ -1,6 +1,6 @@
 import type { PrismaClient } from "@prisma/client";
 
-type GraphQLContext = {
+export type GraphQLContext = {
   prisma: PrismaClient;
   request: Request;
   jwt?: {

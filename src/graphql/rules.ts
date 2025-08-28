@@ -1,6 +1,6 @@
 import { rule } from "graphql-shield";
-import extractPayload from "../utils/auth/extractPayload";
 import type { GraphQLContext } from "@/types/context";
+import extractPayload from "../utils/auth/extractPayload";
 
 const mainRoles: Role[] = ["ADMIN", "MANAGER", "CLIENT", "TECHNICIAN"];
 

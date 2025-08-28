@@ -13,7 +13,7 @@ const FREE_SKU_TO_IGNORE = new Set([
   "99049c9c-6011-4908-bf17-15f496e6519d",
   "5b631642-bd26-49fe-bd20-1daaa972ef80",
   "8f0c5670-4e56-4892-b06d-91c085d7004f",
-  "3f9f06f5-3c31-472c-985f-62d9c10ec167"
+  "3f9f06f5-3c31-472c-985f-62d9c10ec167",
 ]);
 
 export default FREE_SKU_TO_IGNORE;

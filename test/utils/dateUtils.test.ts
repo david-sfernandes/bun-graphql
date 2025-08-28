@@ -1,5 +1,5 @@
-import { firstDayOfMonth, lastDayOfMonth } from "@/utils/dateUtils";
 import { expect, test } from "bun:test";
+import { firstDayOfMonth, lastDayOfMonth } from "@/utils/dateUtils";
 
 test("Get first day of month", () => {
   const date = firstDayOfMonth();

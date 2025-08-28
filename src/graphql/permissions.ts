@@ -1,4 +1,4 @@
-import { allow, or, and, not, shield } from "graphql-shield";
+import { allow, and, not, or, shield } from "graphql-shield";
 import { isAdmin, isAuthorized, isBot, isManager } from "./rules";
 
 const permissions = shield({

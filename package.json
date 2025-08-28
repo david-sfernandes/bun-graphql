@@ -6,13 +6,13 @@
     "seed": "bun prisma/seed.ts"
   },
   "devDependencies": {
-    "@biomejs/biome": "^1.9.4",
+    "@biomejs/biome": "^2.2.2",
     "@types/adm-zip": "^0.5.7",
-    "@types/bun": "^1.2.4",
+    "@types/bun": "^1.2.21",
     "@types/figlet": "^1.7.0",
     "@types/mssql": "^9.1.7",
     "@types/node-cron": "^3.0.11",
-    "bun-types": "^1.2.4"
+    "bun-types": "^1.2.21"
   },
   "scripts": {
     "dev": "bun run index.ts",
@@ -26,25 +26,25 @@
     "test:bitdefender": "bun test ./test/bitdefender/*.test.ts"
   },
   "peerDependencies": {
-    "typescript": "^5.7.2"
+    "typescript": "^5.9.2"
   },
   "dependencies": {
     "@graphql-tools/load-files": "^7.0.1",
-    "@graphql-yoga/plugin-jwt": "^3.7.5",
-    "@graphql-yoga/plugin-sofa": "^3.13.5",
-    "@prisma/client": "^6.7.0",
+    "@graphql-yoga/plugin-jwt": "^3.9.1",
+    "@graphql-yoga/plugin-sofa": "^3.15.1",
+    "@prisma/client": "^6.15.0",
     "@std/csv": "npm:@jsr/std__csv",
     "adm-zip": "^0.5.16",
-    "chalk": "^5.4.1",
-    "dotenv-cli": "^8.0.0",
-    "figlet": "^1.8.0",
-    "graphql": "^16.10.0",
+    "chalk": "^5.6.0",
+    "dotenv-cli": "^10.0.0",
+    "figlet": "^1.8.2",
+    "graphql": "^16.11.0",
     "graphql-middleware": "^6.1.35",
     "graphql-shield": "^7.6.5",
-    "graphql-yoga": "^5.13.4",
+    "graphql-yoga": "^5.15.1",
     "mssql": "^11.0.1",
-    "node-cron": "^3.0.3",
-    "prisma": "^6.7.0",
+    "node-cron": "^4.2.1",
+    "prisma": "^6.15.0",
     "sofa-api": "^0.18.8"
   }
 }

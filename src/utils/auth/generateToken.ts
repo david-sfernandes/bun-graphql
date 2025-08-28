@@ -1,13 +1,19 @@
+import jwt from "jsonwebtoken";
+import SECRET from "@/constant/secret";
 import prisma from "@/db/prisma";
 import validatePassword from "./validatePassword";
-import SECRET from "@/constant/secret";
-import jwt from "jsonwebtoken";
 
-export default async function generateToken(email: string, pass: string, daysDuration: number) {
+export default async function generateToken(
+  email: string,
+  pass: string,
+  daysDuration: number,
+) {
   if (email.trim() === "" || pass.trim() === "") {
-    console.error("Missing parameters to generate token. Insert a valid user and password.");
+    console.error(
+      "Missing parameters to generate token. Insert a valid user and password.",
+    );
     return;
-  };
+  }
 
   const user = await prisma.user.findUnique({
     where: { email },
@@ -38,7 +44,9 @@ export default async function generateToken(email: string, pass: string, daysDur
   const resp = {
     token,
     user: email,
-    expireAt: new Date(Date.now() + daysDuration * 24 * 60 * 60 * 1000).toISOString(),
+    expireAt: new Date(
+      Date.now() + daysDuration * 24 * 60 * 60 * 1000,
+    ).toISOString(),
   };
 
   return resp;

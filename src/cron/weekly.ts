@@ -7,7 +7,6 @@ async function syncDeviceDetails() {
   console.log(`< Updated ${countDevices} devices details`);
 }
 
-
 const weeklyTask = cron.schedule(
   "30 1 * * 0", // 1:30 AM on Sunday
   syncDeviceDetails,

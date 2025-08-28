@@ -1,6 +1,6 @@
+import { readdir, rmdir } from "node:fs/promises";
 import { parse } from "@std/csv/parse";
 import AdmZip from "adm-zip";
-import { readdir, rmdir } from "node:fs/promises";
 
 class BitdefenderService {
   private readonly url =
@@ -12,9 +12,14 @@ class BitdefenderService {
   private securityReportId: string | null = null;
   private headers;
 
-  constructor(key: string, securityReportId?: string, bitdefenderCompanyId?: string) {
+  constructor(
+    key: string,
+    securityReportId?: string,
+    bitdefenderCompanyId?: string,
+  ) {
     this.securityReportId = securityReportId || null;
-    if (bitdefenderCompanyId) this.rootCompanyId = this.rootParentId = bitdefenderCompanyId;
+    if (bitdefenderCompanyId)
+      this.rootCompanyId = this.rootParentId = bitdefenderCompanyId;
     const auth = Buffer.from(`${key}:`).toString("base64");
     this.headers = {
       "Content-Type": "application/json",
@@ -56,7 +61,7 @@ class BitdefenderService {
       if (!firstLevel) continue;
       for (const folder of firstLevel) {
         if (ignoreGroups.has(folder.name)) continue;
-        subFolders.push(folder)
+        subFolders.push(folder);
         const secondLevel = await this.getNetworkGroups(folder.id);
         subFolders.push(...secondLevel);
       }

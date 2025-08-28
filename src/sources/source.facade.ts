@@ -1,3 +1,4 @@
+import chalk from "chalk";
 import pool from "@/db/pool";
 import prisma from "@/db/prisma";
 import BitdefenderService from "@/services/bitdefender.service";
@@ -7,7 +8,6 @@ import detailsToTVP from "@/utils/sql/DetailsToTVP";
 import devicesToTVP from "@/utils/sql/DevicesToTVP";
 import eventsToTVP from "@/utils/sql/EventsToTVP";
 import statusToTVP from "@/utils/sql/StatusToTVP";
-import chalk from "chalk";
 
 class SourceFacade {
   private readonly milvusKey: string;
@@ -23,34 +23,36 @@ class SourceFacade {
     this.bitdefenderKey = Bun.env.BITDEFENDER_KEY_TERABYTE || "";
     if (bitdefenderKey) this.bitdefenderKey = bitdefenderKey;
     this.securityReportId = Bun.env.BITDEFENDER_SEC_REPORT_ID || "";
-    this.bitdefenderCompanyId = bitdefenderCompanyId || undefined
+    this.bitdefenderCompanyId = bitdefenderCompanyId || undefined;
 
     this.bitdefenderService = new BitdefenderService(
       this.bitdefenderKey,
       this.securityReportId,
-      this.bitdefenderCompanyId
+      this.bitdefenderCompanyId,
     );
     this.milvusService = new MilvusService(this.milvusKey);
   }
 
   async syncClients() {
     const clients = await this.milvusService.getClients();
-    const upserts = clients.map(client => prisma.client.upsert({
-      where: { id: client.id },
-      update: {
-        name: client.nome_fantasia || "",
-        companyName: client.razao_social,
-        cnpj: cleanNumericString(client.cnpj_cpf || ""),
-      },
-      create: {
-        id: client.id,
-        name: client.nome_fantasia || "",
-        companyName: client.razao_social,
-        cnpj: cleanNumericString(client.cnpj_cpf || ""),
-      },
-    }))
+    const upserts = clients.map((client) =>
+      prisma.client.upsert({
+        where: { id: client.id },
+        update: {
+          name: client.nome_fantasia || "",
+          companyName: client.razao_social,
+          cnpj: cleanNumericString(client.cnpj_cpf || ""),
+        },
+        create: {
+          id: client.id,
+          name: client.nome_fantasia || "",
+          companyName: client.razao_social,
+          cnpj: cleanNumericString(client.cnpj_cpf || ""),
+        },
+      }),
+    );
 
-    await prisma.$transaction(upserts)
+    await prisma.$transaction(upserts);
     return clients.length;
   }
 
@@ -59,17 +61,17 @@ class SourceFacade {
 
     const tvp = devicesToTVP(devices);
 
-    const result = (await pool.request().input('Devices', tvp).execute('UpsertDevices'));
+    const result = await pool
+      .request()
+      .input("Devices", tvp)
+      .execute("UpsertDevices");
     console.log(chalk.blue(`< Updated ${result.rowsAffected} devices`));
   }
 
   async syncDeviceDetails() {
     const deviceDetails = await this.milvusService.getDeviceDetails();
     const tvp = detailsToTVP(deviceDetails);
-    await pool
-      .request()
-      .input("DetailsList", tvp)
-      .execute("UpsertDetails");
+    await pool.request().input("DetailsList", tvp).execute("UpsertDetails");
     return deviceDetails.length;
   }
 
@@ -122,17 +124,16 @@ class SourceFacade {
     groupName: string,
   ) {
     const tvp = statusToTVP(statusList, groupName);
-    await pool
-      .request()
-      .input("StatusList", tvp)
-      .execute("UpsertStatus");
+    await pool.request().input("StatusList", tvp).execute("UpsertStatus");
   }
 
   async cleanOldSecurityStatus() {
     const deleteDate = new Date();
     deleteDate.setHours(deleteDate.getHours() - 1);
-    const { count } = await prisma.securityStatus.deleteMany({ where: { syncedAt: deleteDate } })
-    console.log(`< Removed ${count} old Security Status`)
+    const { count } = await prisma.securityStatus.deleteMany({
+      where: { syncedAt: deleteDate },
+    });
+    console.log(`< Removed ${count} old Security Status`);
   }
 
   async syncSecurityEvents() {
@@ -149,10 +150,7 @@ class SourceFacade {
     );
 
     const tvp = eventsToTVP(filteredEvents);
-    await pool
-      .request()
-      .input("Events", tvp)
-      .execute("UpsertEvents");
+    await pool.request().input("Events", tvp).execute("UpsertEvents");
 
     console.log(chalk.blue(`< Updated ${filteredEvents.length} events`));
     return filteredEvents.length;

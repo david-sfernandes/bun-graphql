@@ -1,4 +1,7 @@
-import { firstDayPreviousMonth, lastDayPreviousMonth } from "../utils/dateUtils";
+import {
+  firstDayPreviousMonth,
+  lastDayPreviousMonth,
+} from "../utils/dateUtils";
 
 class MilvusService {
   private readonly key: string;
@@ -83,7 +86,7 @@ class MilvusService {
   async getTickets(clientId: number) {
     const milvusTickets: MilvusTicketResp = await this.getTicketsByPage(
       clientId,
-      1
+      1,
     );
     const tickets: Ticket[] = this.formatTickets(milvusTickets.lista);
     if (milvusTickets.meta.paginate.last_page === 1) return tickets;

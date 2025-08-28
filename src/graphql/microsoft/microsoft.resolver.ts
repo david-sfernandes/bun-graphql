@@ -1,4 +1,3 @@
-import FREE_SKU_TO_IGNORE from "@/constant/freeSkuToIgnore";
 import MicrosoftService from "@/services/microsoft.service";
 import type { GraphQLContext } from "@/types/context";
 
@@ -55,7 +54,10 @@ const resolvers = {
         return { error: "Client ID not found in headers", message: null };
       }
       microsoftService.upsertAccounts(value, +clientId);
-      return { error: null, message: `Accounts received from ${clientId} successfully!` };
+      return {
+        error: null,
+        message: `Accounts received from ${clientId} successfully!`,
+      };
     },
     async updateMSSubscribedSkus(
       _: unknown,
@@ -68,7 +70,10 @@ const resolvers = {
       }
 
       microsoftService.upsertSubscribedSkus(value, +clientId);
-      return { error: null, message: `Subscribed Skus received from ${clientId} successfully!` };
+      return {
+        error: null,
+        message: `Subscribed Skus received from ${clientId} successfully!`,
+      };
     },
   },
 };

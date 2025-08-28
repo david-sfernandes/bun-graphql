@@ -1,5 +1,5 @@
-import cleanNumericString from "@/utils/cleanNumericString";
 import { expect, test } from "bun:test";
+import cleanNumericString from "@/utils/cleanNumericString";
 
 test("Clean numeric string", () => {
   const cleaned = cleanNumericString("123.456.789-00/  ");

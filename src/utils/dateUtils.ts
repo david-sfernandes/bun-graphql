@@ -16,11 +16,7 @@ export function firstDayPreviousMonth() {
 
 export function lastDayPreviousMonth() {
   const currentDate = new Date();
-  const date = new Date(
-    currentDate.getFullYear(),
-    currentDate.getMonth(),
-    0,
-  );
+  const date = new Date(currentDate.getFullYear(), currentDate.getMonth(), 0);
   return date.toISOString().split("T")[0];
 }
 

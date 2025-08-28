@@ -21,4 +21,4 @@ type PrismaUser = {
 
 type WithId = {
   id: number;
-}
+};

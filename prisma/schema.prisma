@@ -6,12 +6,13 @@
 
 generator client {
   provider = "prisma-client-js"
+  output   = "../generated/prisma"
   binaryTargets = ["native", "debian-openssl-3.0.x"]
 }
 
 datasource db {
   provider = "sqlserver"
-  url      = "sqlserver://Monitoramento.database.windows.net:1433;encrypt=true;trustServerCertificate=true;databaseName=monitoramento;user=Terabyte@Monitoramento;password=Rutledge50447887#$%"
+  url      = env("DATABASE_URL")
 }
 
 model User {

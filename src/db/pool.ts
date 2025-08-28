@@ -1,13 +1,13 @@
-import sql from 'mssql';
+import sql from "mssql";
 
 const build = async () => {
-  const username = Bun.env.MSSQL_USERNAME
-  const password = Bun.env.MSSQL_PASSWORD
-  const database = Bun.env.MSSQL_DATABASE
-  const host = Bun.env.MSSQL_HOST
+  const username = Bun.env.MSSQL_USERNAME;
+  const password = Bun.env.MSSQL_PASSWORD;
+  const database = Bun.env.MSSQL_DATABASE;
+  const host = Bun.env.MSSQL_HOST;
 
   if (!username || !password || !database || !host) {
-    throw new Error('Missing MSSQL connection environment variables');
+    throw new Error("Missing MSSQL connection environment variables");
   }
 
   const pool = await sql.connect({
@@ -21,7 +21,7 @@ const build = async () => {
     },
   });
   return pool;
-}
+};
 
 const pool = await build();
 

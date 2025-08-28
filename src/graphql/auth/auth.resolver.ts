@@ -1,11 +1,11 @@
+import { randomUUIDv7 } from "bun";
+import { GraphQLError } from "graphql";
+import jwt from "jsonwebtoken";
+import SECRET from "@/constant/secret";
+import type { GraphQLContext } from "@/types/context";
 import canSavePassword from "@/utils/auth/canSavePassword";
 import hashPassword from "@/utils/auth/hashPassword";
 import validatePassword from "@/utils/auth/validatePassword";
-import SECRET from "@/constant/secret";
-import type { GraphQLContext } from "@/types/context";
-import { GraphQLError } from "graphql";
-import jwt from "jsonwebtoken";
-import { randomUUIDv7 } from "bun";
 
 const resolvers = {
   Query: {

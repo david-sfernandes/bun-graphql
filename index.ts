@@ -1,4 +1,3 @@
-import prisma from "@/db/prisma";
 import {
   createInlineSigningKeyProvider,
   useJWT,
@@ -7,6 +6,7 @@ import { useSofa } from "@graphql-yoga/plugin-sofa";
 import chalk from "chalk";
 import figlet from "figlet";
 import { createYoga } from "graphql-yoga";
+import prisma from "@/db/prisma";
 import SECRET from "./src/constant/secret";
 import { dailyTask1, dailyTask2, dailyTask3 } from "./src/cron/daily";
 import { monthlyTask } from "./src/cron/monthly";
